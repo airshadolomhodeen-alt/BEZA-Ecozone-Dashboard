@@ -261,7 +261,7 @@ if app_page == "🌍 Executive Summary & Spatial Map":
             map_style="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"
         )
 
-        # Full width responsive rendering for mobile and desktop
+        # Full width responsive rendering for mobile and desktop screens
         st.pydeck_chart(r, use_container_width=True)
     else:
         st.warning("No zones match the selected filter criteria.")
@@ -296,16 +296,6 @@ elif app_page == "🌐 Live Website Fetch & Portals":
     st.title("🌐 Live Website Fetch & Official Portals")
     st.markdown("Access and verify official government portals and economic zone databases directly through your dashboard.")
     
-    portal_choice = st.selectbox(
-        "Select Official Portal to View / Fetch",
-        [
-            "Philippine Economic Zone Authority (PEZA) Official Portal",
-            "National Mapping and Resource Information Authority (NAMRIA)",
-            "Department of Trade and Industry (DTI) Philippines",
-            "Official Government Portal (GOV.PH)"
-        ]
-    )
-
     url_map = {
         "Philippine Economic Zone Authority (PEZA) Official Portal": "https://www.peza.gov.ph",
         "National Mapping and Resource Information Authority (NAMRIA)": "https://www.namria.gov.ph",
@@ -313,17 +303,17 @@ elif app_page == "🌐 Live Website Fetch & Portals":
         "Official Government Portal (GOV.PH)": "https://www.gov.ph"
     }
 
+    portal_choice = st.selectbox("Select Official Portal to View / Fetch", list(url_map.keys()))
     target_url = url_map[portal_choice]
     st.info(f"🔗 Selected Portal URL: **{target_url}**")
 
     if st.button("🚀 Load / Test Connection"):
-        st.success(f"Successfully connected to **{portal_choice}**! Access external portal below:")
-        st.markdown(f'<a href="{target_url}" target="_blank"><button style="background:#0284c7; color:white; padding:10px 20px; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">Open {portal_choice} in New Tab ↗</button></a>', unsafe_allow_html=True)
+        st.success(f"Successfully connected to **{portal_choice}**!")
 
     st.markdown("---")
     st.markdown("### 🗂️ Integrated Portal Quick Links")
     for name, link in url_map.items():
-        st.markdown(- [{name}]({link}))
+        st.markdown(f"- [{name}]({link})")
 
 # ==========================================
 # PAGE 5: STATISTICAL INSIGHTS & AUDIT
@@ -333,4 +323,4 @@ elif app_page == "🔍 Statistical Insights & Audit":
     st.dataframe(df_sources, use_container_width=True)
 
 st.sidebar.markdown("---")
-st.sidebar.info("PEZA Intelligence Hub v2.18 (Mobile & Web Optimized)")
+st.sidebar.info("PEZA Intelligence Hub v2.19 (Mobile & Web Optimized)")
