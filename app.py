@@ -113,7 +113,7 @@ if app_mode == "📊 Executive Summary":
 # ==========================================
 elif app_mode == "🗺️ Spatial & Zone Distribution":
     st.markdown('<p class="main-header">Spatial Distribution of Economic Zones</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and geographic coordinates.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and geographic zone-type clusters.</p>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     
@@ -134,18 +134,41 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
         st.plotly_chart(fig_bar, use_container_width=True)
         
     with col2:
-        st.subheader("Interactive Geographic Map")
+        st.subheader("Geographic Mapping by Zone Nature")
         if zones is not None and len(zones) > 0:
             lat_col = next((c for c in zones.columns if c.lower() in ['lat', 'latitude']), None)
             lon_col = next((c for c in zones.columns if c.lower() in ['lon', 'long', 'longitude']), None)
+            name_col = next((c for c in zones.columns if 'name' in c.lower() and c.upper() != 'PROVINCE_NAME'), zones.columns[0])
+            nature_col = next((c for c in zones.columns if c.lower() in ['nature', 'type', 'status']), zones.columns[0])
             
             if lat_col and lon_col:
                 map_df = zones.dropna(subset=[lat_col, lon_col]).copy()
-                # Rename columns to 'latitude' and 'longitude' for native st.map support
-                map_df = map_df.rename(columns={lat_col: 'latitude', lon_col: 'longitude'})
                 
-                # Native Streamlit map renders instantly and reliably
-                st.map(map_df, latitude='latitude', longitude='longitude', zoom=5, height=550)
+                # High-resolution interactive Mapbox scatter plot with category color-coding restored
+                fig_map = px.scatter_mapbox(
+                    map_df,
+                    lat=lat_col,
+                    lon=lon_col,
+                    color=nature_col,
+                    hover_name=name_col,
+                    hover_data=['CITY', 'province_name', nature_col],
+                    mapbox_style="open-street-map",
+                    zoom=5.2,
+                    center={"lat": 12.8797, "lon": 121.7740},
+                    height=550
+                )
+                fig_map.update_layout(
+                    margin=dict(l=0, r=0, t=10, b=0),
+                    legend=dict(
+                        title="Zone Nature",
+                        orientation="h",
+                        yanchor="bottom",
+                        y=1.02,
+                        xanchor="right",
+                        x=1
+                    )
+                )
+                st.plotly_chart(fig_map, use_container_width=True)
             else:
                 st.warning("Latitude/Longitude columns not found in zones dataset.")
         else:
