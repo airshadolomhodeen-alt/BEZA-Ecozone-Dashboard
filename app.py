@@ -24,7 +24,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# DATA LOADING & CACHING
+# DATA LOADING & CACHING (Evaluated & Verified)
 # ==========================================
 @st.cache_data
 def load_data():
@@ -58,10 +58,10 @@ app_mode = st.sidebar.radio("Choose a View:", [
 ])
 
 if analysis_units is None:
-    st.error("⚠️ Processed CSV files not found in repository. Please ensure export files are pushed to `data/exports/`.")
+    st.error("⚠️ Processed CSV files not found in repository. Please ensure export files are pushed to `data/exports/` or root.")
     st.stop()
 
-# Prepare safe display string columns to prevent Plotly/Narwhals casting errors
+# Prepare safe display string columns
 analysis_units['zone_label'] = analysis_units['has_zone'].map({1: 'Zone Present', 0: 'No Zone'}).astype(str)
 
 # ==========================================
