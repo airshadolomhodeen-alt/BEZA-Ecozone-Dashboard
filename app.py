@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import plotly.graph_objects as go
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
@@ -47,7 +48,7 @@ def load_data():
 
 analysis_units, zones, sources = load_data()
 
-# Sidebar Navigation & Mapbox Config
+# Sidebar Navigation
 st.sidebar.markdown("## 🧭 Navigation")
 app_mode = st.sidebar.radio("Choose a View:", [
     "📊 Executive Summary",
@@ -58,12 +59,11 @@ app_mode = st.sidebar.radio("Choose a View:", [
 ])
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("### 🗺️ Satellite Map Settings")
-mapbox_token = st.sidebar.text_input("Mapbox Access Token", type="password", placeholder="pk.eyJ1...", help="Get a free token at mapbox.com to enable Google Earth-style satellite imagery.")
-map_style_choice = st.sidebar.selectbox("Basemap Style", ["satellite-streets-v12", "satellite-v9", "streets-v12", "carto-positron"])
+st.sidebar.markdown("### 🗺️ Map Settings")
+map_style_choice = st.sidebar.selectbox("Basemap Style", ["open-street-map", "carto-positron", "carto-darkmatter"])
 
 if analysis_units is None:
-    st.error("⚠️ Processed CSV files not found. Please ensure `analysis_units.csv`, `zones.csv`, and `sources.csv` are in the root directory.")
+    st.error("⚠️ Processed CSV files not found. Please ensure `analysis_units.csv`, `zones.csv`, and `sources.csv` are in your root directory.")
     st.stop()
 
 # Safe string formatting for categorical charts
@@ -119,7 +119,7 @@ if app_mode == "📊 Executive Summary":
 # ==========================================
 elif app_mode == "🗺️ Spatial & Zone Distribution":
     st.markdown('<p class="main-header">Spatial Distribution of Economic Zones</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and Google Earth satellite zone-type clusters.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and interactive categorized zone mapping.</p>', unsafe_allow_html=True)
     
     col1, col2 = st.columns([1.1, 1.3])
     
@@ -140,7 +140,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
         st.plotly_chart(fig_bar, use_container_width=True)
         
     with col2:
-        st.subheader("Google Earth Satellite Mapping by Zone Nature")
+        st.subheader("Categorized Zone Mapping")
         if zones is not None and len(zones) > 0:
             lat_col = next((c for c in zones.columns if c.lower() in ['lat', 'latitude']), None)
             lon_col = next((c for c in zones.columns if c.lower() in ['lon', 'long', 'longitude']), None)
@@ -151,42 +151,64 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
                 map_df = zones.dropna(subset=[lat_col, lon_col]).copy()
                 
                 try:
-                    if mapbox_token and mapbox_token.strip() != "":
-                        px.set_mapbox_access_token(mapbox_token.strip())
-                        active_style = map_style_choice
-                    else:
-                        active_style = "open-street-map"
+                    # Build Figure using Graph Objects for multi-symbol / category distinction
+                    fig_map = go.Figure()
                     
-                    fig_map = px.scatter_mapbox(
-                        map_df,
-                        lat=lat_col,
-                        lon=lon_col,
-                        color=nature_col,
-                        hover_name=name_col,
-                        hover_data=['CITY', 'province_name', nature_col],
-                        mapbox_style=active_style,
-                        zoom=5.2,
-                        center={"lat": 12.8797, "lon": 121.7740},
-                        height=650,
-                        color_discrete_sequence=px.colors.qualitative.Bold
-                    )
+                    # Define a list of distinct marker symbols for categories
+                    symbols = ['circle', 'square', 'diamond', 'triangle-up', 'pentagon', 'star', 'hexagram']
+                    colors = px.colors.qualitative.Bold
+                    
+                    unique_categories = map_df[nature_col].dropna().unique()
+                    
+                    for idx, cat in enumerate(unique_categories):
+                        cat_df = map_df[map_df[nature_col] == cat]
+                        sym = symbols[idx % len(symbols)]
+                        col_val = colors[idx % len(colors)]
+                        
+                        fig_map.add_trace(go.Scattermapbox(
+                            lat=cat_df[lat_col],
+                            lon=cat_df[lon_col],
+                            mode='markers',
+                            marker=dict(
+                                size=11,
+                                symbol=sym,
+                                color=col_val
+                            ),
+                            name=str(cat),
+                            text=cat_df[name_col],
+                            customdata=cat_df[['CITY', 'province_name', nature_col]] if 'CITY' in cat_df.columns else None,
+                            hovertemplate=(
+                                "<b>%{text}</b><br>"
+                                "Category: %{customdata[2]}<br>"
+                                "City/Municipality: %{customdata[0]}<br>"
+                                "Province: %{customdata[1]}<br>"
+                                "<extra></extra>"
+                            ) if 'CITY' in cat_df.columns else "<b>%{text}</b><extra></extra>"
+                        ))
                     
                     fig_map.update_layout(
+                        mapbox=dict(
+                            style=map_style_choice,
+                            zoom=5.0,
+                            center={"lat": 12.8797, "lon": 121.7740}
+                        ),
+                        height=650,
                         margin=dict(l=0, r=0, t=10, b=0),
                         legend=dict(
-                            title=dict(text="<b>Zone Nature</b>"),
+                            title=dict(text="<b>Zone Category</b>"),
                             orientation="h",
                             yanchor="bottom",
-                            y=-0.2,
+                            y=-0.25,
                             xanchor="center",
                             x=0.5,
                             font=dict(size=10)
                         )
                     )
+                    
                     st.plotly_chart(fig_map, use_container_width=True)
                     
                 except Exception as map_err:
-                    st.info("🗺️ **Mapbox Mode:** Enter your free token in the sidebar above (or switch basemap to 'carto-positron') to render the map.")
+                    st.error(f"Mapping error: {map_err}")
             else:
                 st.warning("Latitude/Longitude columns not found in zones dataset.")
         else:
