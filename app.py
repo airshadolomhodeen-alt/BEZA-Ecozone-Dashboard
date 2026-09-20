@@ -116,7 +116,6 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("Top Provinces by Economic Zone Count")
-        # Filter provinces with at least 1 zone and sort by count descending
         top_provinces = analysis_units[analysis_units['n_zones'] > 0].sort_values(by='n_zones', ascending=True)
         
         fig_bar = px.bar(
@@ -128,7 +127,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             color="n_zones",
             color_continuous_scale="Blues"
         )
-        fig_bar.update_layout(height=500, margin=dict(l=0, r=0, t=10, b=0), showlegend=False)
+        fig_bar.update_layout(height=520, margin=dict(l=0, r=0, t=10, b=0), showlegend=False)
         st.plotly_chart(fig_bar, use_container_width=True)
         
     with col2:
@@ -136,20 +135,33 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
         if zones is not None and len(zones) > 0:
             lat_col = next((c for c in zones.columns if c.lower() in ['lat', 'latitude']), None)
             lon_col = next((c for c in zones.columns if c.lower() in ['lon', 'long', 'longitude']), None)
-            name_col = next((c for c in zones.columns if 'name' in c.lower()), zones.columns[0])
+            name_col = next((c for c in zones.columns if 'name' in c.lower() and c.upper() != 'PROVINCE_NAME'), zones.columns[0])
+            nature_col = next((c for c in zones.columns if c.lower() in ['nature', 'type', 'status']), zones.columns[0])
             
             if lat_col and lon_col:
-                fig_map = px.scatter_geo(
-                    zones, lat=lat_col, lon=lon_col, hover_name=name_col,
-                    projection="mercator", height=500, color_discrete_sequence=["#ff7f0e"]
-                )
-                fig_map.update_geos(
-                    visible=True,
+                fig_map = px.scatter_mapbox(
+                    zones, 
+                    lat=lat_col, 
+                    lon=lon_col, 
+                    hover_name=name_col,
+                    hover_data=['CITY', 'province_name', nature_col],
+                    color=nature_col,
+                    mapbox_style="carto-positron",
+                    zoom=5.2, 
                     center={"lat": 12.8797, "lon": 121.7740},
-                    lonaxis_range=[116, 127],
-                    lataxis_range=[4, 21]
+                    height=520
                 )
-                fig_map.update_layout(margin={"r":0,"t":10,"l":0,"b":0})
+                fig_map.update_layout(
+                    margin={"r":0,"t":10,"l":0,"b":0},
+                    legend=dict(
+                        title="Zone Type",
+                        orientation="h",
+                        yanchor="bottom",
+                        y=1.02,
+                        xanchor="right",
+                        x=1
+                    )
+                )
                 st.plotly_chart(fig_map, use_container_width=True)
             else:
                 st.warning("Latitude/Longitude columns not found in zones dataset.")
