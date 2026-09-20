@@ -51,14 +51,10 @@ def load_datasets():
     if os.path.exists("zones.csv"):
         df_zones = pd.read_csv("zones.csv")
     else:
-        df_zones = pd.DataFrame(columns=[
-            'ID', 'ZONE_NAME', 'NATURE', 'STATUS', 'ORIGINAL_LOCATION', 'CITY',
-            'matched_muni', 'admin3_pcode', 'province_name', 'ADM2_PCODE',
-            'region_name', 'admin1_pcode', 'geometry', 'lon', 'lat'
-        ])
+        df_zones = pd.DataFrame()
 
-    # Explicitly map raw columns to standardized dashboard attributes
-    df_zones["name"] = df_zones["ZONE_NAME"] if "ZONE_NAME" in df_zones.columns else "Unknown Zone"
+    # Map raw CSV columns to standardized dashboard attributes matching your exact file schema
+    df_zones["name"] = df_zones["ZONE_NAME"] if "ZONE_NAME" in df_zones.columns else "Unknown"
     df_zones["region"] = df_zones["region_name"] if "region_name" in df_zones.columns else "National Capital Region"
     df_zones["province"] = df_zones["province_name"] if "province_name" in df_zones.columns else "Metro Manila"
     df_zones["nature"] = df_zones["NATURE"] if "NATURE" in df_zones.columns else "IT Center"
@@ -76,6 +72,7 @@ def load_datasets():
     if "demographic_footprint" not in df_zones.columns:
         df_zones["demographic_footprint"] = (50000 + np.random.rand(len(df_zones)) * 200000).astype(int)
     if "workforce" not in df_zones.columns:
+        np.random.seed(42)
         df_zones["workforce"] = (1500 + np.random.rand(len(df_zones)) * 15000).astype(int)
 
     # Build provincial analysis units derived from real dataset provinces
@@ -353,4 +350,4 @@ elif app_page == "🔍 Statistical Insights & Audit":
         )
 
 st.sidebar.markdown("---")
-st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.9 Enterprise Edition")
+st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.10 Enterprise Edition")
