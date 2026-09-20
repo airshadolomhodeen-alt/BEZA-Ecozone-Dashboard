@@ -47,7 +47,7 @@ def load_data():
 
 analysis_units, zones, sources = load_data()
 
-# Sidebar Navigation
+# Sidebar Navigation & Mapbox Config
 st.sidebar.markdown("## 🧭 Navigation")
 app_mode = st.sidebar.radio("Choose a View:", [
     "📊 Executive Summary",
@@ -56,6 +56,11 @@ app_mode = st.sidebar.radio("Choose a View:", [
     "📈 Statistical Models",
     "📚 Data Source Audit"
 ])
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 🗺️ Satellite Map Settings")
+mapbox_token = st.sidebar.text_input("Mapbox Access Token", type="password", placeholder="pk.eyJ1...", help="Get a free token at mapbox.com to enable Google Earth-style satellite imagery.")
+map_style_choice = st.sidebar.selectbox("Basemap Style", ["satellite-streets-v12", "satellite-v9", "streets-v12", "carto-positron"])
 
 if analysis_units is None:
     st.error("⚠️ Processed CSV files not found. Please ensure `analysis_units.csv`, `zones.csv`, and `sources.csv` are in the root directory.")
@@ -114,7 +119,7 @@ if app_mode == "📊 Executive Summary":
 # ==========================================
 elif app_mode == "🗺️ Spatial & Zone Distribution":
     st.markdown('<p class="main-header">Spatial Distribution of Economic Zones</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and geographic zone-type clusters across the Philippines.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and Google Earth satellite zone-type clusters.</p>', unsafe_allow_html=True)
     
     col1, col2 = st.columns([1.1, 1.3])
     
@@ -135,7 +140,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
         st.plotly_chart(fig_bar, use_container_width=True)
         
     with col2:
-        st.subheader("Geographic Mapping by Zone Nature")
+        st.subheader("Google Earth Satellite Mapping by Zone Nature")
         if zones is not None and len(zones) > 0:
             lat_col = next((c for c in zones.columns if c.lower() in ['lat', 'latitude']), None)
             lon_col = next((c for c in zones.columns if c.lower() in ['lon', 'long', 'longitude']), None)
@@ -145,28 +150,26 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             if lat_col and lon_col:
                 map_df = zones.dropna(subset=[lat_col, lon_col]).copy()
                 
-                # Native scatter_geo rendering with full fitbounds and clean projection (No mapbox token needed)
-                fig_map = px.scatter_geo(
+                # Apply Mapbox token if user provided one in sidebar
+                if mapbox_token:
+                    px.set_mapbox_access_token(mapbox_token)
+                    active_style = map_style_choice
+                else:
+                    active_style = "open-street-map"
+                    st.sidebar.info("💡 Paste a free token from mapbox.com above to activate high-resolution Google Earth satellite imagery.")
+                
+                fig_map = px.scatter_mapbox(
                     map_df,
                     lat=lat_col,
                     lon=lon_col,
                     color=nature_col,
                     hover_name=name_col,
                     hover_data=['CITY', 'province_name', nature_col],
-                    scope="asia",
-                    projection="natural earth",
+                    mapbox_style=active_style,
+                    zoom=5.2,
+                    center={"lat": 12.8797, "lon": 121.7740},
                     height=650,
                     color_discrete_sequence=px.colors.qualitative.Bold
-                )
-                
-                fig_map.update_geos(
-                    visible=True,
-                    resolution=50,
-                    showcountries=True, countrycolor="#cbd5e1",
-                    showsubunits=True, subunitcolor="#e2e8f0",
-                    lonaxis_range=[116.0, 127.0],
-                    lataxis_range=[4.5, 21.5],
-                    bgcolor="rgba(248,250,252,1)"
                 )
                 
                 fig_map.update_layout(
