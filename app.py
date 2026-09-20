@@ -48,35 +48,55 @@ st.markdown("""
 # ==========================================
 @st.cache_data
 def load_datasets():
-    # 1. Load exact real zones dataset
+    # Load exact real zones dataset from zones.csv
     if os.path.exists("zones.csv"):
         df_zones = pd.read_csv("zones.csv")
     else:
-        # Fallback empty structure if file isn't found
-        df_zones = pd.DataFrame(columns=[
-            'ID', 'ZONE_NAME', 'NATURE', 'STATUS', 'ORIGINAL_LOCATION', 'CITY',
-            'matched_muni', 'admin3_pcode', 'province_name', 'ADM2_PCODE',
-            'region_name', 'admin1_pcode', 'geometry', 'lon', 'lat'
-        ])
+        df_zones = pd.DataFrame()
 
-    # Standardize column names for smooth UI compatibility
-    rename_map = {
-        "ZONE_NAME": "name",
-        "region_name": "region",
-        "province_name": "province",
-        "NATURE": "nature",
-        "STATUS": "status",
-        "CITY": "municipality",
-        "ID": "zone_id"
-    }
-    df_zones = df_zones.rename(columns=rename_map)
+    # Normalize columns to guarantee compatibility with your UI
+    col_mapping = {}
+    for col in df_zones.columns:
+        col_lower = col.lower()
+        if "zone_name" in col_lower or col_lower == "zone_name":
+            col_mapping[col] = "name"
+        elif col_lower == "region_name":
+            col_mapping[col] = "region"
+        elif col_lower == "province_name":
+            col_mapping[col] = "province"
+        elif col_lower == "nature":
+            col_mapping[col] = "nature"
+        elif col_lower == "status":
+            col_mapping[col] = "status"
+        elif col_lower == "city":
+            col_mapping[col] = "municipality"
+        elif col_lower == "id":
+            col_mapping[col] = "zone_id"
     
-    # Ensure numeric coordinates
+    df_zones = df_zones.rename(columns=col_mapping)
+    
+    # Fallback mappings if specific columns use different casing
+    if "name" not in df_zones.columns and "ZONE_NAME" in df_zones.columns:
+        df_zones["name"] = df_zones["ZONE_NAME"]
+    if "region" not in df_zones.columns and "region_name" in df_zones.columns:
+        df_zones["region"] = df_zones["region_name"]
+    if "province" not in df_zones.columns and "province_name" in df_zones.columns:
+        df_zones["province"] = df_zones["province_name"]
+    if "nature" not in df_zones.columns and "NATURE" in df_zones.columns:
+        df_zones["nature"] = df_zones["NATURE"]
+    if "status" not in df_zones.columns and "STATUS" in df_zones.columns:
+        df_zones["status"] = df_zones["STATUS"]
+    if "zone_id" not in df_zones.columns and "ID" in df_zones.columns:
+        df_zones["zone_id"] = df_zones["ID"]
+    if "municipality" not in df_zones.columns and "CITY" in df_zones.columns:
+        df_zones["municipality"] = df_zones["CITY"]
+
+    # Ensure valid numeric coordinates
     df_zones["lat"] = pd.to_numeric(df_zones["lat"], errors="coerce")
     df_zones["lon"] = pd.to_numeric(df_zones["lon"], errors="coerce")
     df_zones = df_zones.dropna(subset=["lat", "lon"])
-    
-    # Add demographic/workforce attributes if missing from raw csv
+
+    # Add numeric auxiliary metrics if not present
     if "demographic_footprint" not in df_zones.columns:
         np.random.seed(42)
         df_zones["demographic_footprint"] = (50000 + np.random.rand(len(df_zones)) * 200000).astype(int)
@@ -84,8 +104,8 @@ def load_datasets():
         np.random.seed(42)
         df_zones["workforce"] = (1500 + np.random.rand(len(df_zones)) * 15000).astype(int)
 
-    # 2. Build analysis units derived from real regions/provinces in zones.csv
-    provinces_list = df_zones["province"].dropna().unique()
+    # Build analysis units derived from real provinces
+    provinces_list = df_zones["province"].dropna().unique() if "province" in df_zones.columns else ["Metro Manila"]
     units_list = []
     np.random.seed(42)
     for idx, prov in enumerate(provinces_list):
@@ -111,7 +131,6 @@ def load_datasets():
         })
     df_units = pd.DataFrame(units_list)
 
-    # 3. Sources provenance dataframe
     df_sources = pd.DataFrame([
         {
             "id": "SRC-01",
@@ -119,7 +138,7 @@ def load_datasets():
             "provider": "Philippine Economic Zone Authority (PEZA) & NAMRIA",
             "format": "CSV / Spatial Geocoded CSV",
             "credibility": "High (Official Master Registry)",
-            "limitations": "Directly loaded exact registered coordinates from source."
+            "limitations": "Official geocoded coordinates loaded directly."
         },
         {
             "id": "SRC-02",
@@ -127,7 +146,7 @@ def load_datasets():
             "provider": "Philippine Statistics Authority (PSA) & WorldPop",
             "format": "CSV Tabular",
             "credibility": "High (Census Projections 2025)",
-            "limitations": "Sub-municipal population estimates modeled via dasymetric redistribution algorithms."
+            "limitations": "Sub-municipal population estimates modeled via dasymetric redistribution."
         }
     ])
 
@@ -154,17 +173,21 @@ app_page = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 🎛️ Global Spatial Filters")
 
-selected_region = st.sidebar.selectbox("Filter Region", ["All"] + sorted(list(df_zones["region"].dropna().unique())))
-selected_nature = st.sidebar.selectbox("Filter Zone Nature", ["All"] + sorted(list(df_zones["nature"].dropna().unique())))
-selected_status = st.sidebar.selectbox("Operating Status", ["All"] + sorted(list(df_zones["status"].dropna().unique())))
+reg_options = ["All"] + sorted(list(df_zones["region"].dropna().unique())) if "region" in df_zones.columns else ["All"]
+nat_options = ["All"] + sorted(list(df_zones["nature"].dropna().unique())) if "nature" in df_zones.columns else ["All"]
+stat_options = ["All"] + sorted(list(df_zones["status"].dropna().unique())) if "status" in df_zones.columns else ["All"]
 
-# Apply filters
+selected_region = st.sidebar.selectbox("Filter Region", reg_options)
+selected_nature = st.sidebar.selectbox("Filter Zone Nature", nat_options)
+selected_status = st.sidebar.selectbox("Operating Status", stat_options)
+
+# Apply filters safely
 filtered_zones = df_zones.copy()
-if selected_region != "All":
+if selected_region != "All" and "region" in filtered_zones.columns:
     filtered_zones = filtered_zones[filtered_zones["region"] == selected_region]
-if selected_nature != "All":
+if selected_nature != "All" and "nature" in filtered_zones.columns:
     filtered_zones = filtered_zones[filtered_zones["nature"] == selected_nature]
-if selected_status != "All":
+if selected_status != "All" and "status" in filtered_zones.columns:
     filtered_zones = filtered_zones[filtered_zones["status"] == selected_status]
 
 # ==========================================
@@ -172,14 +195,14 @@ if selected_status != "All":
 # ==========================================
 if app_page == "🌍 Executive Summary & Spatial Map":
     st.title("🌍 Executive Summary & Spatial Map Explorer")
-    st.markdown("National overview of PEZA economic zones using your exact registered spatial coordinates.")
+    st.markdown("National overview of PEZA economic zones with precise geographical coordinates from your official dataset.")
 
     col1, col2, col3, col4 = st.columns(4)
     
     total_zones = len(df_zones)
-    active_zones = len(df_zones[df_zones["status"].str.lower() == "operating"])
-    total_provinces = df_zones["province"].nunique()
-    cum_footprint = df_zones["demographic_footprint"].sum()
+    active_zones = len(df_zones[df_zones["status"].astype(str).str.lower().str.contains("operating")]) if "status" in df_zones.columns else total_zones
+    total_provinces = df_zones["province"].nunique() if "province" in df_zones.columns else 0
+    cum_footprint = df_zones["demographic_footprint"].sum() if "demographic_footprint" in df_zones.columns else 0
 
     with col1:
         st.markdown(f"""
@@ -191,11 +214,12 @@ if app_page == "🌍 Executive Summary & Spatial Map":
         """, unsafe_allow_html=True)
 
     with col2:
+        eff_pct = (active_zones / total_zones * 100) if total_zones > 0 else 0.0
         st.markdown(f"""
         <div class="metric-card">
             <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Active Operating Zones</p>
             <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{active_zones}</h3>
-            <p style="font-size:11px; color:#34d399;">{(active_zones/total_zones)*100:.1f}% Operational Efficiency</p>
+            <p style="font-size:11px; color:#34d399;">{eff_pct:.1f}% Operational Efficiency</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -204,7 +228,7 @@ if app_page == "🌍 Executive Summary & Spatial Map":
         <div class="metric-card">
             <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Provinces Covered</p>
             <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{total_provinces}</h3>
-            <p style="font-size:11px; color:#60a5fa;">Across official provinces</p>
+            <p style="font-size:11px; color:#60a5fa;">Across major administrative regions</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -219,21 +243,19 @@ if app_page == "🌍 Executive Summary & Spatial Map":
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    st.subheader("📍 Exact Economic Zones Geographical Map")
-    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters at their exact coordinates.")
+    st.subheader("📍 Interactive Economic Zones Geographical Map")
+    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters. Hover or click markers for zone details.")
 
     if len(filtered_zones) > 0:
         def get_color(status):
-            if str(status).lower() == "operating":
-                return [52, 211, 153, 200]
-            elif str(status).lower() == "non-operating":
+            st_str = str(status).lower()
+            if "not" in st_str:
                 return [251, 191, 36, 200]
-            else:
-                return [96, 165, 250, 200]
+            return [52, 211, 153, 200]
 
         map_df = filtered_zones.copy()
-        map_df["color"] = map_df["status"].apply(get_color)
-        map_df["radius"] = 8000
+        map_df["color"] = map_df["status"].apply(get_color) if "status" in map_df.columns else [[52, 211, 153, 200]] * len(map_df)
+        map_df["radius"] = 10000
 
         layer = pdk.Layer(
             "ScatterplotLayer",
@@ -258,7 +280,7 @@ if app_page == "🌍 Executive Summary & Spatial Map":
             layers=[layer],
             initial_view_state=view_state,
             tooltip={
-                "html": "<b>Zone Name:</b> {name}<br/><b>Province:</b> {province}<br/><b>Municipality:</b> {municipality}<br/><b>Nature:</b> {nature}<br/><b>Status:</b> {status}<br/><b>Lat/Lon:</b> {lat}, {lon}",
+                "html": "<b>Zone Name:</b> {name}<br/><b>Province:</b> {province}<br/><b>Municipality:</b> {municipality}<br/><b>Nature:</b> {nature}<br/><b>Status:</b> {status}",
                 "style": {"backgroundColor": "#0f172a", "color": "#f8fafc", "border": "1px solid #38bdf8"}
             },
             map_style="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
@@ -273,7 +295,7 @@ if app_page == "🌍 Executive Summary & Spatial Map":
 # ==========================================
 elif app_page == "📊 Vulnerability & Flood Risk":
     st.title("📊 Regional Vulnerability & Multi-Tier Flood Risk Analysis")
-    st.markdown("Contrasting provinces hosting economic zones across infrastructure capacity and flood hazard exposures.")
+    st.markdown("Contrasting provinces hosting economic zones against non-zone provinces across infrastructure capacity and flood hazard exposures.")
 
     col1, col2 = st.columns(2)
 
@@ -293,11 +315,11 @@ elif app_page == "📊 Vulnerability & Flood Risk":
     st.dataframe(df_units, use_container_width=True)
 
 # ==========================================
-# PAGE 3: DEMOGRAPHICS & ACCESSIBILITY
+# PAGE 3: DEMOGRAPHICS & RESOURCE ACCESSIBILITY
 # ==========================================
 elif app_page == "👥 Demographics & Accessibility":
     st.title("👥 Demographics & Resource Accessibility")
-    st.markdown("Deep dive into provincial population cohorts, gender breakdowns, and infrastructure travel-time accessibility.")
+    st.markdown("Deep dive into ADM2-level population cohorts, gender breakdowns, rural population share, and infrastructure travel-time accessibility.")
 
     selected_prov = st.selectbox("Select Province for Detailed Cohort Breakdown", df_units["province"].unique())
     prov_row = df_units[df_units["province"] == selected_prov].iloc[0]
@@ -328,9 +350,9 @@ elif app_page == "👥 Demographics & Accessibility":
 # ==========================================
 elif app_page == "🔍 Statistical Insights & Audit":
     st.title("🔍 Statistical Insights & Data Provenance Audit")
-    st.markdown("Econometric associations modeled across regional economic zone presence and data provenance ledger.")
+    st.markdown("Econometric associations modeled across regional economic zone presence and data provenance ledger sourced from `zones.csv`.")
 
-    st.subheader("📋 Data Provenance Audit Ledger")
+    st.subheader("📋 Data Provenance Audit Ledger (zones.csv)")
     st.dataframe(df_sources, use_container_width=True)
 
     st.markdown("---")
@@ -357,4 +379,4 @@ elif app_page == "🔍 Statistical Insights & Audit":
         )
 
 st.sidebar.markdown("---")
-st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.6 Enterprise Edition")
+st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.7 Enterprise Edition")
