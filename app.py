@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import pydeck as pdk
 import streamlit.components.v1 as components
 import os
 
@@ -30,72 +31,39 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# DATA LOADING (DIRECT FROM zones.csv)
+# DATA LOADING (DIRECT FROM zones.csv WITH LAT/LON)
 # ==========================================
 @st.cache_data
 def load_datasets():
-    # 1. Load zones.csv directly from environment
     if os.path.exists("zones.csv"):
         df_zones = pd.read_csv("zones.csv")
-        # Normalize coordinate column names if necessary
+        # Map exact columns from zones.csv
+        rename_map = {
+            "ZONE_NAME": "name",
+            "region_name": "region",
+            "province_name": "province",
+            "NATURE": "nature",
+            "STATUS": "status",
+            "CITY": "municipality"
+        }
+        df_zones = df_zones.rename(columns=rename_map)
+        
+        # Guarantee lat and lon columns are explicitly present and numeric
         if "latitude" in df_zones.columns and "lat" not in df_zones.columns:
             df_zones["lat"] = df_zones["latitude"]
         if "longitude" in df_zones.columns and "lon" not in df_zones.columns:
             df_zones["lon"] = df_zones["longitude"]
+            
+        df_zones["lat"] = pd.to_numeric(df_zones["lat"], errors="coerce")
+        df_zones["lon"] = pd.to_numeric(df_zones["lon"], errors="coerce")
     else:
-        # Fallback synthetic generator if zones.csv is missing temporarily
-        regions = [
-            "National Capital Region (NCR)",
-            "Region III (Central Luzon)",
-            "Region IV-A (CALABARZON)",
-            "Region VII (Central Visayas)",
-            "Region XI (Davao Region)",
-            "Region VI (Western Visayas)"
-        ]
-        provinces_map = {
-            "National Capital Region (NCR)": ["Metro Manila"],
-            "Region III (Central Luzon)": ["Bulacan", "Pampanga", "Tarlac", "Zambales"],
-            "Region IV-A (CALABARZON)": ["Cavite", "Laguna", "Batangas", "Rizal", "Quezon"],
-            "Region VII (Central Visayas)": ["Cebu", "Bohol", "Negros Oriental"],
-            "Region XI (Davao Region)": ["Davao del Sur", "Davao del Norte", "Davao de Oro"],
-            "Region VI (Western Visayas)": ["Iloilo", "Negros Occidental"]
-        }
-        natures = ["IT Center / Park", "Manufacturing", "Agro-Industrial", "Tourism", "Medical Tourism"]
-        np.random.seed(42)
-        zones_list = []
-        base_names = [
-            "Ayala Malls Vertis North IT Center", "Eastwood City CyberPark", "Bonifacio High Street",
-            "Laguna Technopark", "Gateway Industrial Complex", "Cavite Economic Zone",
-            "Cebu IT Park", "Mactan Economic Zone", "Davao Park District", "Clark Freeport Zone"
-        ]
-        for i in range(1, 590):
-            reg = regions[i % len(regions)]
-            provs = provinces_map[reg]
-            prov = provs[i % len(provs)]
-            nature = natures[i % len(natures)]
-            status = "Operating" if i % 10 != 0 else "Non-Operating"
-            lat = 14.5995 + (np.random.rand() - 0.5) * 4.5
-            lon = 120.9842 + (np.random.rand() - 0.5) * 5.0
-            zones_list.append({
-                "zone_id": f"ZN-{1000 + i}",
-                "name": f"{base_names[i % len(base_names)]} {i if i > 10 else ''}".strip(),
-                "region": reg,
-                "province": prov,
-                "municipality": f"{prov} Municipality {i}",
-                "nature": nature,
-                "status": status,
-                "lat": round(lat, 4),
-                "lon": round(lon, 4),
-                "established_year": int(2005 + (i % 18)),
-                "demographic_footprint": int(45000 + np.random.rand() * 250000)
-            })
-        df_zones = pd.DataFrame(zones_list)
+        df_zones = pd.DataFrame(columns=["name", "region", "province", "nature", "status", "lat", "lon"])
 
-    # 2. Supporting units dataset
-    provinces_list = df_zones["province"].unique() if "province" in df_zones.columns else ["Metro Manila"]
+    # Supporting units dataset
+    provinces_list = df_zones["province"].dropna().unique() if "province" in df_zones.columns else ["Metro Manila"]
     units_list = []
     id_counter = 1
-    for prov in provinces_list:
+    for prov in provinces_list[:30]:
         units_list.append({
             "pcode": f"PH{id_counter * 10:04d}",
             "province": prov,
@@ -117,7 +85,7 @@ def load_datasets():
             "id": "SRC-01",
             "dataset": "zones.csv",
             "provider": "Philippine Economic Zone Authority (PEZA)",
-            "format": "CSV Spatial Registry",
+            "format": "CSV Spatial Registry with Lat/Lon",
             "credibility": "High (Official Master Registry)"
         }
     ])
@@ -145,9 +113,9 @@ app_page = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 🎛️ Global Spatial Filters")
 
-regions_list = ["All"] + list(df_zones["region"].unique()) if "region" in df_zones.columns else ["All"]
-natures_list = ["All"] + list(df_zones["nature"].unique()) if "nature" in df_zones.columns else ["All"]
-status_list = ["All"] + list(df_zones["status"].unique()) if "status" in df_zones.columns else ["All"]
+regions_list = ["All"] + sorted(list(df_zones["region"].dropna().unique())) if "region" in df_zones.columns else ["All"]
+natures_list = ["All"] + sorted(list(df_zones["nature"].dropna().unique())) if "nature" in df_zones.columns else ["All"]
+status_list = ["All"] + sorted(list(df_zones["status"].dropna().unique())) if "status" in df_zones.columns else ["All"]
 
 selected_region = st.sidebar.selectbox("Filter Region", regions_list)
 selected_nature = st.sidebar.selectbox("Filter Zone Nature", natures_list)
@@ -165,14 +133,13 @@ if selected_status != "All" and "status" in filtered_zones.columns:
 # PAGE 1: EXECUTIVE SUMMARY & SPATIAL MAP
 # ==========================================
 if app_page == "🌍 Executive Summary & Spatial Map":
-    st.title("🌍 Executive Summary & Google Earth Satellite Inspector")
-    st.markdown("National overview of economic zones with precise coordinate positioning loaded directly from `zones.csv`.")
+    st.title("🌍 Executive Summary & Spatial Map")
+    st.markdown("National overview of economic zones mapped using exact `lat` and `lon` coordinates from `zones.csv`.")
 
     col1, col2, col3, col4 = st.columns(4)
     total_zones = len(df_zones)
     active_zones = len(df_zones[df_zones["status"] == "Operating"]) if "status" in df_zones.columns else total_zones
     total_provinces = df_zones["province"].nunique() if "province" in df_zones.columns else 1
-    cum_footprint = df_zones["demographic_footprint"].sum() if "demographic_footprint" in df_zones.columns else 0
 
     with col1:
         st.markdown(f"""
@@ -198,15 +165,45 @@ if app_page == "🌍 Executive Summary & Spatial Map":
     with col4:
         st.markdown(f"""
         <div class="metric-card">
-            <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Catchment Footprint</p>
-            <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{cum_footprint/1e6:.2f}M</h3>
+            <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Filtered Points</p>
+            <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{len(filtered_zones)}</h3>
         </div>
         """, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
+    st.subheader("📍 Interactive Economic Zones Geographical Map")
+    st.markdown(f"Displaying {len(filtered_zones)} zones matching current sidebar filters using explicit CSV coordinates (`lon`, `lat`).")
+
+    if len(filtered_zones) > 0:
+        layer = pdk.Layer(
+            "ScatterplotLayer",
+            data=filtered_zones,
+            get_position=["lon", "lat"],
+            get_color=[56, 189, 248, 200],
+            get_radius=4000,
+            pickable=True,
+            auto_highlight=True,
+        )
+        view_state = pdk.ViewState(
+            latitude=12.8797,
+            longitude=121.7740,
+            zoom=5.2,
+            pitch=0,
+        )
+        r = pdk.Deck(
+            layers=[layer],
+            initial_view_state=view_state,
+            tooltip={"text": "Zone: {name}\nProvince: {province}\nLat: {lat}, Lon: {lon}\nNature: {nature}\nStatus: {status}"},
+            map_style="mapbox://styles/mapbox/dark-v10"
+        )
+        st.pydeck_chart(r)
+    else:
+        st.warning("No zones found matching current filters.")
+
+    st.markdown("<br>", unsafe_allow_html=True)
     st.subheader("🛰️ Google Earth Satellite Location Inspector")
-    st.markdown("Select a specific economic zone below to center the **Google Earth Satellite View** directly onto its exact CSV-verified coordinates (`lat`, `lon`).")
+    st.markdown("Select an economic zone below to view its precise coordinate mapping and open the high-zoom **Google Earth Satellite View**.")
 
     if len(filtered_zones) > 0:
         zone_names = filtered_zones["name"].tolist()
@@ -217,15 +214,12 @@ if app_page == "🌍 Executive Summary & Spatial Map":
         lon = selected_row["lon"]
         
         col_info1, col_info2, col_info3 = st.columns(3)
-        col_info1.info(f"**Zone ID:** {selected_row.get('zone_id', 'N/A')}")
-        col_info2.info(f"**Exact Coordinates:** {lat}, {lon}")
+        col_info1.info(f"**Zone ID / Record:** {selected_row.get('ID', 'N/A')}")
+        col_info2.info(f"**Exact CSV Coordinates:** Latitude: {lat} | Longitude: {lon}")
         col_info3.info(f"**Status / Nature:** {selected_row.get('status', 'N/A')} ({selected_row.get('nature', 'N/A')})")
 
-        # Google Earth Satellite Embed URL with high precision zoom (z=18) and satellite mode (t=k)
         map_url = f"https://maps.google.com/maps?q={lat},{lon}&t=k&z=18&output=embed"
         components.iframe(map_url, height=550, scrolling=True)
-    else:
-        st.warning("No zones found matching current filters.")
 
 # ==========================================
 # PAGE 2: REGIONAL VULNERABILITY & FLOOD RISK
@@ -268,4 +262,4 @@ elif app_page == "🔍 Statistical Insights & Audit":
     st.dataframe(df_sources, use_container_width=True)
 
 st.sidebar.markdown("---")
-st.sidebar.info("PEZA Intelligence Hub v2.7 Enterprise Edition")
+st.sidebar.info("PEZA Intelligence Hub v2.9 Enterprise Edition")
