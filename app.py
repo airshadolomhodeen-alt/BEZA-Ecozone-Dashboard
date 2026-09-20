@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import plotly.graph_objects as go
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
@@ -146,21 +147,31 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
                 map_df = zones.dropna(subset=[lat_col, lon_col]).copy()
                 
                 try:
-                    fig_map = px.scatter_mapbox(
-                        map_df,
-                        lat=lat_col,
-                        lon=lon_col,
-                        color=nature_col,
-                        hover_name=name_col,
-                        hover_data=[c for c in ['CITY', 'province_name', nature_col] if c in map_df.columns],
-                        mapbox_style="open-street-map",
-                        zoom=5.2,
-                        center={"lat": 12.8797, "lon": 121.7740},
-                        height=650,
-                        color_discrete_sequence=px.colors.qualitative.Bold
-                    )
+                    fig_map = go.Figure()
+                    colors = px.colors.qualitative.Bold
+                    unique_categories = map_df[nature_col].dropna().unique()
+                    
+                    for idx, cat in enumerate(unique_categories):
+                        cat_df = map_df[map_df[nature_col] == cat]
+                        col_val = colors[idx % len(colors)]
+                        
+                        fig_map.add_trace(go.Scattermapbox(
+                            lat=cat_df[lat_col],
+                            lon=cat_df[lon_col],
+                            mode='markers',
+                            marker=dict(size=10, color=col_val),
+                            name=str(cat),
+                            text=cat_df[name_col],
+                            hovertemplate="<b>%{text}</b><br>Category: " + str(cat) + "<extra></extra>"
+                        ))
                     
                     fig_map.update_layout(
+                        mapbox=dict(
+                            style="open-street-map",
+                            zoom=5.2,
+                            center={"lat": 12.8797, "lon": 121.7740}
+                        ),
+                        height=650,
                         margin=dict(l=0, r=0, t=10, b=0),
                         legend=dict(
                             title=dict(text="<b>Zone Category</b>"),
