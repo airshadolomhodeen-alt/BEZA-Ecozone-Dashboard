@@ -48,7 +48,6 @@ st.markdown("""
 # ==========================================
 @st.cache_data
 def load_datasets():
-    # Load exact real zones dataset from zones.csv
     if os.path.exists("zones.csv"):
         df_zones = pd.read_csv("zones.csv")
     else:
@@ -58,43 +57,29 @@ def load_datasets():
             'region_name', 'admin1_pcode', 'geometry', 'lon', 'lat'
         ])
 
-    # Standardize column names safely without dropping any original columns
-    if "ZONE_NAME" in df_zones.columns and "name" not in df_zones.columns:
-        df_zones["name"] = df_zones["ZONE_NAME"]
-    if "region_name" in df_zones.columns and "region" not in df_zones.columns:
-        df_zones["region"] = df_zones["region_name"]
-    if "province_name" in df_zones.columns and "province" not in df_zones.columns:
-        df_zones["province"] = df_zones["province_name"]
-    if "NATURE" in df_zones.columns and "nature" not in df_zones.columns:
-        df_zones["nature"] = df_zones["NATURE"]
-    if "STATUS" in df_zones.columns and "status" not in df_zones.columns:
-        df_zones["status"] = df_zones["STATUS"]
-    if "CITY" in df_zones.columns and "municipality" not in df_zones.columns:
-        df_zones["municipality"] = df_zones["CITY"]
-    if "ID" in df_zones.columns and "zone_id" not in df_zones.columns:
-        df_zones["zone_id"] = df_zones["ID"]
-
-    # Ensure lat and lon exist
-    if "lat" not in df_zones.columns:
-        df_zones["lat"] = 14.5995
-    if "lon" not in df_zones.columns:
-        df_zones["lon"] = 120.9842
+    # Explicitly map raw columns to standardized dashboard attributes
+    df_zones["name"] = df_zones["ZONE_NAME"] if "ZONE_NAME" in df_zones.columns else "Unknown Zone"
+    df_zones["region"] = df_zones["region_name"] if "region_name" in df_zones.columns else "National Capital Region"
+    df_zones["province"] = df_zones["province_name"] if "province_name" in df_zones.columns else "Metro Manila"
+    df_zones["nature"] = df_zones["NATURE"] if "NATURE" in df_zones.columns else "IT Center"
+    df_zones["status"] = df_zones["STATUS"] if "STATUS" in df_zones.columns else "Operating"
+    df_zones["municipality"] = df_zones["CITY"] if "CITY" in df_zones.columns else "Manila"
+    df_zones["zone_id"] = df_zones["ID"] if "ID" in df_zones.columns else range(len(df_zones))
 
     # Ensure valid numeric coordinates
     df_zones["lat"] = pd.to_numeric(df_zones["lat"], errors="coerce")
     df_zones["lon"] = pd.to_numeric(df_zones["lon"], errors="coerce")
     df_zones = df_zones.dropna(subset=["lat", "lon"])
 
-    # Add numeric auxiliary metrics if not present
+    # Add numeric auxiliary metrics for analytics
+    np.random.seed(42)
     if "demographic_footprint" not in df_zones.columns:
-        np.random.seed(42)
         df_zones["demographic_footprint"] = (50000 + np.random.rand(len(df_zones)) * 200000).astype(int)
     if "workforce" not in df_zones.columns:
-        np.random.seed(42)
         df_zones["workforce"] = (1500 + np.random.rand(len(df_zones)) * 15000).astype(int)
 
-    # Build analysis units derived from real provinces
-    provinces_list = df_zones["province"].dropna().unique() if "province" in df_zones.columns else ["Metro Manila"]
+    # Build provincial analysis units derived from real dataset provinces
+    provinces_list = df_zones["province"].dropna().unique()
     units_list = []
     np.random.seed(42)
     for idx, prov in enumerate(provinces_list):
@@ -162,9 +147,9 @@ app_page = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 🎛️ Global Spatial Filters")
 
-reg_options = ["All"] + sorted(list(df_zones["region"].dropna().unique())) if "region" in df_zones.columns else ["All"]
-nat_options = ["All"] + sorted(list(df_zones["nature"].dropna().unique())) if "nature" in df_zones.columns else ["All"]
-stat_options = ["All"] + sorted(list(df_zones["status"].dropna().unique())) if "status" in df_zones.columns else ["All"]
+reg_options = ["All"] + sorted(list(df_zones["region"].dropna().unique()))
+nat_options = ["All"] + sorted(list(df_zones["nature"].dropna().unique()))
+stat_options = ["All"] + sorted(list(df_zones["status"].dropna().unique()))
 
 selected_region = st.sidebar.selectbox("Filter Region", reg_options)
 selected_nature = st.sidebar.selectbox("Filter Zone Nature", nat_options)
@@ -172,11 +157,11 @@ selected_status = st.sidebar.selectbox("Operating Status", stat_options)
 
 # Apply filters safely
 filtered_zones = df_zones.copy()
-if selected_region != "All" and "region" in filtered_zones.columns:
+if selected_region != "All":
     filtered_zones = filtered_zones[filtered_zones["region"] == selected_region]
-if selected_nature != "All" and "nature" in filtered_zones.columns:
+if selected_nature != "All":
     filtered_zones = filtered_zones[filtered_zones["nature"] == selected_nature]
-if selected_status != "All" and "status" in filtered_zones.columns:
+if selected_status != "All":
     filtered_zones = filtered_zones[filtered_zones["status"] == selected_status]
 
 # ==========================================
@@ -189,9 +174,9 @@ if app_page == "🌍 Executive Summary & Spatial Map":
     col1, col2, col3, col4 = st.columns(4)
     
     total_zones = len(df_zones)
-    active_zones = len(df_zones[df_zones["status"].astype(str).str.lower().str.contains("operating")]) if "status" in df_zones.columns else total_zones
-    total_provinces = df_zones["province"].nunique() if "province" in df_zones.columns else 0
-    cum_footprint = df_zones["demographic_footprint"].sum() if "demographic_footprint" in df_zones.columns else 0
+    active_zones = len(df_zones[df_zones["status"].astype(str).str.lower().str.contains("operating")])
+    total_provinces = df_zones["province"].nunique()
+    cum_footprint = df_zones["demographic_footprint"].sum()
 
     with col1:
         st.markdown(f"""
@@ -243,7 +228,7 @@ if app_page == "🌍 Executive Summary & Spatial Map":
             return [52, 211, 153, 200]
 
         map_df = filtered_zones.copy()
-        map_df["color"] = map_df["status"].apply(get_color) if "status" in map_df.columns else [[52, 211, 153, 200]] * len(map_df)
+        map_df["color"] = map_df["status"].apply(get_color)
         map_df["radius"] = 10000
 
         layer = pdk.Layer(
@@ -368,4 +353,4 @@ elif app_page == "🔍 Statistical Insights & Audit":
         )
 
 st.sidebar.markdown("---")
-st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.8 Enterprise Edition")
+st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.9 Enterprise Edition")
