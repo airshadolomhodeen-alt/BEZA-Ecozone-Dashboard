@@ -143,11 +143,10 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             nature_col = next((c for c in zones.columns if c.lower() in ['nature', 'type', 'status']), zones.columns[0])
             
             if lat_col and lon_col:
-                # Build Leaflet map HTML embedding authentic Google Maps tile layers
                 valid_zones = zones.dropna(subset=[lat_col, lon_col]).copy()
                 
                 markers_js = ""
-                for _, row in valid_zones.iterrows z:= '':
+                for _, row in valid_zones.iterrows():
                     lat = row[lat_col]
                     lon = row[lon_col]
                     zname = str(row[name_col]).replace("'", "\\'")
@@ -181,13 +180,11 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
                     <script>
                         var map = L.map('map').setView([12.8797, 121.7740], 5);
                         
-                        // Google Maps Roadmap Layer
                         var googleRoadmap = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={{x}}&y={{y}}&z={{z}}', {{
                             maxZoom: 20,
                             attribution: '&copy; Google Maps'
                         }}).addTo(map);
 
-                        // Google Maps Satellite Layer
                         var googleSat = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={{x}}&y={{y}}&z={{z}}', {{
                             maxZoom: 20,
                             attribution: '&copy; Google Earth / Maps'
