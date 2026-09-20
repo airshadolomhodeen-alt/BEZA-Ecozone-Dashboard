@@ -29,14 +29,22 @@ st.markdown("""
 # ==========================================
 @st.cache_data
 def load_data():
-    try:
-        analysis_units = pd.read_csv("../data/exports/analysis_units.csv")
-        zones = pd.read_csv("../data/exports/zones.csv")
-        sources = pd.read_csv("../data/exports/sources.csv")
-        return analysis_units, zones, sources
-    except FileNotFoundError:
-        # Fallback synthetic structure if files aren't found locally yet
-        return None, None, None
+    # Try standard repository root path (used by Streamlit Cloud)
+    paths_to_try = [
+        ("data/exports/analysis_units.csv", "data/exports/zones.csv", "data/exports/sources.csv"),
+        ("../data/exports/analysis_units.csv", "../data/exports/zones.csv", "../data/exports/sources.csv")
+    ]
+    
+    for au_path, z_path, s_path in paths_to_try:
+        try:
+            analysis_units = pd.read_csv(au_path)
+            zones = pd.read_csv(z_path)
+            sources = pd.read_csv(s_path)
+            return analysis_units, zones, sources
+        except FileNotFoundError:
+            continue
+            
+    return None, None, None
 
 analysis_units, zones, sources = load_data()
 
@@ -51,7 +59,7 @@ app_mode = st.sidebar.radio("Choose a View:", [
 ])
 
 if analysis_units is None:
-    st.error("⚠️ Processed CSV files not found in `../data/exports/`. Please run your data construction pipeline first or verify file paths.")
+    st.error("⚠️ Processed CSV files not found in `data/exports/`. Please ensure your export files (`analysis_units.csv`, `zones.csv`, `sources.csv`) are committed and pushed to your GitHub repository.")
     st.stop()
 
 # ==========================================
@@ -117,14 +125,14 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
         
     with col2:
         st.subheader("Geographic Mapping of Zones")
-        if 'lat' in zones.columns and 'lon' in zones.columns:
+        if zones is not None and 'lat' in zones.columns and 'lon' in zones.columns:
             fig_map = px.scatter_mapbox(
                 zones, lat="lat", lon="lon", hover_name="Zone Name" if "Zone Name" in zones.columns else zones.columns[0],
                 zoom=5, height=400, mapbox_style="carto-positron"
             )
             st.plotly_chart(fig_map, use_container_width=True)
         else:
-            st.info("Latitude and longitude columns available in zones dataset.")
+            st.info("Latitude and longitude coordinates available in zones dataset.")
 
 # ==========================================
 # 3. INFRASTRUCTURE & DEMOGRAPHICS
@@ -165,7 +173,7 @@ elif app_mode == "📈 Statistical Models":
     model_type = st.selectbox("Select Model:", ["Logistic Regression: Zone Placement", "OLS: Population vs Zone Presence"])
     
     if "Logistic" in model_type:
-        logit_mod = smf.logit("has_zone ~ hospitals_count + np.log(access_pop_education_10km + 1) + np.log(T_TL + 1)", data=analysis_units).fit()
+        logit_mod = smf.logit("has_zone + 0 ~ hospitals_count + np.log(access_pop_education_10km + 1) + np.log(T_TL + 1)", data=analysis_units).fit()
         st.text(str(logit_mod.summary()))
     else:
         ols_mod = smf.ols("np.log(T_TL + 1) ~ has_zone", data=analysis_units).fit()
