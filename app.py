@@ -18,13 +18,14 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    .main-header { font-size: 2.2rem; color: #1f77b4; font-weight: 700; }
-    .sub-header { font-size: 1.3rem; color: #333333; font-weight: 500; }
+    .main-header { font-size: 2.2rem; color: #1f77b4; font-weight: 700; margin-bottom: 0px; }
+    .sub-text { font-size: 1.1rem; color: #555555; margin-bottom: 20px; }
+    .metric-card { background-color: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 5px solid #1f77b4; }
 </style>
 """, unsafe_allow_html=True)
 
 # ==========================================
-# DATA LOADING & CACHING (Evaluated & Verified)
+# ROBUST DATA LOADING & CACHING
 # ==========================================
 @st.cache_data
 def load_data():
@@ -58,31 +59,31 @@ app_mode = st.sidebar.radio("Choose a View:", [
 ])
 
 if analysis_units is None:
-    st.error("⚠️ Processed CSV files not found in repository. Please ensure export files are pushed to `data/exports/` or root.")
+    st.error("⚠️ Processed CSV files not found. Please ensure `analysis_units.csv`, `zones.csv`, and `sources.csv` are in the root directory or `data/exports/`.")
     st.stop()
 
-# Prepare safe display string columns
+# Safe string formatting for categorical charts
 analysis_units['zone_label'] = analysis_units['has_zone'].map({1: 'Zone Present', 0: 'No Zone'}).astype(str)
 
 # ==========================================
 # 1. EXECUTIVE SUMMARY
 # ==========================================
 if app_mode == "📊 Executive Summary":
-    st.markdown('<p class="main-header">🇵🇭 PEZA Economic Zones Dashboard</p>', unsafe_allow_html=True)
-    st.markdown("Exploring spatial distribution, provincial disparities, and infrastructure correlates of Philippine Economic Zone Authority (PEZA) zones.")
+    st.markdown('<p class="main-header">🇵🇭 PEZA Economic Zones Intelligence Hub</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Comprehensive analytical assessment of Philippine Economic Zone Authority (PEZA) provincial distributions, infrastructure access, and regional disparities.</p>', unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.metric("Total Provinces", len(analysis_units))
+        st.metric("Total Provinces Analyzed", f"{len(analysis_units):,}")
     with col2:
-        zone_prov_count = analysis_units['has_zone'].sum()
-        st.metric("Provinces w/ Zones", int(zone_prov_count))
+        zone_prov_count = int(analysis_units['has_zone'].sum())
+        st.metric("Provinces with Zones", f"{zone_prov_count:,}")
     with col3:
-        total_zones = analysis_units['n_zones'].sum()
-        st.metric("Total Economic Zones", int(total_zones))
+        total_zones = int(analysis_units['n_zones'].sum())
+        st.metric("Total Economic Zones", f"{total_zones:,}")
     with col4:
         avg_pop = int(analysis_units['T_TL'].mean())
-        st.metric("Avg Province Population", f"{avg_pop:,}")
+        st.metric("Mean Provincial Pop.", f"{avg_pop:,}")
     
     st.markdown("---")
     st.subheader("Descriptive Comparison: Zone vs. Non-Zone Provinces")
@@ -97,8 +98,10 @@ if app_mode == "📊 Executive Summary":
         mean_hosp_access_1h=('access_pop_hospitals_1h', 'mean')
     ).reset_index()
     
-    comparison['has_zone'] = comparison['has_zone'].map({1: 'Zone Province', 0: 'Non-Zone Province'})
+    comparison['has_zone'] = comparison['has_zone'].map({1: 'Zone Province (n=...)', 0: 'Non-Zone Province'})
+    
     st.dataframe(comparison.style.format({
+        'n_provinces': '{:,}',
         'mean_total_pop': '{:,.0f}',
         'mean_hospitals': '{:.2f}',
         'mean_primary_hc': '{:.2f}',
@@ -112,10 +115,12 @@ if app_mode == "📊 Executive Summary":
 # ==========================================
 elif app_mode == "🗺️ Spatial & Zone Distribution":
     st.markdown('<p class="main-header">Spatial Distribution of Economic Zones</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and geographic coordinates.</p>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
+    
     with col1:
-        st.subheader("Top Provinces by Economic Zone Count")
+        st.subheader("Top Provinces by Zone Count")
         top_provinces = analysis_units[analysis_units['n_zones'] > 0].sort_values(by='n_zones', ascending=True)
         
         fig_bar = px.bar(
@@ -123,7 +128,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             x="n_zones", 
             y="ADM2_NAME", 
             orientation="h",
-            labels={"n_zones": "Number of Economic Zones", "ADM2_NAME": "Province / District"},
+            labels={"n_zones": "Number of Economic Zones", "ADM2_NAME": "Province"},
             color="n_zones",
             color_continuous_scale="Blues"
         )
@@ -139,6 +144,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             nature_col = next((c for c in zones.columns if c.lower() in ['nature', 'type', 'status']), zones.columns[0])
             
             if lat_col and lon_col:
+                # carto-positron requires NO API token and renders a crisp, high-end map
                 fig_map = px.scatter_mapbox(
                     zones, 
                     lat=lat_col, 
@@ -154,7 +160,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
                 fig_map.update_layout(
                     margin={"r":0,"t":10,"l":0,"b":0},
                     legend=dict(
-                        title="Zone Type",
+                        title="Zone Nature",
                         orientation="h",
                         yanchor="bottom",
                         y=1.02,
@@ -169,32 +175,33 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             st.info("Zones dataset is currently unavailable.")
             
     st.markdown("---")
-    st.subheader("📋 Province Economic Zone Directory")
-    province_table = analysis_units[['ADM2_NAME', 'ADM1_NAME', 'n_zones', 'T_TL', 'hospitals_count']].sort_values(by='n_zones', ascending=False)
-    province_table.columns = ['Province / Area', 'Region', 'Total Economic Zones', 'Total Population', 'Hospital Count']
-    st.dataframe(province_table, use_container_width=True, height=350)
+    st.subheader("📋 Complete Provincial Zone Directory")
+    directory_df = analysis_units[['ADM2_NAME', 'ADM1_NAME', 'n_zones', 'T_TL', 'hospitals_count']].sort_values(by='n_zones', ascending=False)
+    directory_df.columns = ['Province / Area', 'Region', 'Total Zones', 'Total Population', 'Hospitals']
+    st.dataframe(directory_df, use_container_width=True, height=350)
 
 # ==========================================
 # 3. INFRASTRUCTURE & DEMOGRAPHICS
 # ==========================================
 elif app_mode == "🏥 Infrastructure & Demographics":
     st.markdown('<p class="main-header">Infrastructure & Demographic Correlates</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Evaluating healthcare capacity and population distributions relative to economic zone presence.</p>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader("Hospital Counts by Zone Presence")
+        st.subheader("Hospital Distribution by Zone Presence")
         fig_box = px.box(
             analysis_units, 
             x="zone_label", 
             y="hospitals_count",
             points="all",
-            labels={"zone_label": "Economic Zone Presence", "hospitals_count": "Hospital Count"},
-            color_discrete_sequence=["#52accb"]
+            labels={"zone_label": "Zone Status", "hospitals_count": "Hospital Count"},
+            color_discrete_sequence=["#1f77b4"]
         )
         st.plotly_chart(fig_box, use_container_width=True)
         
     with col2:
-        st.subheader("Provincial Population Distribution")
+        st.subheader("Provincial Population Histogram")
         fig_hist_pop = px.histogram(
             analysis_units, x="T_TL", color="zone_label",
             nbins=20, barmode="group",
@@ -207,24 +214,37 @@ elif app_mode == "🏥 Infrastructure & Demographics":
 # 4. STATISTICAL MODELS
 # ==========================================
 elif app_mode == "📈 Statistical Models":
-    st.markdown('<p class="main-header">Cross-Sectional Regression Models</p>', unsafe_allow_html=True)
-    st.markdown("Analyzing predictors of economic zone placement across provinces using OLS and Logistic regressions.")
+    st.markdown('<p class="main-header">Cross-Sectional Regression Analysis</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Econometric modeling of economic zone determinants across provinces.</p>', unsafe_allow_html=True)
     
-    model_type = st.selectbox("Select Model:", ["Logistic Regression: Zone Placement", "OLS: Population vs Zone Presence"])
+    model_choice = st.selectbox("Select Econometric Specification:", [
+        "Logistic Regression: Probability of Zone Placement",
+        "OLS Regression: Population vs. Zone Status"
+    ])
     
-    if "Logistic" in model_type:
-        logit_mod = smf.logit("has_zone ~ hospitals_count + np.log(access_pop_education_10km + 1) + np.log(T_TL + 1)", data=analysis_units).fit()
-        st.text(str(logit_mod.summary()))
+    if "Logistic" in model_choice:
+        st.markdown("**Model Specification:** `has_zone ~ hospitals_count + log(access_pop_education_10km + 1) + log(T_TL + 1)`")
+        try:
+            logit_mod = smf.logit("has_zone ~ hospitals_count + np.log(access_pop_education_10km + 1) + np.log(T_TL + 1)", data=analysis_units).fit()
+            st.text(str(logit_mod.summary()))
+        except Exception as e:
+            st.error(f"Model fitting error: {e}")
     else:
-        ols_mod = smf.ols("np.log(T_TL + 1) ~ has_zone", data=analysis_units).fit()
-        st.text(str(ols_mod.summary()))
+        st.markdown("**Model Specification:** `log(T_TL + 1) ~ has_zone`")
+        try:
+            ols_mod = smf.ols("np.log(T_TL + 1) ~ has_zone", data=analysis_units).fit()
+            st.text(str(ols_mod.summary()))
+        except Exception as e:
+            st.error(f"Model fitting error: {e}")
 
 # ==========================================
 # 5. DATA SOURCE AUDIT
 # ==========================================
 elif app_mode == "📚 Data Source Audit":
-    st.markdown('<p class="main-header">Source Audit & Provenance</p>', unsafe_allow_html=True)
+    st.markdown('<p class="main-header">Data Provenance & Source Audit</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Reviewing origin links, credibility scores, and variable mapping.</p>', unsafe_allow_html=True)
+    
     if sources is not None:
         st.dataframe(sources, use_container_width=True)
     else:
-        st.info("Source audit table not loaded.")
+        st.info("Sources table not detected.")
