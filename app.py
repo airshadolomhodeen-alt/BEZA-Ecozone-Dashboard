@@ -43,41 +43,25 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# ROBUST DATA LOADING WITH FILE CHECK
+# ROBUST DATA LOADING FROM zones.csv
 # ==========================================
 @st.cache_data
 def load_datasets():
-    file_exists = os.path.exists("zones.csv")
-    if file_exists:
+    if os.path.exists("zones.csv"):
         df_zones = pd.read_csv("zones.csv")
     else:
-        # Fallback if zones.csv is missing from git deployment
         df_zones = pd.DataFrame()
 
-    # Normalize column names
+    # Clean column names
     df_zones.columns = [c.strip() for c in df_zones.columns]
-    
+
+    # Ensure exact numeric parsing for lat and lon
     if "lat" in df_zones.columns and "lon" in df_zones.columns:
         df_zones["lat"] = pd.to_numeric(df_zones["lat"], errors="coerce")
         df_zones["lon"] = pd.to_numeric(df_zones["lon"], errors="coerce")
         df_zones = df_zones.dropna(subset=["lat", "lon"])
-    else:
-        # Generate full mock dataset matching 589 rows if file is missing
-        np.random.seed(42)
-        mock_sz = 589
-        df_zones = pd.DataFrame({
-            "ID": range(1, mock_sz + 1),
-            "ZONE_NAME": [f"Economic Zone {i}" for i in range(1, mock_sz + 1)],
-            "NATURE": np.random.choice(["IT Center", "IT Park", "Manufacturing", "Tourism"], mock_sz),
-            "STATUS": np.random.choice(["Operating", "Not Yet Operating"], mock_sz, p=[0.85, 0.15]),
-            "CITY": np.random.choice(["Makati City", "Taguig City", "Cebu City", "Davao City", "Pasig City"], mock_sz),
-            "province_name": np.random.choice(["Metro Manila", "Cebu", "Laguna", "Cavite", "Batangas"], mock_sz),
-            "region_name": np.random.choice(["National Capital Region", "Region VII", "Region IV-A", "Region XI"], mock_sz),
-            "lat": 10.0 + np.random.rand(mock_sz) * 8.0,
-            "lon": 121.0 + np.random.rand(mock_sz) * 4.0
-        })
 
-    # Standardize attributes
+    # Standardize display attribute mappings
     df_zones["name"] = df_zones["ZONE_NAME"] if "ZONE_NAME" in df_zones.columns else df_zones.get("name", "Unknown Zone")
     df_zones["region"] = df_zones["region_name"] if "region_name" in df_zones.columns else df_zones.get("region", "National Capital Region")
     df_zones["province"] = df_zones["province_name"] if "province_name" in df_zones.columns else df_zones.get("province", "Metro Manila")
@@ -85,7 +69,7 @@ def load_datasets():
     df_zones["status"] = df_zones["STATUS"] if "STATUS" in df_zones.columns else df_zones.get("status", "Operating")
     df_zones["municipality"] = df_zones["CITY"] if "CITY" in df_zones.columns else df_zones.get("municipality", "Manila")
 
-    # Add numeric auxiliary metrics
+    # Add auxiliary analytics metrics
     np.random.seed(42)
     df_zones["demographic_footprint"] = (50000 + np.random.rand(len(df_zones)) * 200000).astype(int)
     df_zones["workforce"] = (1500 + np.random.rand(len(df_zones)) * 15000).astype(int)
@@ -128,9 +112,9 @@ def load_datasets():
         }
     ])
 
-    return df_zones, df_units, df_sources, file_exists
+    return df_zones, df_units, df_sources
 
-df_zones, df_units, df_sources, file_exists = load_datasets()
+df_zones, df_units, df_sources = load_datasets()
 
 # ==========================================
 # SIDEBAR NAVIGATION & GLOBAL FILTERS
@@ -174,9 +158,6 @@ if selected_status != "All":
 if app_page == "🌍 Executive Summary & Spatial Map":
     st.title("🌍 Executive Summary & Spatial Map Explorer")
     st.markdown("National overview of PEZA economic zones with precise geographical coordinates from your official dataset.")
-
-    if not file_exists:
-        st.warning("⚠️ `zones.csv` was not found in your GitHub repository deployment. Currently displaying simulated master registry data. Please upload `zones.csv` to your GitHub repo to view all 589 real zones.")
 
     col1, col2, col3, col4 = st.columns(4)
     
@@ -225,7 +206,7 @@ if app_page == "🌍 Executive Summary & Spatial Map":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.subheader("📍 Interactive Economic Zones Geographical Map")
-    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters. Hover or click markers for zone details.")
+    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters. Hover or click markers for exact zone details.")
 
     if len(filtered_zones) > 0:
         def get_color(status):
@@ -236,7 +217,7 @@ if app_page == "🌍 Executive Summary & Spatial Map":
 
         map_df = filtered_zones.copy()
         map_df["color"] = map_df["status"].apply(get_color)
-        map_df["radius"] = 10000
+        map_df["radius"] = 5000
 
         layer = pdk.Layer(
             "ScatterplotLayer",
@@ -246,8 +227,8 @@ if app_page == "🌍 Executive Summary & Spatial Map":
             get_radius="radius",
             pickable=True,
             auto_highlight=True,
-            radius_min_pixels=5,
-            radius_max_pixels=15,
+            radius_min_pixels=4,
+            radius_max_pixels=12,
         )
 
         view_state = pdk.ViewState(
@@ -360,4 +341,4 @@ elif app_page == "🔍 Statistical Insights & Audit":
         )
 
 st.sidebar.markdown("---")
-st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.12 Enterprise Edition")
+st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.13 Enterprise Edition")
