@@ -1,0 +1,607 @@
+ID,ZONE_NAME,NATURE,STATUS,ORIGINAL_LOCATION,CITY,matched_muni,admin3_pcode,province_name,admin2_pcode,region_name,admin1_pcode
+1,[24]7 Plaza  ,IT Center,Operating,"106 Valero Street, Salcedo Village, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+2,1 Nito Tower [formerly Mikado],IT Center,Operating,"Archbishop Reyes Avenue, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+3,2251 IT Hub,IT Center,Operating,"Pasong Tamo Extension, San Lorenzo Village, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+4,500 Shaw Zentrum,IT Center,Operating,"Shaw Boulevard, Barangay Pleasant Hill, Mandaluyong City ",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+5,6750 Ayala Avenue Building,IT Center,Operating,"Ayala Avenue, Ayala Center, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+6,6780 Ayala ,IT Center,Operating,"6780 Ayala Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+7,6788 Ayala Avenue Building  ,IT Center,Operating,"6788 Ayala Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+8,A. D. Gothong Information Technology Center ,IT Center,Operating," Subangdaku, Mandaue City",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+9,A.T. Yuchengco Centre [formerly RCBC Savings Bank Corporate Center],IT Center,Operating,"Lot 3, Block 9, along 26th and 25th Streets, Bonifacio South, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+10,Abreeza Corporate Center   ,IT Center,Operating,"J.P. Laurel Avenue, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+11,Aeon Center,IT Center,Operating,"Filinvest Corporate City, Alabang-Zapote Road corner North Bridgeway, Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+12,AG&P Special Economic Zone,Manufacturing,Operating,"Barangays San Roque, San Andres, Manghinao, & Sto. Domingo, Bauan, Batangas",Bauan,Bauan,PH041006000,Batangas,PH041000000,Region IV-A,PH040000000
+13,Agrotex Gensan Economic Zone,Agro-Industrial,Operating,"Barangay Tambler, General Santos City",General Santos City,General Santos City,PH126303000,South Cotabato,PH126300000,Region XII,PH120000000
+14,AJMR Agro-Industrial Economic Zone,Agro-Industrial,Operating,"AJMR Port Complex, Km. 20 Tibungco, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+15,Alcos Global I.T. Park,IT Park,Operating,"Industria corner Economia Street, Bagumbayan, Quezon City",Bagumbayan,Bagumbayan,PH126501000,Sultan Kudarat,PH126500000,Region XII,PH120000000
+16,ALLBANK [Formerly Polar Center EDSA ] ,IT Center,Operating,"EDSA corner Cornell Street, Barangay Wack-Wack, Mandaluyong City ",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+17,Allegis Information Technology Park ,IT Park,Operating,"Tulo, Calamba City,  Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+18,Allegro Center,IT Center,Operating,"2248 Pasong Tamo Extension, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+19,Alviera Industrial Park,Manufacturing,Operating,"Barangay Dolores and Banaba, Porac, Pampanga",Porac,Porac,PH035415000,Pampanga,PH035400000,Region III,PH030000000
+20,Amkor Technology Special Economic Zone,Manufacturing,Operating,"Km. 22, East Service Road, South Super Highway, Brgy. Cupang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+21,ANFLO Industrial Estate,Manufacturing,Operating,"Barangay San Vicente, Panabo City, Davao del Norte",Panabo City,City of Panabo,PH112315000,Davao del Norte,PH112300000,Region XI,PH110000000
+22,Angeles Industrial Park,Manufacturing,Operating,"Calibutbut, Bacolor, Pampanga",Bacolor,Bacolor,PH035404000,Pampanga,PH035400000,Region III,PH030000000
+23,Anonas LRT City Center ,IT Center,Operating,"968 Aurora Boulevard, Cubao, Quezon City ",Cubao,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+24,ANR Business Center ,IT Center,Operating,"Barangay Concepcion Grande, Naga City, Camarines Sur",Naga City,Naga City,PH051724000,Camarines Sur,PH051700000,Region V,PH050000000
+25,Anson’s Center ,IT Center,Operating,"23 ADB Avenue, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+26,Araneta Cyber Park ,IT Park,Operating,"EDSA and P. Tuazon Boulevard, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+27,Arcenas Estate IT Building ,IT Center,Operating,"Banawa Hills, Barangay Labangon, Cebu City",Barangay Labangon,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+28,Asahi Special Economic Zone,Manufacturing,Operating,"Brgy. Pinagbuhatan, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+29,Aseana 3 BPO Building,IT Center,Operating,"Aseana Avenue corner Macapagal Boulevard, Aseana City, Parañaque City",Parañaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+30,Aseana One   ,IT Center,Operating,"Lot 13, Bradco Avenue, Aseana Business Park, Parañaque City",Parañaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+31,Aseana Two  ,IT Center,Operating,"Lot 17, Bradco Avenue, Aseana City, Parañaque City",Parañaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+32,Asian Star Building  ,IT Center,Operating,"Lots 1&2, Block 2, Phase 1, Filinvest Corporate City, Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+33,ATC BPO 1 ,IT Center,Operating,"Madrigal Avenue, Alabang Town Center, Barangay Ayala Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+34,Avecshares Center  ,IT Center,Operating,"1132 University Parkway, North Bonifacio Triangle, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+35,Avenir,IT Center,Operating,"Archbishop Reyes Avenue, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+36,Ayala Business Center ,IT Center,Operating,"Matina Town Square, Matina, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+37,Ayala North Exchange [Formerly Makati Gateway],IT Center,Operating,"Ayala Avenue corner Salcedo and Amorsolo Streets, Barangay San Lorenzo, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+38,Bacolod Capitol Corporate Center [Formerly Ayala North Point TechnoHub],IT Park,Operating,"Barangay Zone 15, Talisay City, Negros Occidental",Talisay City,Talisay,PH051611000,Camarines Norte,PH051600000,Region V,PH050000000
+39,Bagong Nayong Pilipino – Entertainment City Manila,Tourism,Operating,"Bay City Project, Parañaque City",Parañaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+40,Baguio City Economic Zone,Manufacturing,Operating,"Loakan Road, Baguio City, Benguet Province",Baguio City,Baguio City,PH141102000,Benguet,PH141100000,Cordillera Administrative Region,PH140000000
+41,BA-Lepanto Building  ,IT Center,Operating,"8747 Paseo de Roxas, Salcedo Village, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+42,Balo-I Agro-Industrial Economic Zone,Agro-Industrial,Operating,"Barangay Maria Cristina, Balo-i, Lanao del Norte",Balo-i,Anao,PH036901000,Tarlac,PH036900000,Region III,PH030000000
+43,Batangas Racing Circuit Tourism Estate,Tourism,Operating,"Maligaya, Rosario, Batangas",Rosario,Rosario,PH160307000,Agusan del Sur,PH160300000,Region XIII,PH160000000
+44,Belle Grande Manila Bay,Tourism,Operating,"Aseana Business Park, Parañaque City",Parañaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+45,Benedicto I.T. Center  ,IT Center,Operating,"A.S. Fortune St., Bakilid, Mandaue City, Cebu",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+46,BGC Corporate Center,IT Center,Operating,"11th Avenue corner 30th Street, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+47,BGC Corporate Center 2,IT Center,Operating,"Block 1, 30th Street corner 5th Avenue, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+48,Bigfoot Information Technology Park ,IT Park,Operating,"Barangay Mactan, Lapu-Lapu City, Island of Mactan",Island of Mactan,Lapu-Lapu City,PH072226000,Cebu,PH072200000,Region VII,PH070000000
+49,Blue Wave Marikina IT Center ,IT Center,Operating,"Sumulong Highway cor. G. Fernando, Marikina City",Marikina City,City of Marikina,PH137402000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+50,Boracay Eco-Village Resort Tourism Economic Zone,Tourism,Operating,"Yapak, Boracay Island, Malay, Aklan",Aklan,Malay,PH060412000,Aklan,PH060400000,Region VI,PH060000000
+51,BPI Buendia Center  ,IT Center,Operating,"Sen. Gil Puyat Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+52,Bridgetowne (formerly Robinsons Business Park),IT Park,Operating,"Along C-5 Road, Ugong Norte, Quezon City",Ugong Norte,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+53,Brooke’s Point Agro-Industrial Economic Zone,Agro-Industrial,Operating,"Barangay Tubtub, Brooke’s Point, Palawan",Palawan,Brooke's Point,PH175306000,Palawan,PH175300000,Region IV-B,PH170000000
+54,BTTC Center ,IT Center,Operating,"Lot 17, Block 12, Ortigas Avenue cor. Roosevelt Street, Barangay Greenhills, San Juan City",San Juan City,San Juan,PH140122000,Abra,PH140100000,Cordillera Administrative Region,PH140000000
+55,Bukidnon Agro-Resources Export Zone,Agro-Industrial,Operating,"Barangay Agusan Canyon, Manolo Fortich, Bukidnon",Manolo Fortich,Manolo Fortich,PH101314000,Bukidnon,PH101300000,Region X,PH100000000
+56,Burgundy Corporate Tower ,IT Center,Operating,"252 Sen. Gil Puyat Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+57,C55 Realty Corp. Building,IT Center,Operating,"Barangay Matina Aplaya, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+58,Calamba Premiere International Park,Manufacturing,Operating,"Batino, Parian and Barandal, Calamba City,  Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+59,Camarines Sur Information Technology Park ,IT Park,Operating,"Capitol Complex, Cadlan, Pili, Camarines Sur",Pili,Pili,PH051728000,Camarines Sur,PH051700000,Region V,PH050000000
+60,Candelaria Agri Special Economic Zone,Agro-Industrial,Operating,"Barangay Mangilag Sur, Candelaria, Quezon",Candelaria,Candelaria,PH045608000,Quezon,PH045600000,Region IV-A,PH040000000
+61,Capella IT Center,IT Center,Operating,"Filinvest Corporate City, Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+62,Carmelray Industrial Park ,Manufacturing,Operating,"Canlubang, Calamba City,  Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+63,Carmelray Industrial Park II,Manufacturing,Operating,"Punta & Tulo, Calamba City,  Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+64,Carmelray International Business Park ,Manufacturing,Operating,"Canlubang, Calamba City,  Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+65,Carmen Cebu Gum Industrial Zone,Agro-Industrial,Operating,"Cogon West, Carmen, Cebu City",Carmen,Carmen,PH166806000,Surigao del Sur,PH166800000,Region XIII,PH160000000
+66,Cavite Biofuels Ecozone,Agro-Industrial,Operating,"Barangay Caluangan, Municipality of Magallanes, Province of Cavite ",Municipality of Magallanes,Magallanes,PH160208000,Agusan del Norte,PH160200000,Region XIII,PH160000000
+67,Cavite Economic Zone,Manufacturing,Operating,"Rosario, Cavite",Cavite,Cavite City,PH042105000,Cavite,PH042100000,Region IV-A,PH040000000
+68,Cavite Economic Zone II,Manufacturing,Operating,"Bacao, Gen. Trias, Cavite",Gen. Trias,City of General Trias,PH042108000,Cavite,PH042100000,Region IV-A,PH040000000
+69,Cavite Technopark-Special Economic Zone,Manufacturing,Operating,"Barangay Sabang, Naic, Cavite ",Naic,Naic,PH042115000,Cavite,PH042100000,Region IV-A,PH040000000
+70,CBP-IT Park,IT Park,Operating,"Barangays Mabolo, Luz, Hipodromo, Carreta, and Kamputhaw, Cebu City",and Kamputhaw,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+71,Cebu Exchange,IT Center,Operating,"Barangay Lahug, Cebu City ",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+72,Cebu I.T. Park    ,IT Park,Operating,"Lahug and Apas, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+73,Cebu I.T. Tower ,IT Center,Operating,"Corner Mindanao and Bohol Streets, Cebu Business Park, Cebu City",Cebu Business Park,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+74,Cebu Light Industrial Park,Manufacturing,Operating,"Basak, Lapu-lapu City, Mactan, Cebu",Mactan,Lapu-Lapu City,PH072226000,Cebu,PH072200000,Region VII,PH070000000
+75,Cebu South Road Properties,Manufacturing,Operating,"South Reclamation Project, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+76,Central Technopark,Manufacturing,Operating,"San Miguel, Tarlac",Tarlac,San Miguel,PH166816000,Surigao del Sur,PH166800000,Region XIII,PH160000000
+77,Centrio Corporate Center  ,IT Center,Operating,"C. M. Recto Avenue and Corrales Street, Cagayan de Oro City ",Cagayan de Oro City,Cagayan de Oro City,PH104305000,Misamis Oriental,PH104300000,Region X,PH100000000
+78,Century City,IT Park,Operating,"Kalayaan Avenue corner Salamanca Street, Barangay Poblacion, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+79,CIIF Agro-Industrial Park,Manufacturing,Operating,"Barangay Kiwalan, Iligan City, Lanao del Norte",Iligan City,Iligan City,PH103504000,Lanao del Norte,PH103500000,Region X,PH100000000
+80,CIIF Agro-Industrial Park – Cagayan,Agro-Industrial,Operating,"Purok 3, Tablon, Cagayan de Oro City",Tablon,Cagayan de Oro City,PH104305000,Misamis Oriental,PH104300000,Region X,PH100000000
+81,CIIF Agro-Industrial Park - Davao,Agro-Industrial,Operating,"KM 9.5, Barangay Sasa, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+82,Citynet Central  ,IT Center,Operating,"Sultan Street, Barangay Highway Hills, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+83,CityNet1  ,IT Center,Operating,"183 EDSA near corner Ortigas Ave., Wack-Wack, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+84,Clark Special Economic Zone ,Manufacturing,Operating,"Angeles City, Municipalities of Mabalacat and Porac, Pampanga and the Municipalities of Capas and Bamban, Tarlac",Pampanga and the Municipalities of Capas and Bamban,Angeles City,PH035401000,Pampanga,PH035400000,Region III,PH030000000
+85,Clark TI Special Economic Zone,Manufacturing,Operating,"Clark Freeport Zone located at Angeles City and the Municipality of Mabalacat, Pampanga",Pampanga,Angeles City,PH035401000,Pampanga,PH035400000,Region III,PH030000000
+86,Cocochem Agro-Industrial Park,Manufacturing,Operating,"San Antonio, San Pascual, Batangas",San Pascual,San Pascual,PH054120000,Masbate,PH054100000,Region V,PH050000000
+87,Cornerstone Business Center  ,IT Center,Operating,"Barangay San Rafael, Mandurriao, Iloilo City",Mandurriao,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+88,Crown 7 I.T. Center,IT Center,Operating,"Juan Luna Avenue, Mabolo, Cebu City, Cebu",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+89,Cyber Omega,IT Center,Operating,"Pearl Drive, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+90,Cyber Park Building One ,IT Center,Operating,"Corner General Aguinaldo Avenue and P. Tuazon  Street, Araneta Center Cubao, Quezon City",Araneta Center Cubao,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+91,Cyber Sigma (formerly Bonifacio Summit Center) ,IT Center,Operating,"Lawton Avenue, Bonifacio South, Taguig City ",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+92,Cybergate Iloilo Towers [formerly- Robinsons Cybergate Pavia Towers],IT Center,Operating,"Barangay Ungka II, Pavia, Iloilo",Pavia,Pavia,PH063036000,Iloilo,PH063000000,Region VI,PH060000000
+93,Cyberscape Alpha,IT Center,Operating," Sapphire and Garnet Roads, Ortigas Center, Pasig City ",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+94,Cyberscape Beta  ,IT Center,Operating,"Topaz and Ruby Roads, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+95,Cyberscape Gamma   ,IT Center,Operating,"Topaz and Ruby Roads, Ortigas Center, Pasig City ",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+96,DADC Economic Zone,Agro-Industrial,Operating,"Barangay Darong, Municipality of Sta. Cruz, Province of Davao del Sur",Municipality of Sta. Cruz,Santa Cruz,PH175111000,Occidental Mindoro,PH175100000,Region IV-B,PH170000000
+97,Daiichi Industrial Park,Manufacturing,Operating,"Maguyam, Silang, Cavite",Silang,Silang,PH042118000,Cavite,PH042100000,Region IV-A,PH040000000
+98,Damosa I.T. Park ,IT Park,Operating,"J.P. Laurel Ave. cor. Angliongto Street, Lanang, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+99,Davao Park District,IT Park,Operating,"Barangay San Antonio, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+100,DBP IT Plaza ,IT Center,Operating,"Barangay Calindagan, Dumaguete, City",City,Dumaguete City,PH074610000,Negros Oriental,PH074600000,Region VII,PH070000000
+101,Diliman IT Building  ,IT Center,Operating,"Commonwealth Avenue, Diliman, Quezon City",Diliman,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+102,DPC Place Building  ,IT Center,Operating,"2322 Chino Roces Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+103,"Eastbay Arts, Recreational and Tourism Zone",Tourism,Operating,"San Roque, Angono & Darangan, Binangonan, Rizal",Binangonan,Binangonan,PH045804000,Rizal,PH045800000,Region IV-A,PH040000000
+104,Eastwood City CyberPark ,IT Park,Operating,"E Rodriguez, Jr. Ave., Bagumbayan, Quezon City ",Bagumbayan,Bagumbayan,PH126501000,Sultan Kudarat,PH126500000,Region XII,PH120000000
+105,ECO Plaza,IT Center,Operating,"2305 Chino Roces Avenue Extension, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+106,Ecofuel Agro-Industrial Ecozone,Agro-Industrial,Operating,"Sta. Filomena, San Mariano, Isabela ",San Mariano,San Mariano,PH023131000,Isabela,PH023100000,Region II,PH020000000
+107,ECOPRIME  ,IT Center,Operating,"32nd Street corner 9th Avenue, Bonifacio Global City, Fort Bonifacio, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+108,Ecotower ,IT Center,Operating,"Lot 5, Block 2, 32nd Street corner 9th Avenue, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+109,EDSA Central IT Center,IT Center,Operating,"EDSA corner United Street, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+110,EDSA Central IT Center 2,IT Center,Operating,"Along United street, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+111,Embarcadero de Legazpi,Tourism,Operating,"Legazpi Port Area, Legaspi City ",Legaspi City,Legazpi City,PH050506000,Albay,PH050500000,Region V,PH050000000
+112,EMI Special Economic Zone,Manufacturing,Operating,"Anabu II, Imus, Cavite",Imus,Imus City,PH042109000,Cavite,PH042100000,Region IV-A,PH040000000
+113,eNGY Tech Building,IT Center,Operating,"H. Cortes Street, Banilad, Mandaue City, Cebu",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+114,eNTEC 2 Building ,IT Center,Operating,"Teresa Avenue, Nepo Commercial Complex, Barangays Sto. Rosario and Cutcut, Angeles City, Pampanga ",Angeles City,Angeles City,PH035401000,Pampanga,PH035400000,Region III,PH030000000
+115,eNTEC Building,IT Center,Operating,"Teresa Ave. cor. Don Juan Ave., Nepo Mart Commercial Complex, Angeles City, Pampanga",Angeles City,Angeles City,PH035401000,Pampanga,PH035400000,Region III,PH030000000
+116,ePLDT Ventus Libertad Building,IT Center,Operating,"418 Arayat Street corner Libertad Street, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+117,EROS Building  ,IT Center,Operating,"Corners Real, Dr. V. Locsin & Cervantes Streets, Brgy. 3, Dumaguete City",Dumaguete City,Dumaguete City,PH074610000,Negros Oriental,PH074600000,Region VII,PH070000000
+118,E-Square Information Technology Park ,IT Park,Operating,"Fort Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+119,Estancia Mall ,IT Center,Operating,"Capitol Commons, Meralco Avenue corner Shaw Boulevard, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+120,Eton Centris ,IT Park,Operating,"EDSA corner Quezon Avenue, Barangay Pinyahan, Diliman District, Quezon City",Diliman District,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+121,Eton Cyberpod Corinthian ,IT Park,Operating,"Ortigas Avenue corner Efipanio Delos Santos Avenue, Barangay Ugong Norte, Quezon City ",Barangay Ugong Norte,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+122,Exportbank Plaza Building,IT Center,Operating,"Exportbank Drive cor. Chino Roces Ave., Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+123,Fairview Terraces Corporate Center ,IT Center,Operating,"Maligaya Road, Fairview, Quezon City",Fairview,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+124,Felcris Centrale ,IT Center,Operating,"Quezon Boulevard, Barangay Bucana, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+125,Fiesta World Mall IT Center,IT Center,Operating,"Barrio Maraouy, Lipa City, Batangas ",Lipa City,Lipa City,PH041014000,Batangas,PH041000000,Region IV-A,PH040000000
+126,Filandia IT Center   ,IT Center,Operating,"Jacinto Extension cor. Quirino Avenue, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+127,Filinvest Cebu Cyberzone,IT Center,Operating,"Salinas Drive, Lahug, Cebu City ",Lahug,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+128,Filinvest Innovation Park [formerly New Clark City-Phase 1],Manufacturing,Operating,"Clark Special Economic Zone, Barangay Aranguren, Capas, Tarlac",Capas,Capas,PH036904000,Tarlac,PH036900000,Region III,PH030000000
+129,Filinvest Technology Park - Calamba,Manufacturing,Operating,"Punta, Burol & Bubuyan, Calamba City,  Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+130,First Cavite Industrial Estate,Manufacturing,Operating,"Langkaan, Dasmariñas, Cavite",Dasmariñas,City of Dasmariñas,PH042106000,Cavite,PH042100000,Region IV-A,PH040000000
+131,First Industrial Township - SEZ,Manufacturing,Operating,"Trapiche, Pagaspas & Baloc-Baloc, Tanauan, Batangas",Tanauan,Tanauan,PH083748000,Leyte,PH083700000,Region VIII,PH080000000
+132,First Oriental Business and Industrial Park,Manufacturing,Operating,"Ilang, Bunawan District, Davao  City",Davao  City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+133,First Philippine Industrial Park ,Manufacturing,Operating,"Barangays Ulango and Laurel, Tanauan City and Sta. Anastacia,  Sto. Tomas, Batangas",Sto. Tomas,Santo Tomas,PH112318000,Davao del Norte,PH112300000,Region XI,PH110000000
+134,First Philippine Industrial Park II,Manufacturing,Operating,"Barangays Sta. Anastacia and San Rafael, Sto. Tomas, Batangas",Sto. Tomas,Santo Tomas,PH112318000,Davao del Norte,PH112300000,Region XI,PH110000000
+135,FLB Corporate Center ,IT Center,Operating,"Arch. Reyes Ave., Cebu Business Park, Mabolo, Cebu City",Mabolo,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+136,Food Terminal Incorporated Special Economic Zone,Manufacturing,Operating,"East Service Road, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+137,Fort Ilocandia Tourism Economic Zone,Tourism,Operating,"Balacad, Laoag City, Ilocos Norte",Ilocos Norte,Laoag City,PH012812000,Ilocos Norte,PH012800000,Region I,PH010000000
+138,GAGFA IT Center   ,IT Center,Operating,"F. Cabahug Street, Barangay Kasambangan, Cebu City",Barangay Kasambangan,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+139,Gateway Business Park ,Manufacturing,Operating,"Javalera, Gen. Trias, Cavite",Gen. Trias,City of General Trias,PH042108000,Cavite,PH042100000,Region IV-A,PH040000000
+140,Gateway Office Tower  ,IT Center,Operating,"Araneta Center, Cubao, Quezon City",Cubao,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+141,Gateway Tower,IT Center,Operating,"Araneta Center, Cubao, Quezon City",Cubao,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+142,Gensan Economic Zone,Manufacturing,Operating,"Barangay Tambler, General Santos City",General Santos City,General Santos City,PH126303000,South Cotabato,PH126300000,Region XII,PH120000000
+143,GLAS Office Development,IT Center,Operating,"Opal Road, cor. Topaz and Ruby Road, Brgy. San Antonio, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+144,Global Trade Center ,IT Center,Operating,"1024 EDSA, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+145,Glorietta 1 BPO  ,IT Center,Operating,"Rizal Drive, Green Street and Hotel Drive, Barangay San Lorenzo, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+146,Glorietta 2 BPO ,IT Center,Operating,"Rizal Drive, Green Street and Hotel Drive, Barangay San Lorenzo, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+147,Glorietta 5  ,IT Center,Operating,"Office Drive, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+148,Golden Gate Business Park-Cavite Export Processing Zone,Manufacturing,Operating,"Brgy. Buenavista, Gen. Trias, Cavite",Gen. Trias,City of General Trias,PH042108000,Cavite,PH042100000,Region IV-A,PH040000000
+149,Golden Mile Business Park,Manufacturing,Operating,"Governor's Drive, Maduya, Carmona, Cavite",Carmona,Carmona,PH042104000,Cavite,PH042100000,Region IV-A,PH040000000
+150,Green Tourism Ecozone - Pangulasian,Tourism,Operating,"Barangay Bebeladan, El Nido, Palawan",Palawan,El Nido,PH175312000,Palawan,PH175300000,Region IV-B,PH170000000
+151,Greenfield Automotive Park,Manufacturing,Operating,"Don Jose, Sta. Rosa City, Laguna",Sta. Rosa City,Santa Rosa,PH034928000,Nueva Ecija,PH034900000,Region III,PH030000000
+152,GT Tower International,IT Center,Operating,"Ayala Ave. cor. H. V. Dela Costa St., Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+153,Hanston Square,IT Center,Operating,"Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+154,Harvester Corporate Center   ,IT Center,Operating,"58 P. Tuazon Boulevard corner 7th and 8th Avenue, Cubao, Quezon City",Cubao,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+155,HDMF-WTCI IT Tower  ,IT Center,Operating,"Mindanao Avenue, Cebu Business Park, Cebu City",Cebu Business Park,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+156,Hermosa Ecozone Industrial Park,Manufacturing,Operating,"Hermosa, Bataan",Bataan,Hermosa,PH030805000,Bataan,PH030800000,Region III,PH030000000
+157,"HGS Cyberpark
+(formerly HTMT Cyber Park)",IT Park,Operating,"86 E. Rodriguez Jr. Avenue, Barangay Ugong Norte, Quezon City",Barangay Ugong Norte,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+158,Hijo Special Economic Zone,Manufacturing,Operating,"Madaum, Tagum City, Davao del Norte",Tagum City,City of Tagum,PH112319000,Davao del Norte,PH112300000,Region XI,PH110000000
+159,Horizon IT Park,IT Park,Operating,"Barangays Sto. Cristo and Kaybanban, San Jose Del Monte City, Bulacan ",San Jose Del Monte City,City of San Jose del Monte,PH031420000,Bulacan,PH031400000,Region III,PH030000000
+160,HPI Corporate Center ,IT Center,Operating,"1026 EDSA, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+161,HVG Arcade IT Park ,IT Park,Operating,"HVG Arcade, Subangdaku, Mandaue City",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+162,Iloilo Business Park,Tourism,Operating,"Old Airport, Iloilo City",Iloilo City,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+163,Iloilo Commercial Development Corp. Building ,IT Center,Operating,"Corner Avacena and Locsin Streets, Barangay North San Jose, Iloilo City",Barangay North San Jose,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+164,Iloilo Gateway Cyberscape,IT Center,Operating,"Barangay Mali-ao, Pavia, Iloilo ",Pavia,Pavia,PH063036000,Iloilo,PH063000000,Region VI,PH060000000
+165,Iloilo Technohub,IT Park,Operating,"Riverside Boardwalk, Barangay San Rafael, Iloilo City",Barangay San Rafael,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+166,Inoza Tower,IT Center,Operating,"Block 32, Lots 8 and 11, 39th and 40th Streets, Bonifacio Global City, Fort Bonifacio, Taguig City ",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+167,Insular Life Building ,IT Center,Operating,"6781 Ayala Avenue corner Paseo de Roxas, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+168,Insular Life Corporate Center  ,IT Center,Operating,"Life Drive, Filinvest Corporate City, Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+169,Irasan-Roxas Zanorte Special Economic Zone,Agro-Industrial,Operating,"Barangay Irasan, Municipality of Roxas, Zamboanga del Norte ",Municipality of Roxas,Roxas City,PH061914000,Capiz,PH061900000,Region VI,PH060000000
+170,I-Square Building,IT Center,Operating,"Meralco Avenue, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+171,Jasaan Misamis Oriental Ecozone,Manufacturing,Operating,"Solana & Luz Banzon, Jasaan, Misamis Oriental",Jasaan,Jasaan,PH104311000,Misamis Oriental,PH104300000,Region X,PH100000000
+172,Jazz IT Center ,IT Center,Operating,"Jupiter Street corner N. Garcia Street, Barangay Bel-Air, Makati City ",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+173,JELP Business Solution Center ,IT Center,Operating,"409 Shaw Boulevard, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+174,JESA Building    ,IT Center,Operating,"90 General Maxilom Avenue, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+175,JGC Philippines Building ,IT Center,Operating,"2109 Prime Street, Madrigal Business Park, Ayala Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+176,JMALL IT Center  ,IT Center,Operating,"A.S. Fortuna Street, Bakilid, Mandaue City, Cebu",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+177,John Hay Special Tourism Economic Zone,Tourism,Operating,"Baguio City, Benguet Province",Benguet Province,Baguio City,PH141102000,Benguet,PH141100000,Cordillera Administrative Region,PH140000000
+178,Jose Panganiban SEZ,Manufacturing,Operating,"Jose Panganiban, Camarines Norte",Camarines Norte,Iba,PH037105000,Zambales,PH037100000,Region III,PH030000000
+179,JY Campos IT Centre,IT Center,Operating,"9th Avenue corner 30th Street, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+180,JY Square IT Center ,IT Center,Operating,"Salinas Drive, Lahug, Cebu City",Lahug,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+181,JY Square IT Center II ,IT Center,Operating,"Salinas Drive, Lahug, Cebu City",Lahug,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+182,JY Square IT Center III ,IT Center,Operating,"Salinas Drive, Lahug, Cebu City",Lahug,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+183,Kamanga Agro-Industrial Economic Zone,Agro-Industrial,Operating,"Brgy. Kamanga, Municipality of Maasim, Province of Sarangani ",Municipality of Maasim,Maasim,PH128004000,Sarangani,PH128000000,Region XII,PH120000000
+184,Keppel Center    ,IT Center,Operating,"Cardinal Rosales Avenue corner Samar Loop, Cebu Business Park, Cebu City",Cebu Business Park,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+185,King’s Court IT Center  ,IT Center,Operating,"2129 Don Chino Roces Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+186,K-Pointe Technology Center  ,IT Center,Operating,"No. 691 Aurora Boulevard, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+187,KRC I.T. Zone ,IT Center,Operating,"Lopez Jaena Street, Subangdaku, Mandaue City, Cebu",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+188,"L & Y Plaza I, L & Y Plaza II, L & Y Plaza III",IT Center,Operating,"120 E. Rodriguez Jr. Avenue corner Ortigas Avenue, Brgy. Ugong, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+189,Laguna International Industrial Park,Manufacturing,Operating,"Ganado & Mamplasan, Biñan City, Laguna",Biñan City,City of Biñan,PH043403000,Laguna,PH043400000,Region IV-A,PH040000000
+190,Laguna Technopark ,Manufacturing,Operating,"Sta. Rosa and Biñan City, Laguna",Laguna,City of Santa Rosa,PH043428000,Laguna,PH043400000,Region IV-A,PH040000000
+191,Laguna Technopark Annex,Manufacturing,Operating,"Barangay Biñan, Biñan City, Laguna ",Biñan City,City of Biñan,PH043403000,Laguna,PH043400000,Region IV-A,PH040000000
+192,Lakeside EvoZone ,IT Park,Operating,"Barangays Don Jose and Sto. Domingo, Sta. Rosa City, Laguna ",Sta. Rosa City,Santa Rosa,PH034928000,Nueva Ecija,PH034900000,Region III,PH030000000
+193,LBRDC - Special Economic Zone [formerly Victoria Wave Special Economic Zone],Manufacturing,Operating,"Malaria, Tala, Caloocan City",Caloocan City,Caloocan City,PH137501000,"NCR, Third District",PH137500000,National Capital Region,PH130000000
+194,Lexmark Plaza,IT Park,Operating,"Cebu Business Park, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+195,Lexmark Plaza III (formerly Creativo IT Center),IT Center,Operating,"Cebu Business Park, Cebu City, Province of Cebu",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+196,Leyte Industrial Development Estate,Manufacturing,Operating,"Isabel, Leyte",Leyte,Leyte,PH083729000,Leyte,PH083700000,Region VIII,PH080000000
+197,Leyte Information Communication Tech. Park ,IT Park,Operating,"Brgy. Pawing, Palo, Leyte",Palo,Palo,PH083739000,Leyte,PH083700000,Region VIII,PH080000000
+198,Leyte Mikyu  Economic Zone,IT Park,Operating,"Pawing, Palo, Leyte",Palo,Palo,PH083739000,Leyte,PH083700000,Region VIII,PH080000000
+199,Light Industry & Science Park I,Manufacturing,Operating,"Diezmo, Cabuyao, Laguna",Cabuyao,Cabuyao City,PH043404000,Laguna,PH043400000,Region IV-A,PH040000000
+200,Light Industry & Science Park II,Manufacturing,Operating,"Real & La Mesa, Calamba City,  Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+201,Light Industry & Science Park III,Manufacturing,Operating,"San Rafael & Sta Anastacia, Sto. Tomas, Batangas",Sto. Tomas,Santo Tomas,PH112318000,Davao del Norte,PH112300000,Region XI,PH110000000
+202,Light Industry & Science Park IV,Manufacturing,Operating,"Barangays Bulihan, Luta Sur, Luta Norte, San Fernando, San Pedro West, and Poblacion, Malvar, Batangas",Malvar,Malvar,PH041017000,Batangas,PH041000000,Region IV-A,PH040000000
+203,Lima Technology Center ,Manufacturing,Operating,"San Lucas, Bugtong na Pulo & Inosluban, Lipa City and Santiago & Payapa, Malvar, Batangas ",Malvar,Malvar,PH041017000,Batangas,PH041000000,Region IV-A,PH040000000
+204,Limketkai Mall Module-2 BPO & Cyberpark Buildin,IT Center,Operating,"Lapasan, Cagayan De Oro City ",Cagayan De Oro City,Cagayan de Oro City,PH104305000,Misamis Oriental,PH104300000,Region X,PH100000000
+205,LinkSy IT Park,IT Park,Operating,"Bantayan, Dumaguete City, Negros Oriental",Dumaguete City,Dumaguete City,PH074610000,Negros Oriental,PH074600000,Region VII,PH070000000
+206,Lopue’s South Square IT Park,IT Park,Operating,"Araneta Street, Barangay Tangub, Bacolod City ",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+207,Lopue's East I. T. Center   ,IT Center,Operating,"Burgos Street coner Hilado National Highway, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+208,LP Information Technology Park,IT Park,Operating,"Jose Romero Sr. Street, Bagacay, Dumaguete City, Negros Oriental",Dumaguete City,Dumaguete City,PH074610000,Negros Oriental,PH074600000,Region VII,PH070000000
+209,Luisa Avenue Square IT Center  ,IT Center,Operating,"Jacinto Extension corner Villamor Street, Davao City ",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+210,Luisita Industrial Park,Manufacturing,Operating,"San Miguel, Tarlac",Tarlac,San Miguel,PH166816000,Surigao del Sur,PH166800000,Region XIII,PH160000000
+211,Lumina Point,IT Center,Operating,"Aguinaldo Highway corner Nueno Avenue, Tanzang Luma 1, Imus, Cavite ",Imus,Imus City,PH042109000,Cavite,PH042100000,Region IV-A,PH040000000
+212,Luxur Plaza ITformation Centre   ,IT Center,Operating,"46 Lizares Avenue, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+213,Maayo Medical,Medical Tourism Center,Operating,"Barangay Alang-alang, Mandaue City, Cebu ",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+214,Mabuhay I.T. Park ,IT Park,Operating,"Barangay Lago, General Santos City",General Santos City,General Santos City,PH126303000,South Cotabato,PH126300000,Region XII,PH120000000
+215,Macroasia Ecozone,Manufacturing,Operating,"Nichols Field, NAIA, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+216,Mactan Economic Zone,Manufacturing,Operating,"Lapu-Lapu City, Mactan, Cebu",Mactan,Lapu-Lapu City,PH072226000,Cebu,PH072200000,Region VII,PH070000000
+217,Mactan Ecozone II,Manufacturing,Operating,"Basak, Lapu-lapu City, Mactan, Cebu",Mactan,Lapu-Lapu City,PH072226000,Cebu,PH072200000,Region VII,PH070000000
+218,Mall of Asia Arena Annex Bldg. – IT Center ,IT Center,Operating,"Coral Way corner J.W. Diokno Boulevard, Mall of Asia Complex, CBP-1A, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+219,Mango Square  ,IT Center,Operating,"Maxilom Avenue corner Juana Osmeña Street, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+220,Manila Harbour Center,Manufacturing,Operating,"District of Tondo, Manila City",Manila City,Tondo I / II,PH133901000,National Capital Region,PH133900000,National Capital Region,PH130000000
+221,Manticao Ecozone Corporation SEZ,Manufacturing,Operating,"Barangay Poblacion, Manticao, Misamis Oriental",Manticao,Manticao,PH104318000,Misamis Oriental,PH104300000,Region X,PH100000000
+222,Maria Cristina Building ,IT Center,Operating,"Along Osmeña Capitol Site, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+223,Market! Market!  ,IT Center,Operating,"Lot-C, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+224,Marvin Plaza Building  ,IT Center,Operating,"2153 Chino Roces Avenue corner Herrera Street, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+225,Matina IT Park,IT Park,Operating,"Mac Arthur Highway, Matina, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+226,McKinley Exchange Corporate Center    ,IT Center,Operating,"McKinley Road corner Epifanio Delos Santos Avenue (EDSA), Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+227,McKinley Hill Cyber Park ,IT Park,Operating,"Fort Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+228,McKinley West,IT Park,Operating,"South Bonifacio District, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+229,MDC 100         ,IT Center,Operating,"E. Rodriguez Jr. Avenue (C-5 Road) cor. Eastwood Avenue, Barangay Bagumbayan, Quezon City",Barangay Bagumbayan,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+230,Mega One Bldg.(formerly PLDT Sampaloc Building),IT Center,Operating,"España Boulevard, Rotonda, Quezon City",Rotonda,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+231,Menarco Tower,IT Center,Operating,"Lot 8, Block 5, 32nd Street, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+232,MetroCas Industrial Estates-Special Economic Zone,Manufacturing,Operating,"Barangay Calibuyo, Tanza, Cavite",Tanza,Tanza,PH042120000,Cavite,PH042100000,Region IV-A,PH040000000
+233,Milestone at Fifth Avenue,IT Center,Operating,"Lot 2, Block 16, 4th and 5th Avenues, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+234,Millennium Industrial Economic Zone,Manufacturing,Operating,"Barangays Calumpang and Tambler, General Santos City, South Cotabato",General Santos City,General Santos City,PH126303000,South Cotabato,PH126300000,Region XII,PH120000000
+235,Misibis Resorts and Estates,Tourism,Operating,"Cagraray Island, Barangay Misibis, Bacacay, Albay",Bacacay,Bacacay,PH050501000,Albay,PH050500000,Region V,PH050000000
+236,MJ Corporate Plaza,IT Center,Operating,"2310 Pasong Tamo Extension, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+237,Monfort Information Technology Building,IT Center,Operating,"22nd Street, Lacson, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+238,Montage [formerly Abiathar Commercial Complex],IT Center,Operating,"Archbishop Reyes Avenue, Cebu City ",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+239,MRI Ecozone,Manufacturing,Operating,"Sabang,  Danao  City, Cebu",Danao  City,Danao City,PH072223000,Cebu,PH072200000,Region VII,PH070000000
+240,MSE Center ,IT Park,Operating,"Ayala Triangle, Ayala Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+241,Multinational Bancorporation Centre  ,IT Center,Operating,"6805 Ayala Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+242,Naga City Technology Park,IT Park,Operating,"Barangay Triangulo, Naga City",Naga City,Naga City,PH051724000,Camarines Sur,PH051700000,Region V,PH050000000
+243,Naga Valley Industrial Park,Manufacturing,Operating,"Barangay Cantao-an, Naga, Cebu",Naga,Naga City,PH051724000,Camarines Sur,PH051700000,Region V,PH050000000
+244,Negros First Cybercentre  ,IT Center,Operating,"Barangay 39, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+245,Neutrinus Information Technology Center  ,IT Center,Operating,"254 Magsaysay Avenue, Baguio City",Baguio City,Baguio City,PH141102000,Benguet,PH141100000,Cordillera Administrative Region,PH140000000
+246,New Jubilee Agro-Industrial Economic Zone,Agro-Industrial,Operating,"Barangay Hilapnitan, Municipality of Baybay, Province of Leyte",Municipality of Baybay,City of Baybay,PH083708000,Leyte,PH083700000,Region VIII,PH080000000
+247,Newport City CyberTourism Zone,Tourism,Operating,"Sales Road corner Andrews Avenue, Villamor Airbase, Pasay City ",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+248,Nex Tower,IT Center,Operating,"6786 Ayala Avenue, Barangay San Lorenzo, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+249,Niscom IT Building   ,IT Center,Operating,"No. 41 Commonwealth Avenue, Barangay Holy Spirit, Quezon City",Barangay Holy Spirit,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+250,Northgate Cyber Zone ,IT Park,Operating,"Filinvest Corporate City, Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+251,NorthLuzon Aero Industrial Park,Manufacturing,Operating,"Barangay Linmansangan, Binalonan, Pangasinan ",Binalonan,Binalonan,PH015512000,Pangasinan,PH015500000,Region I,PH010000000
+252,NYK-TDG I.T. Park,IT Park,Operating,"Knowledge Avenue, Carmel Town, Canlubang, Calamba City, Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+253,Oakridge I.T. Center Towers,IT Center,Operating,"A.S. Fortuna, Banilad, Mandaue City ",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+254,Oakridge Information Technology Center   ,IT Center,Operating,"A.S. Fortuna Street, Banilad, Mandaue City",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+255,Octagon IT Center  ,IT Center,Operating,"San Miguel Avenue, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+256,Okada Resorts (formerly Eagle I Entertainment City),Tourism,Operating,"Barangays Tambo and Dongalo, Parañaque City ",Parañaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+257,One Ayala Avenue,IT Center,Operating,"Epifanio Delos Santos Avenue corner Ayala Avenue, Barangay San Lorenzo, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+258,One Corporate Centre ,IT Center,Operating,"Meralco Avenue corner Julia Vargas Avenue, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+259,One Felicity Center ,IT Center,Operating,"Commonwealth Avenue, Barangay Holy Spirit, Quezon City",Barangay Holy Spirit,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+260,One Global Place   ,IT Center,Operating,"Lot 1, Bock 9, 5th Avenue corner 25th Street, Bonifacio South District, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+261,One Griffinstone,IT Center,Operating,"Commerce Ave. cor. Spectrum, Filinvest Corp. City, Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+262,One Julia Vargas Building  ,IT Center,Operating,"No.1 Julia Vargas Avenue corner Meralco Avenue, Barangay Ugong, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+263,One San Miguel Avenue Condominium   ,IT Center,Operating,"Shaw Boulevard corner San Miguel Avenue, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+264,One Sanparq   ,IT Center,Operating,"San Antonio Park Square, Lacson Street, Mandalagan, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+265,One World Place ,IT Center,Operating,"Block 5, 32nd Street, City Center North, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+266,Orient Square IT Center  ,IT Center,Operating,"Along Emerald Avenue, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+267,Ortigas Technopoint Tower 1&2    ,IT Center,Operating," No. 1, Doña Julia Vargas Street corner Meralco Avenue, Barangay Ugong, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+268,Pacific Information Technology Center   ,IT Center,Operating,"Pascor Drive, Brgy. Sto. Nino, Paranaque City",Paranaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+269,Pacific Star Building   ,IT Center,Operating,"Corners Sen. Gil Puyat and Makati Avenues, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+270,Palayan City Government Center & Central Business Hub,IT Park,Operating,"Barangay Singalat, Palayan City, Nueva Ecija",Nueva Ecija,Palayan City,PH034919000,Nueva Ecija,PH034900000,Region III,PH030000000
+271,Pamalican Island Tourism Ecozone,Tourism,Operating,"Barangay Manamok, Cuyo, Palawan",Palawan,Cuyo,PH175310000,Palawan,PH175300000,Region IV-B,PH170000000
+272,Pampanga Economic Zone,Manufacturing,Operating,"Barangay Pulong Maragul, Angeles City, Pampanga",Angeles City,Angeles City,PH035401000,Pampanga,PH035400000,Region III,PH030000000
+273,Pangasinan Industrial Park II,Manufacturing,Operating,"Alos, Alaminos &  Tagudin, Mabini, Pangasinan",Mabini,Mabini,PH118203000,Compostela Valley,PH118200000,Region XI,PH110000000
+274,PANORAMA  ,IT Center,Operating,"Block 9, City Center North, Fort Bonifacio, Taguig City ",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+275,Panorama TechnoCenter   ,IT Center,Operating,"1029 EDSA, Veterans Village, Project 7, Quezon City ",Project 7,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+276,PBCom Tower  ,IT Center,Operating,"Ayala Avenue cor. Herrera Street, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+277,PDC Information Techno Park,IT Park,Operating,"Barangay Tambubong, San Rafael, Bulacan",San Rafael,San Rafael,PH063042000,Iloilo,PH063000000,Region VI,PH060000000
+278,People's Technology Complex,Manufacturing,Operating,"Maduya, Carmona, Cavite",Carmona,Carmona,PH042104000,Cavite,PH042100000,Region IV-A,PH040000000
+279,Peoplesupport Center IT Building    ,IT Center,Operating,"Amorsolo Street, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+280,Phil. BXT Corp. Tourism Economic Zone,Tourism,Operating,"Barangay Maribago, Lapu-Lapu City",Lapu-Lapu City,Lapu-Lapu City,PH072226000,Cebu,PH072200000,Region VII,PH070000000
+281,Philamlife  I.T. Building  ,IT Center,Operating,"Acacia Avenue, Madrigal Business Park, Brgy. Ayala Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+282,Philamlife IT Tower   ,IT Center,Operating,"8767 Paseo de Roxas, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+283,Philippine Packing Agricultural Export Processing Zone ,Agro-Industrial,Operating,"Bugo, Cagayan De Oro City",Cagayan De Oro City,Cagayan de Oro City,PH104305000,Misamis Oriental,PH104300000,Region X,PH100000000
+284,Philplans Corporate Center  ,IT Center,Operating,"10th Avenue corner Kalayaan Avenue, Bonifacio Triangle, Bonifacio Global City, Taguig City ",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+285,Phividec Industrial Estate-Economic Zone ,Manufacturing,Operating,"Municipalities of Villanueva and Tagoloan, Misamis Oriental ",Misamis Oriental,Tago,PH166818000,Surigao del Sur,PH166800000,Region XIII,PH160000000
+286,Pioneer House Cebu  ,IT Center,Operating,"Lot 8, Blk. 14, Cardinal Rosales Ave., Brgy. Mabolo, Cebu City",Brgy. Mabolo,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+287,Plastic Processing Center SEZ ,Manufacturing,Operating,"Alion and Cabcaben, Mariveles, Bataan",Mariveles,Mariveles,PH030807000,Bataan,PH030800000,Region III,PH030000000
+288,Polaris Center ,IT Center,Operating,"Spectrum Midway, Filinvest Corporate City, Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+289,Pueblo de Oro IT Park ,IT Park,Operating,"Pueblo Business Park, Barangay Upper Carmen, Cagayan de Oro City",Barangay Upper Carmen,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+290,Pueblo de Panay Technopark,IT Park,Operating," Roxas City, Capiz",Capiz,Roxas City,PH061914000,Capiz,PH061900000,Region VI,PH060000000
+291,Q Plaza Building II   ,IT Center,Operating,"Tatlong Kawayan, Barangay Dela Paz, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+292,Quezon Agro-Industrial Zone,Agro-Industrial,Operating,"Barangay San Jose, Quezon, Bukidnon",Quezon,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+293,RBC Sheridan   ,IT Center,Operating,"Corner of United Street and Sheridan Street, Barangay Highway Hills, Mandaluyong City ",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+294,RCBC Plaza  ,IT Center,Operating,"Ayala Ave. cor. Gil Puyat Ave., Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+295,Rio Tuba Export Processing Zone,Manufacturing,Operating,"Rio Tuba, Bataraza, Palawan",Palawan,Bataraza,PH175305000,Palawan,PH175300000,Region IV-B,PH170000000
+296,Robinland IT/BPO Center   ,IT Center,Operating,"Zuellig Ave., Mandaue Reclamation Area, Mandaue City, Province of Cebu",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+297,Robinsons Big R Supercenter Cainta Junction ,IT Center,Operating,"Ortigas Avenue Extension, Barangay Sto. Domingo, Cainta, Rizal",Cainta,Cainta,PH045805000,Rizal,PH045800000,Region IV-A,PH040000000
+298,Robinsons Cybergate Cebu  ,IT Center,Operating,"Don Gil Garcia Street, Barangay Capitol Site, Cebu City",Barangay Capitol Site,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+299,Robinsons Cybergate Center   ,IT Center,Operating,"Araneta Street, Singcang, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+300,Robinsons Cybergate Davao   ,IT Center,Operating,"J.P. Laurel Avenue, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+301,Robinsons Cybergate Naga,IT Center,Operating,"Naga Diversion Road corner Almeda Highway, Barangay Triangulo, Naga City ",Naga City,Naga City,PH051724000,Camarines Sur,PH051700000,Region V,PH050000000
+302,Robinsons CyberPark ,IT Park,Operating,"EDSA corner Pioneer Street, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+303,Robinsons Cyberpark Davao,IT Park,Operating,"J.P. Laurel Avenue, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+304,Robinsons Galleria Cebu ,IT Center,Operating,"General Maxilom Avenue, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+305,Robinsons Luisita  ,IT Center,Operating,"McArthur Highway, San Miguel, Tarlac City, Tarlac ",Tarlac City,City of Tarlac,PH036916000,Tarlac,PH036900000,Region III,PH030000000
+306,Robinsons Luisita 2,IT Center,Operating,"McArthur Highway, San Miguel, Tarlac City ",San Miguel,San Miguel,PH166816000,Surigao del Sur,PH166800000,Region XIII,PH160000000
+307,Robinsons Luisita 3,IT Center,Operating,"McArthur Highway, San Miguel, Tarlac City",San Miguel,San Miguel,PH166816000,Surigao del Sur,PH166800000,Region XIII,PH160000000
+308,Robinsons Place Dasmariñas ,IT Center,Operating,"Aguinaldo Highway corner Governor’s Drive, Sitio Pala-pala, Barangay Sampaloc, Dasmariñas, Cavite",Dasmariñas,City of Dasmariñas,PH042106000,Cavite,PH042100000,Region IV-A,PH040000000
+309,Robinsons Place Ilocos Norte Expansion ,IT Center,Operating,"Valdez Compound, Barangay 1 San Francisco, San Nicolas, Ilocos Norte",Ilocos Norte,San Francisco,PH166719000,Surigao del Norte,PH166700000,Region XIII,PH160000000
+310,Robinsons Place Lipa ,IT Center,Operating,"JP Laurel National Highway, Mataas na Lupa, Lipa City",Lipa City,Lipa City,PH041014000,Batangas,PH041000000,Region IV-A,PH040000000
+311,Robinsons Place Novaliches   ,IT Center,Operating,"1199 Quirino Highway corner Maligaya Road, Barangay Pasong Putik, Novaliches, Quezon City",Novaliches,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+312,Robinsons Place Otis (Manila Gas)    ,IT Center,Operating,"Paz Mendiola Guanzon Street, Paco, Manila",Manila,Paco,PH133911000,"NCR, City of Manila, First District",PH133900000,National Capital Region,PH130000000
+313,Robinsons Place Sta. Rosa  ,IT Center,Operating,"Brgy. Tagapo, Sta. Rosa City, Laguna",Sta. Rosa City,Santa Rosa,PH034928000,Nueva Ecija,PH034900000,Region III,PH030000000
+314,Robinsons Summit Center  ,IT Center,Operating,"6783 Ayala Avenue, Salcedo Village, Barangay Bel-Air, Makati City ",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+315,Robinsons-Equitable Tower  ,IT Center,Operating,"ADB Avenue corner Poveda Street, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+316,Samar Agro-Industrial Economic Zone ,Agro-Industrial,Operating,"Barangay Malajog, Tinambacan District, Calbayog City, Western Samar ",Calbayog City,Calbayog City,PH086003000,Samar,PH086000000,Region VIII,PH080000000
+317,San Carlos Ecozone,Agro-Industrial,Operating,"Palampas and Punao, San Carlos City, Negros Occidental",San Carlos City,San Carlos City,PH064524000,Negros Occidental,PH064500000,Region VI,PH060000000
+318,San Carlos Ecozone II,Manufacturing,Operating,"Barangay Palampas, San Carlos City, Negros Occidental",San Carlos City,San Carlos City,PH064524000,Negros Occidental,PH064500000,Region VI,PH060000000
+319,San Lazaro Tourism and Business Park,Tourism,Operating,"Felix Huertas Street, Sta. Cruz, Manila",Manila,Santa Cruz,PH133905000,National Capital Region,PH133900000,National Capital Region,PH130000000
+320,Sanctuary IT Building  ,IT Center,Operating,"Mac Arthur Highway,Brgy. Nancayasan, Urdaneta City, Pangasinan",Urdaneta City,City of Urdaneta,PH015546000,Pangasinan,PH015500000,Region I,PH010000000
+321,Sarangani Economic Development Zone ,Agro-Industrial,Operating,"Cannery, Polomolok, South Cotabato",Polomolok,Polomolok,PH126312000,South Cotabato,PH126300000,Region XII,PH120000000
+322,Scape  ,IT Center,Operating,"Macapagal Avenue cor. Pearl Drive, Central Business Park 1, Barangay 76, San Rafael, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+323,SDC IT Building  ,IT Center,Operating,"Dr. A. Santos Avenue cor. Soreena Avenue, Parañaque City",Parañaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+324,Seatrium Philippines Marine - SEZ [formerly Keppel Philippines Marine Special Economic Zone],Manufacturing,Operating,"Barangay San Miguel, Bauan, Batangas",Bauan,Bauan,PH041006000,Batangas,PH041000000,Region IV-A,PH040000000
+325,Shaw Center Mall ,IT Center,Operating,"Shaw Boulevard cor. Nueve de Pebrero Street, Barangay Addition Hills, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+326,Silver City  ,IT Center,Operating,"Frontera Verde Drive, Frontera Verde, Ortigas Avenue, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+327,Silver City 2 & 3  ,IT Center,Operating,"Along Frontera Verde Drive, Frontera Verde, E. Rodriguez Jr. Avenue, Ugong, Pasig City ",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+328,Silver City 5 [formerly Transcom Center]  ,IT Center,Operating,"C-5 corner Las Fiestas Road, Frontera Verde, Pasig City ",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+329,Skytech IT Park (Mabalacat),IT Park,Operating,"Barangay Camachiles, Mabalacat, Pampanga",Mabalacat,Mabalacat City,PH035409000,Pampanga,PH035400000,Region III,PH030000000
+330,SLC Building,IT Center,Operating,"6797 Ayala Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+331,SM Baguio Cyberzone Building  ,IT Center,Operating,"Harrison Road, Baguio City, Benguet Province",Baguio City,Baguio City,PH141102000,Benguet,PH141100000,Cordillera Administrative Region,PH140000000
+332,SM BF – Parañaque IT Center  ,IT Center,Operating,"Dr. A. Santos Avenue corner President’s Avenue, Barangay BF, Parañaque City ",Parañaque City,City of Parañaque,PH137604000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+333,SM City Clark IT Park,IT Park,Operating,"M. A. Roxas Highway, Malabanias, Angeles City ",Angeles City,Angeles City,PH035401000,Pampanga,PH035400000,Region III,PH030000000
+334,SM City Fairview – Annex II   ,IT Center,Operating,"Regalado Avenue corner Qurino Hi-way, Barangay Pasong Putik, Novaliches, Quezon City",Novaliches,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+335,SM City Fairview - BPO Towers,IT Center,Operating,"Quirino Highway corner Regalado Avenue, Barangay Pasong Putik, Novaliches, Quezon City",Novaliches,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+336,SM City Lipa    ,IT Center,Operating,"Ayala High, Lipa City, Batangas",Lipa City,Lipa City,PH041014000,Batangas,PH041000000,Region IV-A,PH040000000
+337,SM City North EDSA Complex,IT Park,Operating,"EDSA corner North Avenue, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+338,SM City Pampanga ,IT Center,Operating,"City of San Fernando and Municipality of Mexico, Pampanga",Pampanga,San Fernando,PH175913000,Romblon,PH175900000,Region IV-B,PH170000000
+339,SM City San Mateo,IT Center,Operating,"General Luna Avenue, Barangay Ampid 1, San Mateo, Rizal",San Mateo,San Mateo,PH045811000,Rizal,PH045800000,Region IV-A,PH040000000
+340,SM Cyber West Avenue   ,IT Center,Operating,"EDSA corner West Avenue and Bulacan Streets, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+341,SM iCity 2 ,IT Park,Operating,"SM Central Business Park, Bay City, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+342,SM iCity 3,IT Park,Operating,"SM Central Business Park 1-A, Mall of Asia Complex, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+343,SM Lanang Premier IT Center,IT Center,Operating,"J.P. Laurel Avenue, Barangay San Antonio, Agdao District, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+344,SM Makati Cyber Zone 2 Building,IT Center,Operating,"Gil Puyat Avenue corner Zodiac and Jupiter Streets, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+345,SM Makati Cyberzone Building   ,IT Center,Operating,"69 Jupiter Street, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+346,SM Megamall Building D IT Center  ,IT Center,Operating,"Barangay Wack-Wack, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+347,SM Megamall I.T. Center  ,IT Center,Operating,"Brgy. Wack-Wack, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+348,SM Mezza Strip IT Center  ,IT Center,Operating,"Aurora Boulevard corner Araneta Avenue, Barangay Doña Imelda, Quezon City",Barangay Doña Imelda,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+349,SM Strata [formerly SM City Iloilo BPO Tower],IT Center,Operating,"Along Benigno Aquino Avenue, Mandurriao, Iloilo City",Mandurriao,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+350,SMDM IT Center  ,IT Center,Operating,"Sitio Pala-Pala, Barangay Sampaloc 1, Dasmariñas City, Cavite",Dasmariñas City,City of Dasmariñas,PH042106000,Cavite,PH042100000,Region IV-A,PH040000000
+351,SMMS IT Center  ,IT Center,Operating,"Barangay Mayamot, Marcos Hi-way, Antipolo City ",Antipolo City,City of Antipolo,PH045802000,Rizal,PH045800000,Region IV-A,PH040000000
+352,SMPIC Special Economic Zone ,Manufacturing,Operating,"Barangay Paciano Rizal, Calamba City, Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+353,SMTT IT Park,IT Park,Operating,"Manila East Road, Barangay Dolores, Taytay, Rizal",Taytay,Taytay,PH175320000,Palawan,PH175300000,Region IV-B,PH170000000
+354,Solaris One (formerly Dela Rosa E-Services Building),IT Center,Operating,"Dela Rosa Street, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+355,Southgate Towers  [formerly Alphaland Southgate Towers],IT Center,Operating,"2258 Pasong Tamo Extension corner EDSA, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+356,SouthPark Corporate Center,IT Center,Operating,"Along National Road, Barangay Alabang, Muntinlupa City ",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+357,Southwoods Mall  ,IT Center,Operating,"Barangay Halang, Soro-Soro, San Francisco, Biñan, Laguna ",Biñan,City of Biñan,PH043403000,Laguna,PH043400000,Region IV-A,PH040000000
+358,Spark Place  ,IT Center,Operating,"P. Tuazon corner 10th Avenue, Cubao, Quezon City ",Cubao,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+359,SRC Allah Valley Economic Development Zone,Agro-Industrial,Operating,"Tubi-allah, Surallah, South Cotabato ",Surallah,Surallah,PH126313000,South Cotabato,PH126300000,Region XII,PH120000000
+360,SRC Calumpang Economic Development Zone,Agro-Industrial,Operating,"Calumpang, General Santos City",General Santos City,General Santos City,PH126303000,South Cotabato,PH126300000,Region XII,PH120000000
+361,SRC Upper Klinan Economic Development Zone,Agro-Industrial,Operating,"Upper Klinan, Polomolok, South Cotabato",Polomolok,Polomolok,PH126312000,South Cotabato,PH126300000,Region XII,PH120000000
+362,St. Frances Cabrini Medical Tourism Park,Medical Tourism Park,Operating,"Maharlika Highway, Sto. Tomas, Batangas",Sto. Tomas,Santo Tomas,PH112318000,Davao del Norte,PH112300000,Region XI,PH110000000
+363,St. Francis Square  ,IT Center,Operating,"J. Vargas cor. Bank Drive, Ortigas Center, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+364,St. Luke’s Medical Center Global City,Medical Tourism Center,Operating,"Rizal Drive Corner 5th Avenue and 32nd Street, Fort Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+365,Sta. Maria Industrial Park,Manufacturing,Operating,"Bulac, Sta. Maria, Bulacan",Sta. Maria,Santa Maria,PH175917000,Romblon,PH175900000,Region IV-B,PH170000000
+366,Sta. Rosa Commercial IT Park ,IT Park,Operating,"Barrio San Jose, Sta. Rosa City, Laguna",Sta. Rosa City,Santa Rosa,PH034928000,Nueva Ecija,PH034900000,Region III,PH030000000
+367,Subic Shipyard Special Economic Zone,Manufacturing,Operating,"Cabangaan Point, Subic, Zambales",Subic,Subic,PH037114000,Zambales,PH037100000,Region III,PH030000000
+368,Summit One Office Tower ,IT Center,Operating,"Shaw Boulevard, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+369,Sun Plaza      ,IT Center,Operating,"Princeton Street corner Shaw Boulevard, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+370,Sunnymede IT Center  ,IT Center,Operating,"1614 Quezon Avenue, Quezon City ",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+371,Suntech iPark ,IT Park,Operating,"Lancaster Estates, Imus, Cavite",Imus,Imus City,PH042109000,Cavite,PH042100000,Region IV-A,PH040000000
+372,Suntrust Ecotown Tanza,Manufacturing,Operating,"Sahud-Ulan, Tanza, Cavite",Tanza,Tanza,PH042120000,Cavite,PH042100000,Region IV-A,PH040000000
+373,Supima eCircle ,IT Park,Operating,"Malhacan Road, Malhacan, Mecauayan, Bulacan",Mecauayan,City of Meycauayan,PH031412000,Bulacan,PH031400000,Region III,PH030000000
+374,Synergis IT Center ,IT Center,Operating,"F. Cabahug Street, Kasambangan, Cebu City",Kasambangan,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+375,T.U. Building,IT Center,Operating,"Lacson Street corner B.S. Aquino Drive, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+376,Tabangao Special Economic Zone,Manufacturing,Operating,"Tabangao,  Batangas",Batangas,Batangas City,PH041005000,Batangas,PH041000000,Region IV-A,PH040000000
+377,Taganito Special Economic Zone,Manufacturing,Operating,"Barangays Cagdianao, Hayanggabon, and Taganito, Municipality of Claver, Province of Surigao Del Norte",Province of Surigao Del Norte,Anao,PH036901000,Tarlac,PH036900000,Region III,PH030000000
+378,Tagbilaran Uptown IT Hub,IT Park,Operating,"Raja Sikatuna Avenue, Dampas District, Tagbilaran City, Bohol",Tagbilaran City,Tagbilaran City,PH071242000,Bohol,PH071200000,Region VII,PH070000000
+379,Tarlac Provincial IT Park II,IT Park,Operating,"Brgy. Tibag, Tarlac City",Tarlac City,City of Tarlac,PH036916000,Tarlac,PH036900000,Region III,PH030000000
+380,TDG Innovation and Global Business Solutions Center,IT Center,Operating,"AFP-RSBS Compound, Km. 12 East Service Road, C5, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+381,TechZone Building ,IT Center,Operating,"Sen. Gil Puyat Avenue, Makati City ",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+382,TECO Industrial Park,Manufacturing,Operating,"Bundagul and Paralayunan, Mabalacat, Pampanga",Mabalacat,Mabalacat City,PH035409000,Pampanga,PH035400000,Region III,PH030000000
+383,The 30th Corporate Center,IT Center,Operating,"Meralco Avenue corner St. Paul Road, Barangay Ugong, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+384,The Annex-SM City Davao IT Center   ,IT Center,Operating,"Quimpo Boulevard, Matina, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+385,The Block IT Park ,IT Park,Operating,"Villamonte, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+386,The Discovery Center  ,IT Center,Operating,"25 ADB Avenue, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+387,The Enterprise Center  ,IT Center,Operating,"6766 Ayala Avenue cor. Paseo de Roxas, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+388,The Facilities Centre,IT Center,Operating,"548 Shaw Boulevard, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+389,The Finance Centre,IT Center,Operating,"Block 55, 26th St. corner 9th Avenue, Bonifacio South District, Bonifacio Global City, Taguig City ",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+390,The Globe Tower Cebu (formerly Innove IT Plaza) ,IT Center,Operating,"Samar Loop cor. Panay Road, Cebu Business Park, Cebu City",Cebu Business Park,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+391,The Mactan Newtown,Tourism,Operating,"Barangay Mactan, Lapu-Lapu City, Cebu",Lapu-Lapu City,Lapu-Lapu City,PH072226000,Cebu,PH072200000,Region VII,PH070000000
+392,The North Park ,IT Center,Operating,"Barangay Alang-Alang, Mandaue City",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+393,The Paragon Corporate Centre,IT Center,Operating,"Lot 6, Industry St., Madrigal Business Park, Ayala Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+394,The Rockwell Business Center,IT Park,Operating,"Block 4, Meralco Center, Barangay Ugong, Ortigas Avenue, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+395,The VYV   ,IT Center,Operating,"Valdez Center, San Nicolas, Ilocos Norte",Ilocos Norte,San Nicolas,PH133904000,"NCR, City of Manila, First District",PH133900000,National Capital Region,PH130000000
+396,Tower 6789 ,IT Center,Operating,"Ayala Avenue, Barangay Bel-Air, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+397,Toyota-SEZ formerly Toyota Sta. Rosa (Laguna)  Special Economic Zone],Manufacturing,Operating,"Pulong Sta. Cruz, Sta. Rosa City, Laguna",Sta. Rosa City,Santa Rosa,PH034928000,Nueva Ecija,PH034900000,Region III,PH030000000
+398,Trafalgar Plaza  ,IT Center,Operating,"105 H. V. de la Costa Street, Salcedo Village, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+399,Transcom Center Bacolod   ,IT Center,Operating,"Araneta Street, Barangay Tangub, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+400,Twenty-five Seven McKinley  ,IT Center,Operating,"7th Avenue corner 25th St., Bonifacio Global City, Fort Bonifacio, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+401,Twenty-four Seven McKinley ,IT Center,Operating,"7th Avenue corner 24th St., Fort Bonifacio, Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+402,Two Sanparq ,IT Center,Operating,"San Antonio Park Square, Lacson Street, Mandalagan, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+403,UnionBank Plaza ,IT Center,Operating,"Meralco Avenue cor. Onyx Street, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+404,UP Science And Technology Park (North) ,IT Park,Operating,"Commonwealth  Avenue, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+405,UP Town Corporate Center,IT Center,Operating,"UP Town Center, Katipunan Avenue, Barangay UP Campus, Quezon City ",Barangay UP Campus,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+406,Uptown Bonifacio,IT Park,Operating,"North Bonifacio District, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+407,Valencia Special Economic Zone,Agro-Industrial,Operating,"Barangay Palinpinon, Municipality of Valencia, Province of Negros Oriental",Municipality of Valencia,Valencia,PH074623000,Negros Oriental,PH074600000,Region VII,PH070000000
+408,V-Corporate Centre  ,IT Center,Operating,"Along L.P. Leviste Street (formerly Alfaro Street), Salcedo Village, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+409,Venvi IT Hub,IT Park,Operating," Valdez Center, San Nicolas, Ilocos Norte",Ilocos Norte,San Nicolas,PH133904000,"NCR, City of Manila, First District",PH133900000,National Capital Region,PH130000000
+410,Vertis North IT Park,IT Park,Operating,"EDSA, North Triangle, Quezon City ",North Triangle,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+411,Villa Angela Techno Park,IT Park,Operating,"Don Carlos Hilado Avenue corner F. Gonzaga Avenue, Bacolod City ",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+412,Vista Hub  ,IT Center,Operating,"Lot 5 & 6, 21st Drive Bonifacio Global City, Taguig ",Taguig,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+413,Vista Mall Bataan (BPO) [formerly Starmall Bataan (BPO)],IT Center,Operating,"Roman Highway, Barangay Cupang, Balanga, Bataan ",Balanga,City of Balanga,PH030803000,Bataan,PH030800000,Region III,PH030000000
+414,Vistahub BPO Molino,IT Center,Operating,"Daang Hari Road, Molino IV, Bacoor City, Cavite",Bacoor City,Bacoor City,PH042103000,Cavite,PH042100000,Region IV-A,PH040000000
+415,Vitro Internet Data Center Building  ,IT Center,Operating,"Carlos P. Garcia (C5) corner Danny Floor  Street, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+416,W City Center ,IT Center,Operating,"7th Avenue corner 30th Street, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+417,W Fifth Avenue    ,IT Center,Operating,"Block 1, 5th Avenue, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+418,W North  ,IT Center,Operating,"34th Street, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+419,Waltermart-North EDSA ,IT Center,Operating,"Epifanio Delos Santos Avenue, Barangay Veterans Village, Quezon City",Barangay Veterans Village,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+420,West Cebu Industrial Park,Manufacturing,Operating,"Arpili & Buanoy, Balamban, Cebu ",Balamban,Balamban,PH072208000,Cebu,PH072200000,Region VII,PH070000000
+421,Worldwide Corporate Center  ,IT Center,Operating,"Shaw Boulevard, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+422,Wynsum Corporate Plaza IT Building ,IT Center,Operating,"Along Emerald Avenue, Ortigas Center, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+423,Xentromall Batangas,IT Center,Operating,"Diversion Road, Alangilan, Batangas City",Alangilan,Batangas City,PH041005000,Batangas,PH041000000,Region IV-A,PH040000000
+424,YTMI Realty Special Economic Zone,Manufacturing,Operating,"Brgy. Makiling, Calamba City,  Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+425,YY Star DAS Information Technology Center ,IT Center,Operating,"Barangay Bagacay, Dumaguete City, Negros Oriental",Dumaguete City,Dumaguete City,PH074610000,Negros Oriental,PH074600000,Region VII,PH070000000
+426,Zuellig Building  ,IT Center,Operating,"Paseo de Roxas corner Makati Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+427,8 Rockwell,IT Center,Not Yet Operating,"Block 9, Rockwell Center, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+428,A57 Techno Park,IT Park,Not Yet Operating,"Barangay Don Martin Marundan, Mati City, Davao Oriental ",Mati City,City of Mati,PH112509000,Davao Oriental,PH112500000,Region XI,PH110000000
+429,Abanao Square,IT Center,Not Yet Operating," Abanao corner Zandueta Streets, Baguio City",Baguio City,Baguio City,PH141102000,Benguet,PH141100000,Cordillera Administrative Region,PH140000000
+430,Abra Agro-Industrial Center,Manufacturing,Not Yet Operating,"Gadanni, Tayum, Abra",Tayum,Tayum,PH140124000,Abra,PH140100000,Cordillera Administrative Region,PH140000000
+431,ACI IT Business Centre,IT Center,Not Yet Operating,"J. P. Laurel corner Inigo Streets, Bajada Highway, Davao City ",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+432,Aeon Towers   ,IT Center,Not Yet Operating,"J.P. Laurel Avenue, Barangay 20-B, Bajada, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+433,AIU Centre  ,IT Center,Not Yet Operating,"Lacson Street, Mandalagan, Bacolod City ",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+434,Amigo Mall   ,IT Center,Not Yet Operating,"Corner Iznart and Delgado Streets, Iloilo City",Iloilo City,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+435,Amihan Woodlands Township,Manufacturing,Not Yet Operating,"Daja Daku & Taglawigan, San Isidro & Jubay, Calubian, Leyte",Calubian,Calubian,PH083713000,Leyte,PH083700000,Region VIII,PH080000000
+436,ArcoVia City,IT Park,Not Yet Operating,"E. Rodriguez Jr. Avenue, Ugong, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+437,Aurora Tower,IT Center,Not Yet Operating,"Aurora Boulevard cor. General Aguinaldo Avenue, Araneta Center, Cubao, Quezon City",Cubao,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+438,Ayala Bacolod Capitol Corporate Center,IT Center,Not Yet Operating,"North Capitol Road corner Aguinaldo Street, Barangay 4, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+439,Ayala de Zamboanga Industrial Park ,Manufacturing,Not Yet Operating,"Ayala, Zamboanga City",Zamboanga City,Zamboanga City,PH097332000,Zamboanga del Sur,PH097300000,Region IX,PH090000000
+440,Bacolod IT Park ,IT Park,Not Yet Operating,"Barangay Estefania, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+441,Bacolod-Silay Economic Zone and Technopark,Manufacturing,Not Yet Operating,"Barangay Bagtic, Silay City, Negros Occidental",Silay City,Silay City,PH064526000,Negros Occidental,PH064500000,Region VI,PH060000000
+442,"BatStateU Knowledge, Innovation and Science Technology Park",IT Park,Not Yet Operating,"Barangay Alangilan, Batangas City, Batangas",Batangas City,Batangas City,PH041005000,Batangas,PH041000000,Region IV-A,PH040000000
+443,Bayawan City Information Technology Park,IT Park,Not Yet Operating,"Barangay Villareal, Bayawan City, Negros Oriental",Bayawan City,City of Bayawan,PH074606000,Negros Oriental,PH074600000,Region VII,PH070000000
+444,Bench City Center,IT Center,Not Yet Operating,"Lot 2 and 3, Block 5, City Center, North Bonifacio Global City, Taguig City ",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+445,BEN-LOR I.T. Center,IT Center,Not Yet Operating,"Quezon Avenue, Barangay Paligsahan, Quezon City ",Barangay Paligsahan,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+446,Bonifacio Business Park,IT Park,Not Yet Operating,"F. Cabahug Street, Barangay Kasambagan, Cebu City ",Barangay Kasambagan,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+447,Camarines Sur Tourism Park,Tourism,Not Yet Operating,"Capitol Complex, Cadlan, Pili and Maycatmon, Milaor, Camarines Sur",Milaor,Milaor,PH051721000,Camarines Sur,PH051700000,Region V,PH050000000
+448,Cash and Carry Mall ,IT Center,Not Yet Operating,"South Superhighway Corner Emilia & Filmore Streets, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+449,Cavite Eco-Industrial Estate,Manufacturing,Not Yet Operating,"Pasong Kawayan II, Gen. Trias, Cavite",Gen. Trias,City of General Trias,PH042108000,Cavite,PH042100000,Region IV-A,PH040000000
+450,CB Mall IT Center  ,IT Center,Not Yet Operating,"Mc Arthur Highway, Nancayasan, Urdaneta City, Pangasinan",Urdaneta City,City of Urdaneta,PH015546000,Pangasinan,PH015500000,Region I,PH010000000
+451,CBC Asia Technozone,IT Center,Not Yet Operating,"Emilio Aguinaldo Highway, Barangay Talaba VII, Bacoor City, Cavite ",Bacoor City,Bacoor City,PH042103000,Cavite,PH042100000,Region IV-A,PH040000000
+452,CIIF Agro-Industrial Park – Legazpi ,Agro-Industrial,Not Yet Operating,"Barangay 47, Peñaranda Extension, Legaspi City, Albay ",Legaspi City,Legazpi City,PH050506000,Albay,PH050500000,Region V,PH050000000
+453,Circuit Corporate Center 1 ,IT Center,Not Yet Operating,"Circuit Makati (formerly known as Sta. Ana Racetrack), Barangay Carmona, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+454,Circuit Corporate Center 2 ,IT Center,Not Yet Operating,"Circuit Makati (formerly known as Sta. Ana Racetrack), Barangay Carmona, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+455,Connecticut Arcade ,IT Center,Not Yet Operating,"Connecticut Street, Greenhills Shopping Center, San Juan City",San Juan City,San Juan,PH140122000,Abra,PH140100000,Cordillera Administrative Region,PH140000000
+456,Convergys IT Building  ,IT Center,Not Yet Operating,"Ayala Avenue corner Salcedo Street, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+457,CyberBayan IT Park,IT Park,Not Yet Operating,"Sumulong Hi-way, Barrio Sto. Niño, Marikina City",Marikina City,City of Marikina,PH137402000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+458,Cybergate Galleria,IT Center,Not Yet Operating,"General Maxillom Avenue, Cebu City",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+459,DASOLand: A Family Adventure and Leisure Park,Tourism,Not Yet Operating,"Barangay San Vicente, Dasol, Pangasinan",Dasol,Dasol,PH015519000,Pangasinan,PH015500000,Region I,PH010000000
+460,Davao del Sur Industrial Economic Zone,Manufacturing,Not Yet Operating,"Along Diversion Road, Barangay Cogon, Digos City, Davao del Sur ",Digos City,City of Digos,PH112403000,Davao del Sur,PH112400000,Region XI,PH110000000
+461,Davao Lioc Kui Fraternity Building,IT Center,Not Yet Operating,"16 Sobrecarey Street corner Lapu-lapu Street, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+462,DG3 I. T. Center ,IT Center,Not Yet Operating,"72 N. Escario St. corner F. Ramos Extension, Capitol Site, Cebu City",Capitol Site,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+463,DRRC Information Technology Park,IT Park,Not Yet Operating,"K44-45 Mac Arthur Highway, Barangay Longos, Malolos City, Bulacan ",Malolos City,City of Malolos,PH031410000,Bulacan,PH031400000,Region III,PH030000000
+464,East Cyber Gate,IT Center,Not Yet Operating,"169 EDSA, Manduyong City",Manduyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+465,East Gate Business Center,IT Center,Not Yet Operating,"Barangay Mayamot, Marcos Highway, Antipolo City",Antipolo City,City of Antipolo,PH045802000,Rizal,PH045800000,Region IV-A,PH040000000
+466,Eastern Visayas Regional Growth Center,Manufacturing,Not Yet Operating,"Tagpuro, San Isidro, New Kawayan, Sto. Niño, Tacloban City, Leyte",Tacloban City,Tacloban City,PH083747000,Leyte,PH083700000,Region VIII,PH080000000
+467,ECCO 4 Building,IT Center,Not Yet Operating,"Residence  Section ""A"", Military Cut-Off, Baguio City",Baguio City,Baguio City,PH141102000,Benguet,PH141100000,Cordillera Administrative Region,PH140000000
+468,Ecocentrum BPO/IT Park,IT Park,Not Yet Operating,"Halang, Biñan City, Laguna",Biñan City,City of Biñan,PH043403000,Laguna,PH043400000,Region IV-A,PH040000000
+469,"Eco-Tourism of Cabatuan, Iloilo",Tourism,Not Yet Operating,"Cabatuan, Iloilo",Iloilo,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+470,EDSA Grand Residences  ,IT Center,Not Yet Operating,"EDSA corner Corregidor Street, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+471,ePLDT Ventus Jupiter Building,IT Center,Not Yet Operating,"No. 222-224 Nicanor Garcia Street corner Jupiter Street, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+472,Eugenio Lopez Jr. Communication Center  ,IT Center,Not Yet Operating,"Mother Ignacia Avenue cor. Sgt. Esguerra St., Diliman. Quezon  City",Diliman. Quezon  City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+473,Federated IT Park ,IT Park,Not Yet Operating,"Sacsac, Bacong, Negros Oriental",Bacong,Bacong,PH074603000,Negros Oriental,PH074600000,Region VII,PH070000000
+474,Federated IT Park II,IT Park,Not Yet Operating,"Barangay Looc, Sibulan, Negros Oriental",Sibulan,Sibulan,PH074620000,Negros Oriental,PH074600000,Region VII,PH070000000
+475,Felcris Centrale IT Park,IT Park,Not Yet Operating,"Quimpo Boulevard, Barangay 40-D, Davao City",Davao City,Davao City,PH112402000,Davao del Sur,PH112400000,Region XI,PH110000000
+476,Fil-Estate Industrial Park,Manufacturing,Not Yet Operating,"Trece Martirez & Tanza, Cavite",Cavite,Cavite City,PH042105000,Cavite,PH042100000,Region IV-A,PH040000000
+477,Filinvest EDSA Building  ,IT Center,Not Yet Operating,"167 EDSA, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+478,First Batangas Industrial Park,Manufacturing,Not Yet Operating,"Mang-hinao & Balayong, Bauan, Batangas",Bauan,Bauan,PH041006000,Batangas,PH041000000,Region IV-A,PH040000000
+479,First Bulacan Business Park,IT Park,Not Yet Operating,"Barangays Santor and Balite, Malolos City, Bulacan",Malolos City,City of Malolos,PH031410000,Bulacan,PH031400000,Region III,PH030000000
+480,First Bulacan IT Park ,IT Park,Not Yet Operating,"McArthur Highway, Abangan Norte, Marilao, Bulacan",Marilao,Marilao,PH031411000,Bulacan,PH031400000,Region III,PH030000000
+481,First Philippine Industrial Park III-Special Economic Zone ,Manufacturing,Not Yet Operating,"Barangays Patay Bata and Pantay Matanda, Tanauan City, Batangas ",Tanauan City,Tanauan,PH083748000,Leyte,PH083700000,Region VIII,PH080000000
+482,Fishermall     ,IT Center,Not Yet Operating,"Quezon Avenue corner Roosevelt Avenue, Barangay Sta. Cruz, Quezon City",Barangay Sta. Cruz,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+483,Foodport Processing Zone,Agro-Industrial,Not Yet Operating,"Barangay Tambler, General Santos City",General Santos City,General Santos City,PH126303000,South Cotabato,PH126300000,Region XII,PH120000000
+484,Garden Plaza   ,IT Center,Not Yet Operating,"Garden Villas 3, Barangay Ibaba, Sta. Rosa City, Laguna",Sta. Rosa City,Santa Rosa,PH034928000,Nueva Ecija,PH034900000,Region III,PH030000000
+485,Georgetown Cybermall IT Building  ,IT Center,Not Yet Operating,"R.N. Pelaez Boulevard, Kauswagan, Cagayan de Oro City",Kauswagan,Kauswagan,PH103507000,Lanao del Norte,PH103500000,Region X,PH100000000
+486,Gernarine Information Technology Center ,IT Center,Not Yet Operating,"Alternate Road, Legaspi City, Albay",Legaspi City,Legazpi City,PH050506000,Albay,PH050500000,Region V,PH050000000
+487,GGVPI IT Zone ,IT Center,Not Yet Operating,"168 Ouano Avenue, Mandaue Reclamation Area, Mandaue City, Cebu",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+488,Global Industrial/Maritime Complex,Manufacturing,Not Yet Operating,"Larap, Jose Panganiban, Camarines Norte",Camarines Norte,Iba,PH037105000,Zambales,PH037100000,Region III,PH030000000
+489,Goodland I.T. Center ,IT Center,Not Yet Operating,"377 Sen. Gil Puyat Avenue, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+490,Grand Cenia Hotel and Residences  ,IT Center,Not Yet Operating,"Archbishop Reyes Avenue corner Apitong Street, Barangay Camputhaw, Cebu City",Barangay Camputhaw,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+491,Grand Tower Cebu,IT Center,Not Yet Operating,"M. Logarta Avenue corner Kaoshiong Street, North Reclamation Area, Cebu City",North Reclamation Area,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+492,GST Iloilo Corporate Center,IT Center,Not Yet Operating,"Quezon Street, Barangay Sampaguita, Iloilo City ",Barangay Sampaguita,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+493,GT Times Square Cebu ,IT Center,Not Yet Operating,"J. Llorente corner Don Mariano Cui Street, Capitol Site, Cebu City",Capitol Site,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+494,HANN Lux Lifestyle Resort,Manufacturing,Not Yet Operating,"Clark Special Economic Zone, Barangay Aranguren, Capas, Tarlac ",Capas,Capas,PH036904000,Tarlac,PH036900000,Region III,PH030000000
+495,Hi Point Information Technology Tower 1 ,IT Center,Not Yet Operating,"Omapad Road, Opao, Mandaue City ",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+496,Hi Point Information Technology Tower 2  ,IT Center,Not Yet Operating,"Omapad Road, Opao, Mandaue City ",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+497,Hi Point Information Technology Tower 3  ,IT Center,Not Yet Operating,"Omapad Road, Opao, Mandaue City ",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+498,Island Cove Tourism Economic Zone ,Tourism,Not Yet Operating,"Covelandia Road, Binakayan, Kawit, Cavite",Kawit,Kawit,PH042111000,Cavite,PH042100000,Region IV-A,PH040000000
+499,ITC Ecozone,Agro-Industrial,Not Yet Operating,"Purok 2, Lumbocan, Butuan City",Butuan City,Butuan City,PH160202000,Agusan del Norte,PH160200000,Region XIII,PH160000000
+500,Jackman Plaza - I.T. Center  ,IT Center,Not Yet Operating,"EDSA, Muñoz, Quezon City",Muñoz,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+501,JEG Tower,IT Center,Not Yet Operating,"Archbishop Reyes corner Acacia Streets, Barangay Camputhaw, Cebu City",Barangay Camputhaw,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+502,Juan Luna Building  ,IT Center,Not Yet Operating,"120 Juan Luna St., Binondo, Manila",Manila,Binondo,PH133902000,"NCR, City of Manila, First District",PH133900000,National Capital Region,PH130000000
+503,Kayumanggi Center ,IT Center,Not Yet Operating,"Commonwealth and Luzon Avenue, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+504,Kelly Special Economic Zone,Manufacturing,Not Yet Operating,"Kelly, Tuding & Gumatdang, Itogon, Benguet",Itogon,Itogon,PH141106000,Benguet,PH141100000,Cordillera Administrative Region,PH140000000
+505,LB Centtro   ,IT Center,Not Yet Operating," Barangay Batong Malake, Los Baños, Laguna",Los Baños,Los Baños,PH043411000,Laguna,PH043400000,Region IV-A,PH040000000
+506,Legaspi City Special Economic Zone,Manufacturing,Not Yet Operating,"Sitio Caridad, Banquerohan, Legaspi City, Albay",Legaspi City,Legazpi City,PH050506000,Albay,PH050500000,Region V,PH050000000
+507,Libran House IT Center,IT Center,Not Yet Operating,"144 Legaspi Street, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+508,Limketkai IT Center ,IT Center,Not Yet Operating,"Lapasan, Cagayan de Oro City",Cagayan de Oro City,Cagayan de Oro City,PH104305000,Misamis Oriental,PH104300000,Region X,PH100000000
+509,Lopue’s Mandalagan IT Center   ,IT Center,Not Yet Operating,"Lacson Street, Barangay Mandalangan, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+510,Lopue's San Sebastian  I.T. Center  ,IT Center,Not Yet Operating,"Corner Araneta and San Sebastian Streets, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+511,MacroAsia Cebu Special Ecozone,Manufacturing,Not Yet Operating,"Mactan Cebu International Airport, Lapu-Lapu City, Cebu",Lapu-Lapu City,Lapu-Lapu City,PH072226000,Cebu,PH072200000,Region VII,PH070000000
+512,Manila COD IT Building  ,IT Center,Not Yet Operating,"General Romulo Street, Araneta Center, Cubao, Quezon City",Cubao,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+513,Marina Town Dumaguete,IT Center,Not Yet Operating,"Flores Avenue, Barangay Piapi, Dumaguete City, Negros Oriental",Dumaguete City,Dumaguete City,PH074610000,Negros Oriental,PH074600000,Region VII,PH070000000
+514,MDi Corporate Center  ,IT Center,Not Yet Operating,"10th Avenue corner 39th Street, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+515,Megacenter IT Building,IT Center,Not Yet Operating,"General Tinio and Melencio Streets, Cabanatuan City",Cabanatuan City,Cabanatuan City,PH034903000,Nueva Ecija,PH034900000,Region III,PH030000000
+516,Metro IT Park,IT Park,Not Yet Operating,"Metrobank Avenue, Metropolitan Park, Central Park 1-A, San Rafael, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+517,Metropolis Star ,IT Center,Not Yet Operating,"South Super Highway, Alabang, Muntinlupa City",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+518,Metropolitan Technological Complex ,IT Park,Not Yet Operating,"Metrobank Avenue, Metropolitan Park, Central Business Park 1-A, San Rafael, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+519,Mindanao Economic Development Zone            (formerly Sarangani Economic Development Zone (Matinao)),Manufacturing,Not Yet Operating,"Matinao, Polomolok, South Cotabato",Polomolok,Polomolok,PH126312000,South Cotabato,PH126300000,Region XII,PH120000000
+520,Naga City Industrial Park,Manufacturing,Not Yet Operating,"Barangay Carolina, Naga City",Naga City,Naga City,PH051724000,Camarines Sur,PH051700000,Region V,PH050000000
+521,Naga City IT (Cyber) Park,IT Park,Not Yet Operating,"Felix Plazo St., Sabang, Naga City, Province of Camarines Sur",Naga City,Naga City,PH051724000,Camarines Sur,PH051700000,Region V,PH050000000
+522,Nasipit Agusan del Norte Industrial Estate,Manufacturing,Not Yet Operating,"Camagong and Talisay, Nasipit, Agusan del Norte",Agusan del Norte,Nasipit,PH160209000,Agusan del Norte,PH160200000,Region XIII,PH160000000
+523,New Cebu Township,Manufacturing,Not Yet Operating,"Cantao-an, Naga, Cebu",Naga,Naga City,PH051724000,Camarines Sur,PH051700000,Region V,PH050000000
+524,Norkis Cyberpark,IT Park,Not Yet Operating,"A.S Fortuna Street corner V. Albano Street, Barangay Bakilid, Mandaue City",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+525,North Negros Agro-Industrial Export Processing Zone,Agro-Industrial,Not Yet Operating,"Barangay Paraiso, Sagay City, Negros Occidental",Sagay City,Sagay City,PH064523000,Negros Occidental,PH064500000,Region VI,PH060000000
+526,NUVO.CITY,IT Park,Not Yet Operating,"E. Rodriguez  Jr. Avenue cor Calle Industria, Bagumbayan, Quezon City",Bagumbayan,Bagumbayan,PH126501000,Sultan Kudarat,PH126500000,Region XII,PH120000000
+527,One Asia Business Center,IT Park,Not Yet Operating,"Barangay San Antonio, Biñan City, Laguna ",Biñan City,City of Biñan,PH043403000,Laguna,PH043400000,Region IV-A,PH040000000
+528,Ore Central Building,IT Center,Not Yet Operating,"9th Avenue corner  31st Street, Bonifacio Global City, Fort Bonifacio, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+529,Orion Corporate Center,IT Center,Not Yet Operating,"A.S. Fortuna Street corner Sacris Road, Bakilid, Mandaue City",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+530,Ororama Megacenter IT Center ,IT Center,Not Yet Operating,"Lapasan Highway, Cagayan de Oro City",Cagayan de Oro City,Cagayan de Oro City,PH104305000,Misamis Oriental,PH104300000,Region X,PH100000000
+531,P & S Ecozone,Manufacturing,Not Yet Operating,"Km. 48, Mc Arthur Highway, Barrios of Iba Este, San Marcos and Palimbang, Calumpit, Bulacan",Calumpit,Calumpit,PH031407000,Bulacan,PH031400000,Region III,PH030000000
+532,Park Triangle Corporate Center,IT Center,Not Yet Operating,"32nd Street corner Rizal Drive, Bonifacio Global City, Taguig City",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+533,Paseo del Rio de Cagayan Economic Tourism Zone,Tourism,Not Yet Operating,"Macasandig, Cagayan de Oro City",Cagayan de Oro City,Cagayan de Oro City,PH104305000,Misamis Oriental,PH104300000,Region X,PH100000000
+534,PCH IT Center ,IT Center,Not Yet Operating,"95 A. Bonifacio Street, Baguio City",Baguio City,Baguio City,PH141102000,Benguet,PH141100000,Cordillera Administrative Region,PH140000000
+535,Philippine Int'l Air Terminals Co. SEZ,Manufacturing,Not Yet Operating,"Villamor Airbase, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+536,Philnico Industrial Estate ,Manufacturing,Not Yet Operating,"Nonoc Island, Surigao del Norte",Surigao del Norte,Surigao City,PH166724000,Surigao del Norte,PH166700000,Region XIII,PH160000000
+537,Philtai Central Luzon Industrial Park,Manufacturing,Not Yet Operating,"Barangays Santo Rosario and San Roque, Magalang, Pampanga",Magalang,Magalang,PH035411000,Pampanga,PH035400000,Region III,PH030000000
+538,Plazuela de Iloilo ,IT Center,Not Yet Operating,"Benigno Aquino Avenue, Barangay San Rafael, Iloilo City",Barangay San Rafael,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+539,PLDT Garnet Building ,IT Center,Not Yet Operating,"F. Ortigas Jr. corner Garnet Road, Ortigas Center, Brgy. San Antonio, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+540,PNOC Petrochemical Industrial Estate,Manufacturing,Not Yet Operating,"Batangas Dos, Mariveles, Bataan",Mariveles,Mariveles,PH030807000,Bataan,PH030800000,Region III,PH030000000
+541,Polambato-Bogo Economic Zone,Manufacturing,Not Yet Operating,"Polambato, Bogo, Cebu",Bogo,City of Bogo,PH072211000,Cebu,PH072200000,Region VII,PH070000000
+542,Poro Point Special Economic Zone,Manufacturing,Not Yet Operating,"San Fernando City, La Union",La Union,San Fernando,PH175913000,Romblon,PH175900000,Region IV-B,PH170000000
+543,PSMT IT Building,IT Center,Not Yet Operating,"73 Ortigas Ave. Ext., Barangay Sta. Lucia, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+544,Qimonda I.T. Center,IT Center,Not Yet Operating,"Don Serging Avenue, North Reclamation Area, Cebu City, Cebu",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+545,Quezon Techno-Industrial Special Economic Zone,Manufacturing,Not Yet Operating,"Barangay Rosario and San Jose, 
+Mauban, Quezon
+",Mauban,Mauban,PH045627000,Quezon,PH045600000,Region IV-A,PH040000000
+546,Rapu-Rapu Ecozone,Manufacturing,Not Yet Operating,"Malobago and Pagcolbon, Rapu-Rapu, Albay",Rapu-Rapu,Rapu-Rapu,PH050515000,Albay,PH050500000,Region V,PH050000000
+547,Reliance I.T. Center ,IT Center,Not Yet Operating,"99 E. Rodriguez Jr., Barrio Ugong, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+548,Republic Wakepark,Tourism,Not Yet Operating,"Nuvali Development Complex, Barangay Canlubang, Calamba City, Laguna",Calamba City,City of Calamba,PH043405000,Laguna,PH043400000,Region IV-A,PH040000000
+549,Riverbank Center ICT Bldg I,IT Center,Not Yet Operating,"A. Bonifacio Ave.,  Barangka, Marikina City",Marikina City,City of Marikina,PH137402000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+550,Riverbank Center ICT Bldg II,IT Center,Not Yet Operating,"A. Bonifacio Ave.,  Barangka, Marikina City",Marikina City,City of Marikina,PH137402000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+551,RLC Special Economic Zone,Manufacturing,Not Yet Operating,"Simlong, Batangas City, Batangas ",Batangas City,Batangas City,PH041005000,Batangas,PH041000000,Region IV-A,PH040000000
+552,Robinsons Cagayan de Oro ,IT Center,Not Yet Operating,"Rosario Crescent corner Florentino Street, Limketkai Center, Cagayan de Oro City ",Limketkai Center,Cagayan de Oro City,PH104305000,Misamis Oriental,PH104300000,Region X,PH100000000
+553,Robinsons Cybergate Magnolia,IT Center,Not Yet Operating,"Aurora Boulevard corner Doña Hemady Street, Quezon City ",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+554,Robinsons Cyberpark Bacolod,IT Center,Not Yet Operating,"Lacson Street, Mandalagan, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+555,Robinsons Place Iloilo ,IT Center,Not Yet Operating,"Ledesma Street, Iloilo City",Iloilo City,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+556,Robinsons Starmills Pampanga,IT Center,Not Yet Operating,"Olongapo-Gapan Road, Brgy. San Jose, San Fernando City, Pampanga",San Fernando City,San Fernando,PH175913000,Romblon,PH175900000,Region IV-B,PH170000000
+557,Samal Casino Resort,Manufacturing,Not Yet Operating,"San Isidro and Libertad, Kaputian,  Samal City, Davao Del Norte",Samal City,Samal,PH030812000,Bataan,PH030800000,Region III,PH030000000
+558,San Lazaro Leisure and Business Park,Tourism,Not Yet Operating,"Barangay Lantic, Carmona, Cavite ",Carmona,Carmona,PH042104000,Cavite,PH042100000,Region IV-A,PH040000000
+559,Sarangani Agro-Industrial Eco Zone,Agro-Industrial,Not Yet Operating,"Municipality of Alabel, Province of Sarangani",Province of Sarangani,Alabel,PH128001000,Sarangani,PH128000000,Region XII,PH120000000
+560,Scrubbed.Net Tech Center,IT Center,Not Yet Operating,"Zone 6, Panipuan, San Fernando City, Pampanga",San Fernando City,San Fernando,PH175913000,Romblon,PH175900000,Region IV-B,PH170000000
+561,Sevina Park Commercial,IT Park,Not Yet Operating,"along Barangay Biñan, Biñan City",Biñan City,City of Biñan,PH043403000,Laguna,PH043400000,Region IV-A,PH040000000
+562,SGI Technology Center,IT Center,Not Yet Operating,"Nono Limbaga Drive, Tanjay City, Negros Oriental ",Tanjay City,City of Tanjay,PH074621000,Negros Oriental,PH074600000,Region VII,PH070000000
+563,Shannalyne Technological and Environmental Park,Manufacturing,Not Yet Operating,"Milagros, Esperanza, Agusan del Sur",Agusan del Sur,Esperanza,PH160303000,Agusan del Sur,PH160300000,Region XIII,PH160000000
+564,Silver City 1A,IT Center,Not Yet Operating,"Silver City KPO Campus, Frontera Drive, Frontera Verde, C-5 cor. Ortigas Ave., Brgy. Ugong, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+565,Silver City 4,IT Center,Not Yet Operating,"Frontera Verde, C-5 cor. Ortigas Avenue, Barangay Ugong, Pasig City",Pasig City,City of Pasig,PH137403000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+566,SM City Bacolod IT Center  ,IT Center,Not Yet Operating,"Reclamation Area, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+567,SM City Bacoor  ,IT Center,Not Yet Operating,"Gen. Aguinaldo cor. Tirona Hway, Brgy. Habay II, Bacoor City",Bacoor City,Bacoor City,PH042103000,Cavite,PH042100000,Region IV-A,PH040000000
+568,SM City Rosario I.T. Center  ,IT Center,Not Yet Operating,"Barangay Tejero, Rosario, Cavite",Rosario,Rosario,PH160307000,Agusan del Sur,PH160300000,Region XIII,PH160000000
+569,SM CyberZone 1  ,IT Center,Not Yet Operating,"Block 9, SM Central Business Park, Bay City, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+570,SM iCity  ,IT Park,Not Yet Operating,"SM Central Business Park, Bay City, Pasay City",Pasay City,Pasay City,PH137605000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+571,SM Seaside City Tourism Economic Zone,Tourism,Not Yet Operating,"Cebu South Road Properties Complex, Cebu City ",Cebu City,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+572,SMBL IT Center  ,IT Center,Not Yet Operating,"Doña Remedios, Trinidad Highway, Baliwag, Bulacan",Baliwag,Bula,PH051706000,Camarines Sur,PH051700000,Region V,PH050000000
+573,SMCI IT Center,IT Center,Not Yet Operating,"Benigno Aquino Ave., Iloilo City",Iloilo City,Iloilo City,PH063022000,Iloilo,PH063000000,Region VI,PH060000000
+574,SMCO IT Center ,IT Center,Not Yet Operating,"Pueblo de Oro, Upper Carmen, Cagayan de Oro City",Upper Carmen,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+575,SMNE IT Center  ,IT Center,Not Yet Operating,"EDSA corner North Avenue, Quezon City ",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+576,SMNV IT Center ,IT Center,Not Yet Operating,"Quirino Highway, Barangay San Bartolome, Quezon City",Barangay San Bartolome,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+577,South Coast Ecozone,Manufacturing,Not Yet Operating,"Papaya, Nasugbu, Batangas",Nasugbu,Nasugbu,PH041019000,Batangas,PH041000000,Region IV-A,PH040000000
+578,South Forbes Cyber Park,IT Park,Not Yet Operating,"South Forbes Golf City, Barangay Inhican, Silang, Cavite",Silang,Silang,PH042118000,Cavite,PH042100000,Region IV-A,PH040000000
+579,South Tower,IT Center,Not Yet Operating,"Alabang Zapote Road, Barangay Almanza Uno, Las Piñas City",Las Piñas City,City of Las Piñas,PH137601000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+580,Southkey Building ,IT Center,Not Yet Operating,"Indo-China Drive, Filinvest Northgate Business District, Alabang, Muntinlupa City ",Muntinlupa City,City of Muntinlupa,PH137603000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+581,St. Francis IT Centre,IT Center,Not Yet Operating,"Araneta Street, Singcang, Bacolod City",Bacolod City,Bacolod City,PH064501000,Negros Occidental,PH064500000,Region VI,PH060000000
+582,Starmall EDSA-Shaw,IT Center,Not Yet Operating,"Shaw Boulevard cor. EDSA, Mandaluyong City",Mandaluyong City,City of Mandaluyong,PH137401000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+583,Subic Hermosa Cyber City,Manufacturing,Not Yet Operating,"Culis and Sumalo, Hermosa, Bataan",Hermosa,Hermosa,PH030805000,Bataan,PH030800000,Region III,PH030000000
+584,Taft East Gate,IT Park,Not Yet Operating,"Cardinal Rosales Avenue, Barangay Luz, Cebu City",Barangay Luz,Cebu City,PH072217000,Cebu,PH072200000,Region VII,PH070000000
+585,Taft Information Technology Park ,IT Park,Not Yet Operating,"Poblacion and Subangdaku, Mandaue City",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+586,Tarlac Provincial IT Park I ,IT Park,Not Yet Operating,"Brgy. Tibag, Tarlac City",Tarlac City,City of Tarlac,PH036916000,Tarlac,PH036900000,Region III,PH030000000
+587,Tarlac Provincial IT Park III ,IT Park,Not Yet Operating,"Brgy. San Isidro, Tarlac City",Tarlac City,City of Tarlac,PH036916000,Tarlac,PH036900000,Region III,PH030000000
+588,Tarlac Terrapark,Manufacturing,Not Yet Operating,"San Miguel, Tarlac ",Tarlac,San Miguel,PH166816000,Surigao del Sur,PH166800000,Region XIII,PH160000000
+589,The Forum at PonteFino Estates,IT Park,Not Yet Operating,"Barangays Pallocon Silangan and Gulod Labac, Batangas City",Batangas City,Batangas City,PH041005000,Batangas,PH041000000,Region IV-A,PH040000000
+590,The Orchard Tower Manila   ,IT Center,Not Yet Operating,"961 Juan Luna Street, Barangay 7, Tondo, Manila",Manila,Luna,PH148105000,Apayao,PH148100000,Cordillera Administrative Region,PH140000000
+591,The Paseo Center IT Building ,IT Center,Not Yet Operating,"8757 Paseo de Roxas corner Sedeño Street, Salcedo Village, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+592,The Peak Tower ,IT Center,Not Yet Operating,"No. 107 Leviste Street, Salcedo Village, Makati City",Makati City,City of Makati,PH137602000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+593,The Space,IT Center,Not Yet Operating,"A.S. Fortuna corner P. Remedio St., Banilad, Mandaue City",Mandaue City,Mandaue City,PH072230000,Cebu,PH072200000,Region VII,PH070000000
+594,Tigerland Agro-Industrial Economic Zone,Agro-Industrial,Not Yet Operating,"Barangay Mabacong, Batangas City ",Batangas City,Batangas City,PH041005000,Batangas,PH041000000,Region IV-A,PH040000000
+595,Tubay Agri-Processing Center,Manufacturing,Not Yet Operating,"Doña Rosario, Tubay,  Agusan del Norte",Agusan del Norte,Bay,PH043402000,Laguna,PH043400000,Region IV-A,PH040000000
+596,Tupi IT Park,IT Park,Not Yet Operating,"along National Highway, Barangay Poblacion, Tupi, South Cotabato",Tupi,Tupi,PH126317000,South Cotabato,PH126300000,Region XII,PH120000000
+597,UP Science And Technology Park (South) ,IT Park,Not Yet Operating,"C.P. Garcia, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+598,UPLB Agro-Industial Park,Agro-Industrial,Not Yet Operating,"University of the Philippines, Los Baños, Laguna",Los Baños,Los Baños,PH043411000,Laguna,PH043400000,Region IV-A,PH040000000
+599,UPLB Information Technology Park,IT Park,Not Yet Operating,"University of the Philippines, Los Baños, Laguna",Los Baños,Los Baños,PH043411000,Laguna,PH043400000,Region IV-A,PH040000000
+600,Vista Mall Las Piñas IT Hub ,IT Center,Not Yet Operating,"Alabang-Zapote Road corner C.V. Starr Avenue, Philamlife Village, Pamplona 2, Las Piñas City",Las Piñas City,City of Las Piñas,PH137601000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+601,Vista Place Campus Tower 1,IT Center,Not Yet Operating,"C-5 Road and Levi Mariano Avenue, Barangay Ususan, Taguig City ",Taguig City,Taguig City,PH137607000,"NCR, Fourth District",PH137600000,National Capital Region,PH130000000
+602,V-tech Tower   ,IT Center,Not Yet Operating,"G. Araneta Avneue cor. Ma. Clara Street, Quezon City",Quezon City,Quezon City,PH137404000,"NCR, Second District",PH137400000,National Capital Region,PH130000000
+603,West Aeropark IT Park,IT Park,Not Yet Operating,"Aeropark Office Campus, GGLC, Clark Freeport Zone, Pampanga",Clark Freeport Zone,Mabalacat City,PH035409000,Pampanga,PH035400000,Region III,PH030000000

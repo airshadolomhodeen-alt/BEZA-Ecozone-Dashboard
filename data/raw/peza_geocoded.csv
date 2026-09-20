@@ -1,0 +1,604 @@
+ID,ADDRESS,NEIGHBORHOOD,CITY,SUBREGION,REGION,COUNTRYCODE,Longitude,Latitude,Match Score
+1,106 Valero Street,Salcedo Village,Makati City,,NCR,PHL,121.020589026066,14.558667142472,84.64
+2,Archbishop Reyes Avenue,,Cebu City,,R-VII,PHL,123.903215091716,10.319096795543,95.76
+3,Pasong Tamo Extension,San Lorenzo Village,Makati City,,NCR,PHL,121.018240180211,14.54132945069,90.87
+4,Shaw Boulevard,Barangay Pleasant Hill,Mandaluyong City,,NCR,PHL,121.041240741234,14.589249035386,94.51
+5,Ayala Avenue,Ayala Center,Makati City,,NCR,PHL,121.020284452404,14.55730061151,89
+6,6780 Ayala Avenue,,Makati City,,NCR,PHL,121.018717932058,14.558096627965,100
+7,6788 Ayala Avenue,,Makati City,,NCR,PHL,121.017379174483,14.558459354825,100
+8,Subangdaku,,Mandaue City,,R-VII,PHL,0.0,0.0,0
+9,Lot 3,"Block 9, along 26th and 25th Streets, Bonifacio South, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,80
+10,J.P. Laurel Avenue,,Davao City,,R-XI,PHL,125.613141843149,7.07771597599,95.96
+11,Filinvest Corporate City,"Alabang-Zapote Road corner North Bridgeway, Alabang",Muntinlupa City,,NCR,PHL,121.039341437183,14.422641216974,81.91
+12,Barangays San Roque,"San Andres, Manghinao, & Sto. Domingo",Bauan,Batangas,R-IV,PHL,120.98561,13.7917023,80
+13,Barangay Tambler,,General Santos City,,R-XII,PHL,125.142049154048,6.059019276156,82.84
+14,AJMR Port Complex,Km. 20 Tibungco,Davao City,,R-XI,PHL,125.6444437,7.1958224,77.44
+15,Industria corner Economia Street,,Bagumbayan,Quezon City,NCR,PHL,121.08192703737,14.60544620855,96.7
+16,EDSA corner Cornell Street,Barangay Wack-Wack,Mandaluyong City,,NCR,PHL,121.054724576443,14.58304850598,96.41
+17,Tulo,,Calamba City,Laguna,R-IV,PHL,121.1547242,14.2047764,88.33
+18,2248 Pasong Tamo Extension,,Makati City,,NCR,PHL,121.021247489491,14.535731634198,92.57
+19,Barangay Dolores and Banaba,,Porac,Pampanga,R-III,PHL,120.5546037,15.0927183,80
+20,Km. 22,"East Service Road, South Super Highway, Brgy. Cupang",Muntinlupa City,,NCR,PHL,121.0375531,14.4334395,80
+21,Barangay San Vicente,,Panabo City,Davao del Norte,R-XI,PHL,125.7110622,7.3000336,90
+22,Calibutbut,,Bacolor,Pampanga,R-III,PHL,120.5872864,15.049021,94.48
+23,968 Aurora Boulevard,,Cubao,Quezon City,NCR,PHL,121.053684621891,14.623242472067,97.08
+24,Barangay Concepcion Grande,,Naga City,Camarines Sur,R-V,PHL,123.220080201593,13.62031376305,94.57
+25,23 ADB Avenue,Ortigas Center,Pasig City,,NCR,PHL,121.059873831021,14.586253955302,98.04
+26,EDSA and P. Tuazon Boulevard,,Quezon City,,NCR,PHL,121.052216815759,14.616485013012,100
+27,Banawa Hills,,Barangay Labangon,Cebu City,R-VII,PHL,123.87,10.30444,76.41
+28,Brgy. Pinagbuhatan,,Pasig City,,NCR,PHL,121.091376245404,14.555018882146,96.98
+29,Aseana Avenue corner Macapagal Boulevard,Aseana City,Parañaque City,,NCR,PHL,120.990224993317,14.525254780671,92.93
+30,Lot 13,"Bradco Avenue, Aseana Business Park",Parañaque City,,NCR,PHL,121.028933,14.4778938,75
+31,Lot 17,"Bradco Avenue, Aseana City",Parañaque City,,NCR,PHL,121.028933,14.4778938,75
+32,Lots 1&2,"Block 2, Phase 1, Filinvest Corporate City, Alabang",Muntinlupa City,,NCR,PHL,121.045957869505,14.413034462324,81.95
+33,Madrigal Avenue,"Alabang Town Center, Barangay Ayala Alabang",Muntinlupa City,,NCR,PHL,121.024819669592,14.417145352419,84.92
+34,1132 University Parkway,"North Bonifacio Triangle, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,80
+35,Archbishop Reyes Avenue,,Cebu City,,R-VII,PHL,123.903215091716,10.319096795543,95.76
+36,Matina Town Square,Matina,Davao City,,R-XI,PHL,125.596980943586,7.062798714386,84.12
+37,Ayala Avenue corner Salcedo and Amorsolo Streets,Barangay San Lorenzo,Makati City,,NCR,PHL,121.014100878782,14.558467510136,83.22
+38,Barangay Zone 15,,Talisay City,Negros Occidental,R-VI,PHL,122.967328,10.7387188,84.55
+39,Bay City Project,,Parañaque City,,NCR,PHL,121.028933,14.4778938,81.33
+40,Loakan Road,,Baguio City,Benguet Province,CAR,PHL,120.61306,16.37389,95.79
+41,8747 Paseo de Roxas,Salcedo Village,Makati City,,NCR,PHL,121.024242947355,14.557823336012,95.43
+42,Barangay Maria Cristina,,Balo-i,Lanao del Norte,R-X,PHL,124.20396,8.16604,90.24
+43,Maligaya,,Rosario,Batangas,R-IV,PHL,121.2798695,13.8108769,95.38
+44,Aseana Business Park,,Parañaque City,,NCR,PHL,121.03084307711,14.462886078226,86.07
+45,A.S. Fortune St.,Bakilid,Mandaue City,Cebu,R-VII,PHL,123.93833,10.33583,83.68
+46,11th Avenue corner 30th Street,Bonifacio Global City,Taguig City,,NCR,PHL,121.053434769182,14.551000802103,99.45
+47,Block 1,"30th Street corner 5th Avenue, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,84.13
+48,Barangay Mactan,Lapu-Lapu City,Island of Mactan,,R-VII,PHL,124.010877316435,10.308930097409,78.54
+49,Sumulong Highway cor. G. Fernando,,Marikina City,,NCR,PHL,121.10179441101,14.635041996201,99.8
+50,Yapak,"Boracay Island, Malay",Aklan,,R-VI,PHL,121.9145738,11.9890985,80
+51,Sen. Gil Puyat Avenue,,Makati City,,NCR,PHL,121.027206103696,14.561780614697,96.86
+52,Along C-5 Road,,Ugong Norte,Quezon City,NCR,PHL,121.070455,14.5978452,86.96
+53,Barangay Tubtub,Brooke’s Point,Palawan,,R-IV,PHL,117.804654774655,8.777441324139,86.41
+54,Lot 17,"Block 12, Ortigas Avenue cor. Roosevelt Street, Barangay Greenhills",San Juan City,,NCR,PHL,121.0483499,14.6035528,75
+55,Barangay Agusan Canyon,,Manolo Fortich,Bukidnon,R-X,PHL,124.7993427,8.3201012,90.7
+56,252 Sen. Gil Puyat Avenue,,Makati City,,NCR,PHL,121.027206103696,14.561780614697,91.58
+57,Barangay Matina Aplaya,,Davao City,,R-XI,PHL,125.57967,7.04359,86.25
+58,Batino,Parian and Barandal,Calamba City,Laguna,R-IV,PHL,121.125916,14.2006247,83.26
+59,Capitol Complex,Cadlan,Pili,Camarines Sur,R-V,PHL,123.252264,13.595887,83.16
+60,Barangay Mangilag Sur,,Candelaria,Quezon,R-IV,PHL,121.454851861504,13.931041500981,91.43
+61,Filinvest Corporate City,Alabang,Muntinlupa City,,NCR,PHL,121.03818957701,14.419685610029,94.85
+62,Canlubang,,Calamba City,Laguna,R-IV,PHL,121.077643,14.1941922,95.86
+63,Punta & Tulo,,Calamba City,Laguna,R-IV,PHL,121.1300426,14.182214,90.34
+64,Canlubang,,Calamba City,Laguna,R-IV,PHL,121.077643,14.1941922,95.86
+65,Cogon West,,Carmen,Cebu City,R-VII,PHL,124.0155211,10.5886914,88.15
+66,Barangay Caluangan,,Municipality of Magallanes,Province of Cavite,R-IV,PHL,120.7575,14.18833,78.33
+67,Rosario,,Cavite,,R-IV,PHL,120.8554197,14.4159654,92.5
+68,Bacao,,Gen. Trias,Cavite,R-IV,PHL,120.88339,14.40579,94.55
+69,Barangay Sabang,,Naic,Cavite,R-IV,PHL,120.794463250909,14.313605909193,83.06
+70,Barangays Mabolo,"Luz, Hipodromo, Carreta",and Kamputhaw,Cebu City,R-VII,PHL,123.90551,10.32577,75
+71,Barangay Lahug,,Cebu City,,R-VII,PHL,0.0,0.0,0
+72,Lahug and Apas,,Cebu City,,R-VII,PHL,123.89279,10.3343,81.67
+73,Corner Mindanao and Bohol Streets,,Cebu Business Park,Cebu City,R-VII,PHL,123.904481718272,10.320136812665,94.57
+74,Basak,Lapu-lapu City,Mactan,Cebu,R-VII,PHL,124.00706,10.30623,88.29
+75,South Reclamation Project,,Cebu City,,R-VII,PHL,123.715110515002,10.56921486546,75.4
+76,San Miguel,,Tarlac,,R-III,PHL,120.6118002,15.4616333,91.58
+77,C. M. Recto Avenue and Corrales Street,,Cagayan de Oro City,,R-X,PHL,124.650471184706,8.485902393463,98.37
+78,Kalayaan Avenue corner Salamanca Street,Barangay Poblacion,Makati City,,NCR,PHL,121.028389307218,14.564836809675,97.96
+79,Barangay Kiwalan,,Iligan City,Lanao del Norte,R-X,PHL,124.266934542588,8.279961668879,89.33
+80,Purok 3,,Tablon,Cagayan de Oro City,R-X,PHL,124.7186829,8.476735,89.23
+81,KM 9.5,Barangay Sasa,Davao City,,R-XI,PHL,125.65322,7.13451,78.57
+82,Sultan Street,Barangay Highway Hills,Mandaluyong City,,NCR,PHL,121.051798052642,14.581508242445,94.4
+83,183 EDSA near corner Ortigas Ave.,Wack-Wack,Mandaluyong City,,NCR,PHL,121.058313120649,14.593227489196,92.12
+84,Angeles City,Municipalities of Mabalacat and Porac,Pampanga and the Municipalities of Capas and Bamban,Tarlac,R-III,PHL,120.5939098,15.3411537,75
+85,Clark Freeport Zone located at Angeles City and the Municipality of Mabalacat,,Pampanga,,R-III,PHL,0.0,0.0,0
+86,San Antonio,,San Pascual,Batangas,R-IV,PHL,121.0183035,13.7890472,96.13
+87,Barangay San Rafael,,Mandurriao,Iloilo City,R-VI,PHL,122.53556,10.71972,80
+88,Juan Luna Avenue,Mabolo,Cebu City,Cebu,R-VII,PHL,123.911859678995,10.318882502764,96.11
+89,Pearl Drive,Ortigas Center,Pasig City,,NCR,PHL,121.060532392692,14.58086667759,97.46
+90,Corner General Aguinaldo Avenue and P. Tuazon  Street,,Araneta Center Cubao,Quezon City,NCR,PHL,121.055138893917,14.617554580149,96.64
+91,Lawton Avenue,Bonifacio South,Taguig City,,NCR,PHL,121.03858494782,14.534735460564,87.44
+92,Barangay Ungka II,,Pavia,Iloilo,R-VI,PHL,122.539032998706,10.766644226577,85.07
+93,Sapphire and Garnet Roads,Ortigas Center,Pasig City,,NCR,PHL,121.062420710517,14.587393752798,89.48
+94,Topaz and Ruby Roads,Ortigas Center,Pasig City,,NCR,PHL,121.061031120392,14.585132079471,99.29
+95,Topaz and Ruby Roads,Ortigas Center,Pasig City,,NCR,PHL,121.061031120392,14.585132079471,99.29
+96,Barangay Darong,,Municipality of Sta. Cruz,Province of Davao del Sur,R-XI,PHL,125.46917,6.93278,84.07
+97,Maguyam,,Silang,Cavite,R-IV,PHL,121.0220105,14.2701092,94.55
+98,J.P. Laurel Ave. cor. Angliongto Street,Lanang,Davao City,,R-XI,PHL,125.645311050827,7.105675692373,81.57
+99,Barangay San Antonio,,Davao City,,R-XI,PHL,125.63487,7.09899,85.33
+100,Barangay Calindagan,Dumaguete,City,,R-VII,PHL,123.2936929,9.2820651,80.94
+101,Commonwealth Avenue,,Diliman,Quezon City,NCR,PHL,121.052204068744,14.653119221301,100
+102,2322 Chino Roces Avenue,,Makati City,,NCR,PHL,121.023569796711,14.53195699236,100
+103,San Roque,Angono & Darangan,Binangonan,Rizal,R-IV,PHL,121.1668,14.5255,83
+104,E Rodriguez,Jr. Ave.,Bagumbayan,Quezon City,NCR,PHL,121.075529168915,14.612099643779,87.07
+105,2305 Chino Roces Avenue Extension,,Makati City,,NCR,PHL,121.022369756881,14.533670239252,90.52
+106,Sta. Filomena,,San Mariano,Isabela,R-II,PHL,122.0121112,17.0161175,93.67
+107,32nd Street corner 9th Avenue,"Bonifacio Global City, Fort Bonifacio",Taguig City,,NCR,PHL,121.052208161472,14.552992300388,96.53
+108,Lot 5,"Block 2, 32nd Street corner 9th Avenue, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,82.69
+109,EDSA corner United Street,,Mandaluyong City,,NCR,PHL,121.052394910274,14.579188388111,100
+110,Along United street,,Mandaluyong City,,NCR,PHL,121.05519072938,14.576982480905,95
+111,Legazpi Port Area,,Legaspi City,,R-V,PHL,123.7539,13.1494,91.43
+112,Anabu II,,Imus,Cavite,R-IV,PHL,120.958363,14.3778182,93.5
+113,H. Cortes Street,Banilad,Mandaue City,Cebu,R-VII,PHL,123.924660580706,10.339189705407,78.28
+114,Teresa Avenue,"Nepo Commercial Complex, Barangays Sto. Rosario and Cutcut",Angeles City,Pampanga,R-III,PHL,120.583798632431,15.131500090189,80.42
+115,Teresa Ave. cor. Don Juan Ave.,Nepo Mart Commercial Complex,Angeles City,Pampanga,R-III,PHL,120.586795387107,15.133661912182,79
+116,418 Arayat Street corner Libertad Street,,Mandaluyong City,,NCR,PHL,121.047344960223,14.575675033314,84.81
+117,Corners Real,"Dr. V. Locsin & Cervantes Streets, Brgy. 3",Dumaguete City,,R-VII,PHL,123.3003036,9.2957675,75
+118,Fort Bonifacio Global City,,Taguig City,,NCR,PHL,121.049221,14.5484707,100
+119,Capitol Commons,Meralco Avenue corner Shaw Boulevard,Pasig City,,NCR,PHL,121.0806429,14.5598218,75
+120,EDSA corner Quezon Avenue,Barangay Pinyahan,Diliman District,Quezon City,NCR,PHL,121.037797406799,14.644086195456,97.58
+121,Ortigas Avenue corner Efipanio Delos Santos Avenue,,Barangay Ugong Norte,Quezon City,NCR,PHL,121.058576982961,14.593024689049,97.8
+122,Exportbank Drive cor. Chino Roces Ave.,,Makati City,,NCR,PHL,121.012115506927,14.559328390546,100
+123,Maligaya Road,,Fairview,Quezon City,NCR,PHL,121.070728,14.7032559,85.35
+124,Quezon Boulevard,Barangay Bucana,Davao City,,R-XI,PHL,125.609803091497,7.061246108865,94.12
+125,Barrio Maraouy,,Lipa City,Batangas,R-IV,PHL,121.1651615,13.9603158,83.61
+126,Jacinto Extension cor. Quirino Avenue,,Davao City,,R-XI,PHL,125.611122364929,7.075584319921,98.95
+127,Salinas Drive,,Lahug,Cebu City,R-VII,PHL,123.90142982402,10.329566655031,95.17
+128,Clark Special Economic Zone,Barangay Aranguren,Capas,Tarlac,R-III,PHL,120.5242057,15.3600325,80
+129,Punta,Burol & Bubuyan,Calamba City,Laguna,R-IV,PHL,121.1044156,14.1713317,85.95
+130,Langkaan,,Dasmariñas,Cavite,R-IV,PHL,120.93333,14.31667,95.56
+131,Trapiche,Pagaspas & Baloc-Baloc,Tanauan,Batangas,R-IV,PHL,121.130195764962,14.095534901109,82.45
+132,Ilang,Bunawan District,Davao  City,,R-XI,PHL,125.64331,7.24163,80
+133,Barangays Ulango and Laurel,Tanauan City and Sta. Anastacia,Sto. Tomas,Batangas,R-IV,PHL,121.1386951,14.1366969,80
+134,Barangays Sta. Anastacia and San Rafael,,Sto. Tomas,Batangas,R-IV,PHL,121.135924649478,14.134966079987,80.26
+135,Arch. Reyes Ave.,Cebu Business Park,Mabolo,Cebu City,R-VII,PHL,123.903215091716,10.319096795543,82.12
+136,East Service Road,,Taguig City,,NCR,PHL,121.045365962506,14.475037466063,100
+137,Balacad,Laoag City,Ilocos Norte,,R-I,PHL,120.5537,18.1553,97.24
+138,F. Cabahug Street,,Barangay Kasambangan,Cebu City,R-VII,PHL,0.0,0.0,0
+139,Javalera,,Gen. Trias,Cavite,R-IV,PHL,120.9148453,14.2672221,95.2
+140,Araneta Center,,Cubao,Quezon City,NCR,PHL,121.054306309481,14.620711631427,92.81
+141,Araneta Center,,Cubao,Quezon City,NCR,PHL,121.054306309481,14.620711631427,92.81
+142,Barangay Tambler,,General Santos City,,R-XII,PHL,125.142049154048,6.059019276156,82.84
+143,Opal Road,"cor. Topaz and Ruby Road, Brgy. San Antonio",Pasig City,,NCR,PHL,121.060413535005,14.586868728345,82.66
+144,1024 EDSA,,Quezon City,,NCR,PHL,121.02309546481,14.657015448742,100
+145,Rizal Drive,"Green Street and Hotel Drive, Barangay San Lorenzo",Makati City,,NCR,PHL,121.0205792,14.5499982,80
+146,Rizal Drive,"Green Street and Hotel Drive, Barangay San Lorenzo",Makati City,,NCR,PHL,121.0205792,14.5499982,80
+147,Office Drive,,Makati City,,NCR,PHL,121.0261473,14.569122,81.67
+148,Brgy. Buenavista,,Gen. Trias,Cavite,R-IV,PHL,120.89313308989,14.322124825391,88.99
+149,Governor's Drive,Maduya,Carmona,Cavite,R-IV,PHL,121.061299695251,14.318265386058,82.26
+150,Barangay Bebeladan,El Nido,Palawan,,R-IV,PHL,119.378899,11.0208037,86.67
+151,Don Jose,,Sta. Rosa City,Laguna,R-IV,PHL,121.086706,14.2577375,95.56
+152,Ayala Ave. cor. H. V. Dela Costa St.,,Makati City,,NCR,PHL,121.016263459351,14.559942113496,100
+153,Ortigas Center,,Pasig City,,NCR,PHL,121.061656368573,14.585894670552,89.64
+154,58 P. Tuazon Boulevard corner 7th and 8th Avenue,,Cubao,Quezon City,NCR,PHL,121.054617288082,14.617097305421,97.05
+155,Mindanao Avenue,,Cebu Business Park,Cebu City,R-VII,PHL,123.905252042684,10.320229030972,86.67
+156,Hermosa,,Bataan,,R-III,PHL,120.5073637,14.8317529,90.59
+157,86 E. Rodriguez Jr. Avenue,,Barangay Ugong Norte,Quezon City,NCR,PHL,121.079751514401,14.594870300309,98.43
+158,Madaum,,Tagum City,Davao del Norte,R-XI,PHL,125.8117185,7.3855036,96.13
+159,Barangays Sto. Cristo and Kaybanban,,San Jose Del Monte City,Bulacan,R-III,PHL,121.0962,14.8138,83.33
+160,1026 EDSA,,Quezon City,,NCR,PHL,121.022677680171,14.657366714441,93.33
+161,HVG Arcade,Subangdaku,Mandaue City,,R-VII,PHL,0.0,0.0,0
+162,Old Airport,,Iloilo City,,R-VI,PHL,122.5412049,10.710011,89.57
+163,Corner Avacena and Locsin Streets,,Barangay North San Jose,Iloilo City,R-VI,PHL,122.53389,10.77028,75
+164,Barangay Mali-ao,,Pavia,Iloilo,R-VI,PHL,122.5312381,10.7885609,84.29
+165,Riverside Boardwalk,,Barangay San Rafael,Iloilo City,R-VI,PHL,122.5499271,10.7064294,75.73
+166,Block 32,"Lots 8 and 11, 39th and 40th Streets, Bonifacio Global City, Fort Bonifacio",Taguig City,,NCR,PHL,121.049221,14.5484707,80
+167,6781 Ayala Avenue corner Paseo de Roxas,,Makati City,,NCR,PHL,121.021073917402,14.556754014714,98.55
+168,Life Drive,"Filinvest Corporate City, Alabang",Muntinlupa City,,NCR,PHL,121.044048,14.4178119,80
+169,Barangay Irasan,,Municipality of Roxas,Zamboanga del Norte,R-IX,PHL,123.2059,8.443,77.59
+170,Meralco Avenue,Ortigas Center,Pasig City,,NCR,PHL,121.061094013752,14.574816627423,97.46
+171,Solana & Luz Banzon,,Jasaan,Misamis Oriental,R-X,PHL,124.7671238,8.633751,91.58
+172,Jupiter Street corner N. Garcia Street,Barangay Bel-Air,Makati City,,NCR,PHL,121.02230773355,14.562824398541,98.64
+173,409 Shaw Boulevard,,Mandaluyong City,,NCR,PHL,121.031367025605,14.591639878264,96.91
+174,90 General Maxilom Avenue,,Cebu City,,R-VII,PHL,123.911284475679,10.305412841803,93.82
+175,2109 Prime Street,"Madrigal Business Park, Ayala Alabang",Muntinlupa City,,NCR,PHL,121.044048,14.4178119,80
+176,A.S. Fortuna Street,Bakilid,Mandaue City,Cebu,R-VII,PHL,123.93833,10.33583,81.36
+177,Baguio City,,Benguet Province,,CAR,PHL,120.59306,16.41639,100
+178,Jose Panganiban,,Camarines Norte,,R-V,PHL,122.6925122,14.2914107,97.33
+179,9th Avenue corner 30th Street,Bonifacio Global City,Taguig City,,NCR,PHL,121.051682699961,14.551555181179,99.45
+180,Salinas Drive,,Lahug,Cebu City,R-VII,PHL,123.90142982402,10.329566655031,95.17
+181,Salinas Drive,,Lahug,Cebu City,R-VII,PHL,123.90142982402,10.329566655031,95.17
+182,Salinas Drive,,Lahug,Cebu City,R-VII,PHL,123.90142982402,10.329566655031,95.17
+183,Brgy. Kamanga,,Municipality of Maasim,Province of Sarangani,R-XII,PHL,125.00611,5.8575,79.63
+184,Cardinal Rosales Avenue corner Samar Loop,,Cebu Business Park,Cebu City,R-VII,PHL,123.905841262967,10.316146314291,97.5
+185,2129 Don Chino Roces Avenue,,Makati City,,NCR,PHL,121.017400187747,14.54282023725,96.11
+186,No. 691 Aurora Boulevard,,Quezon City,,NCR,PHL,121.034074165408,14.61349702655,100
+187,Lopez Jaena Street,Subangdaku,Mandaue City,Cebu,R-VII,PHL,123.927416414191,10.325582761123,94.72
+188,120 E. Rodriguez Jr. Avenue corner Ortigas Avenue,Brgy. Ugong,Pasig City,,NCR,PHL,121.079872716721,14.589876320488,97.23
+189,Ganado & Mamplasan,,Biñan City,Laguna,R-IV,PHL,121.08089,14.28893,89.09
+190,Sta. Rosa and Biñan City,,Laguna,,R-IV,PHL,121.0847536,14.338775,81.43
+191,Barangay Biñan,,Biñan City,Laguna,R-IV,PHL,121.052755769086,14.262423582578,84.53
+192,Barangays Don Jose and Sto. Domingo,,Sta. Rosa City,Laguna,R-IV,PHL,121.0602981,14.2428494,82.04
+193,Malaria,Tala,Caloocan City,,NCR,PHL,120.9714452,14.6515298,83.08
+194,Cebu Business Park,,Cebu City,,R-VII,PHL,123.902926544578,10.318823724104,81.76
+195,Cebu Business Park,,Cebu City,Province of Cebu,R-VII,PHL,123.89071,10.31672,80.95
+196,Isabel,,Leyte,,R-VIII,PHL,124.4332803,10.9246802,87.5
+197,Brgy. Pawing,,Palo,Leyte,R-VIII,PHL,124.9953433,11.1876675,85
+198,Pawing,,Palo,Leyte,R-VIII,PHL,124.9953433,11.1876675,90
+199,Diezmo,,Cabuyao,Laguna,R-IV,PHL,121.1056553,14.2495405,94.55
+200,Real & La Mesa,,Calamba City,Laguna,R-IV,PHL,121.1636109,14.1860107,90.67
+201,San Rafael & Sta Anastacia,,Sto. Tomas,Batangas,R-IV,PHL,121.137891833297,14.127700493254,89.52
+202,Barangays Bulihan,"Luta Sur, Luta Norte, San Fernando, San Pedro West, and Poblacion",Malvar,Batangas,R-IV,PHL,121.1560434,14.051504,80
+203,San Lucas,"Bugtong na Pulo & Inosluban, Lipa City and Santiago & Payapa",Malvar,Batangas,R-IV,PHL,121.1554715,14.0158578,80
+204,Lapasan,,Cagayan De Oro City,,R-X,PHL,124.6647411,8.4825661,96.8
+205,Bantayan,,Dumaguete City,Negros Oriental,R-VII,PHL,123.3062306,9.3196019,95.9
+206,Araneta Street,Barangay Tangub,Bacolod City,,R-VI,PHL,122.930957749075,10.637968702362,81.27
+207,Burgos Street coner Hilado National Highway,,Bacolod City,,R-VI,PHL,122.946825132137,10.673165704895,80.48
+208,Jose Romero Sr. Street,Bagacay,Dumaguete City,Negros Oriental,R-VII,PHL,123.288206909931,9.298260856021,85.87
+209,Jacinto Extension corner Villamor Street,,Davao City,,R-XI,PHL,125.616314912036,7.080866951533,81.77
+210,San Miguel,,Tarlac,,R-III,PHL,120.6118002,15.4616333,91.58
+211,Aguinaldo Highway corner Nueno Avenue,Tanzang Luma 1,Imus,Cavite,R-IV,PHL,120.942146983436,14.422624914172,97.63
+212,46 Lizares Avenue,,Bacolod City,,R-VI,PHL,122.944331514596,10.660515536974,85.39
+213,Barangay Alang-alang,,Mandaue City,Cebu,R-VII,PHL,123.945969692498,10.33196754455,88.92
+214,Barangay Lago,,General Santos City,,R-XII,PHL,125.190639955306,6.128659427953,76.5
+215,Nichols Field,NAIA,Pasay City,,NCR,PHL,121.0226,14.5181,91.43
+216,Lapu-Lapu City,,Mactan,Cebu,R-VII,PHL,124.01105,10.30563,86.59
+217,Basak,Lapu-lapu City,Mactan,Cebu,R-VII,PHL,124.00706,10.30623,88.29
+218,Coral Way corner J.W. Diokno Boulevard,"Mall of Asia Complex, CBP-1A",Pasay City,,NCR,PHL,120.984486826223,14.531377216117,94.7
+219,Maxilom Avenue corner Juana Osmeña Street,,Cebu City,,R-VII,PHL,123.89541736054,10.310278101969,99.17
+220,District of Tondo,,Manila City,,NCR,PHL,120.9780244,14.611891,87.86
+221,Barangay Poblacion,,Manticao,Misamis Oriental,R-X,PHL,124.2852492,8.3959471,90.48
+222,Along Osmeña Capitol Site,,Cebu City,,R-VII,PHL,123.88934,10.31642,82.35
+223,Lot-C,Bonifacio Global City,Taguig City,,NCR,PHL,121.049221,14.5484707,95.56
+224,2153 Chino Roces Avenue corner Herrera Street,,Makati City,,NCR,PHL,121.013595164294,14.554982792845,99.23
+225,Mac Arthur Highway,Matina,Davao City,,R-XI,PHL,125.580309649763,7.05835631629,93.61
+226,McKinley Road corner Epifanio Delos Santos Avenue (EDSA),,Makati City,,NCR,PHL,121.029402092579,14.550029213796,99.33
+227,Fort Bonifacio Global City,,Taguig City,,NCR,PHL,121.049221,14.5484707,100
+228,South Bonifacio District,Bonifacio Global City,Taguig City,,NCR,PHL,121.049221,14.5484707,83.7
+229,E. Rodriguez Jr. Avenue (C-5 Road) cor. Eastwood Avenue,,Barangay Bagumbayan,Quezon City,NCR,PHL,121.078624735157,14.607326017975,90.28
+230,España Boulevard,,Rotonda,Quezon City,NCR,PHL,121.001881058029,14.617641749738,93
+231,Lot 8,"Block 5, 32nd Street, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,89.23
+232,Barangay Calibuyo,,Tanza,Cavite,R-IV,PHL,120.803859026083,14.355698701368,87.57
+233,Lot 2,"Block 16, 4th and 5th Avenues, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,86.44
+234,Barangays Calumpang and Tambler,,General Santos City,South Cotabato,R-XII,PHL,125.0807127,6.0241739,83.87
+235,Cagraray Island,Barangay Misibis,Bacacay,Albay,R-V,PHL,123.9018294,13.247069,80
+236,2310 Pasong Tamo Extension,,Makati City,,NCR,PHL,121.022833697974,14.532785836855,99.42
+237,22nd Street,Lacson,Bacolod City,,R-VI,PHL,122.956165853736,10.683501710255,89.5
+238,Archbishop Reyes Avenue,,Cebu City,,R-VII,PHL,123.903215091716,10.319096795543,95.76
+239,Sabang,,Danao  City,Cebu,R-VII,PHL,124.0309784,10.4967268,93.04
+240,Ayala Triangle,Ayala Avenue,Makati City,,NCR,PHL,121.02424,14.55681,82.16
+241,6805 Ayala Avenue,,Makati City,,NCR,PHL,121.017566761476,14.559269381947,100
+242,Barangay Triangulo,,Naga City,,R-V,PHL,123.186369176606,13.618379855496,87.6
+243,Barangay Cantao-an,,Naga,Cebu,R-VII,PHL,123.7604266,10.2522157,82.3
+244,Barangay 39,,Bacolod City,,R-VI,PHL,122.9455785,10.6657479,95
+245,254 Magsaysay Avenue,,Baguio City,,CAR,PHL,120.594105285901,16.427018648419,88.39
+246,Barangay Hilapnitan,,Municipality of Baybay,Province of Leyte,R-VIII,PHL,124.7698,10.7989,82.75
+247,Sales Road corner Andrews Avenue,Villamor Airbase,Pasay City,,NCR,PHL,121.018736288426,14.517091603259,96.32
+248,6786 Ayala Avenue,Barangay San Lorenzo,Makati City,,NCR,PHL,121.021665910552,14.55638630067,90.87
+249,No. 41 Commonwealth Avenue,,Barangay Holy Spirit,Quezon City,NCR,PHL,121.084692122095,14.681075389951,92.08
+250,Filinvest Corporate City,Alabang,Muntinlupa City,,NCR,PHL,121.03818957701,14.419685610029,94.85
+251,Barangay Linmansangan,,Binalonan,Pangasinan,R-I,PHL,120.572394496797,16.048648578943,91.38
+252,Knowledge Avenue,"Carmel Town, Canlubang",Calamba City,Laguna,R-IV,PHL,121.081563662349,14.207932105803,91.57
+253,A.S. Fortuna,Banilad,Mandaue City,,R-VII,PHL,123.914777757449,10.343290200741,89.29
+254,A.S. Fortuna Street,Banilad,Mandaue City,,R-VII,PHL,123.937400833007,10.329503267751,78.25
+255,San Miguel Avenue,Ortigas Center,Pasig City,,NCR,PHL,121.059536214743,14.580938024375,97.46
+256,Barangays Tambo and Dongalo,,Parañaque City,,NCR,PHL,120.9922338,14.5046791,82
+257,Epifanio Delos Santos Avenue corner Ayala Avenue,Barangay San Lorenzo,Makati City,,NCR,PHL,121.029110402348,14.550341900694,98.9
+258,Meralco Avenue corner Julia Vargas Avenue,Ortigas Center,Pasig City,,NCR,PHL,121.063759178419,14.584360399556,99.37
+259,Commonwealth Avenue,,Barangay Holy Spirit,Quezon City,NCR,PHL,121.084692122095,14.681075389951,94.29
+260,Lot 1,"Bock 9, 5th Avenue corner 25th Street, Bonifacio South District, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,80
+261,Commerce Ave. cor. Spectrum,"Filinvest Corp. City, Alabang",Muntinlupa City,,NCR,PHL,121.036848622537,14.41920358086,84.44
+262,No.1 Julia Vargas Avenue corner Meralco Avenue,Barangay Ugong,Pasig City,,NCR,PHL,121.063759178419,14.584360399556,96.41
+263,Shaw Boulevard corner San Miguel Avenue,Ortigas Center,Pasig City,,NCR,PHL,121.057274435208,14.578133483687,99.45
+264,San Antonio Park Square,"Lacson Street, Mandalagan",Bacolod City,,R-VI,PHL,122.959698804893,10.693421453257,86.61
+265,Block 5,"32nd Street, City Center North, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,84.13
+266,Along Emerald Avenue,Ortigas Center,Pasig City,,NCR,PHL,121.0806429,14.5598218,75
+267,No. 1,"Doña Julia Vargas Street corner Meralco Avenue, Barangay Ugong",Pasig City,,NCR,PHL,121.0929237,14.5483004,80
+268,Pascor Drive,Brgy. Sto. Nino,Paranaque City,,NCR,PHL,120.996887401976,14.508769408084,96.32
+269,Corners Sen. Gil Puyat and Makati Avenues,,Makati City,,NCR,PHL,121.027675504343,14.561250193306,97.79
+270,Barangay Singalat,Palayan City,Nueva Ecija,,R-III,PHL,121.09584142048,15.571712635294,87.7
+271,Barangay Manamok,Cuyo,Palawan,,R-IV,PHL,120.6902418,11.3180781,79.91
+272,Barangay Pulong Maragul,,Angeles City,Pampanga,R-III,PHL,120.6252458,15.1609007,86.81
+273,Alos,Alaminos &  Tagudin,Mabini,Pangasinan,R-I,PHL,119.9471451,16.0723623,84.86
+274,Block 9,"City Center North, Fort Bonifacio",Taguig City,,NCR,PHL,121.0422,14.5272,87.13
+275,1029 EDSA,Veterans Village,Project 7,Quezon City,NCR,PHL,121.022166079386,14.65720865161,100
+276,Ayala Avenue cor. Herrera Street,,Makati City,,NCR,PHL,121.018834859607,14.558266780599,99.67
+277,Barangay Tambubong,,San Rafael,Bulacan,R-III,PHL,121.0398579,14.9984073,87.03
+278,Maduya,,Carmona,Cavite,R-IV,PHL,121.0654542,14.3187509,94.55
+279,Amorsolo Street,,Makati City,,NCR,PHL,121.014100878782,14.558467510136,100
+280,Barangay Maribago,,Lapu-Lapu City,,R-VII,PHL,123.992427359715,10.285174160713,83.49
+281,Acacia Avenue,"Madrigal Business Park, Brgy. Ayala Alabang",Muntinlupa City,,NCR,PHL,121.021909507068,14.419071038411,84.87
+282,8767 Paseo de Roxas,,Makati City,,NCR,PHL,121.021894421904,14.557102073243,98.65
+283,Bugo,,Cagayan De Oro City,,R-X,PHL,124.7650316,8.5061761,96.36
+284,10th Avenue corner Kalayaan Avenue,"Bonifacio Triangle, Bonifacio Global City",Taguig City,,NCR,PHL,121.055899383992,14.561059714556,96.24
+285,Municipalities of Villanueva and Tagoloan,,Misamis Oriental,,R-X,PHL,0.0,0.0,0
+286,Lot 8,"Blk. 14, Cardinal Rosales Ave.",Brgy. Mabolo,Cebu City,R-VII,PHL,123.92232,10.32337,75
+287,Alion and Cabcaben,,Mariveles,Bataan,R-III,PHL,120.5591509,14.4602426,86.29
+288,Spectrum Midway,"Filinvest Corporate City, Alabang",Muntinlupa City,,NCR,PHL,121.037770587039,14.420822196427,87.17
+289,Pueblo Business Park,,Barangay Upper Carmen,Cagayan de Oro City,R-X,PHL,124.63611,8.47833,76
+290,Roxas City,,Capiz,,R-VI,PHL,122.75111,11.58528,92.94
+291,Tatlong Kawayan,Barangay Dela Paz,Pasig City,,NCR,PHL,121.085748,14.5715599,80
+292,Barangay San Jose,,Quezon,Bukidnon,R-X,PHL,125.070979105569,7.736116124699,85.25
+293,Corner of United Street and Sheridan Street,Barangay Highway Hills,Mandaluyong City,,NCR,PHL,121.055840291574,14.576458402246,98.93
+294,Ayala Ave. cor. Gil Puyat Ave.,,Makati City,,NCR,PHL,121.015521912377,14.561355009005,99.67
+295,Rio Tuba,Bataraza,Palawan,,R-IV,PHL,117.4080605,8.5566586,95.2
+296,Zuellig Ave.,Mandaue Reclamation Area,Mandaue City,Province of Cebu,R-VII,PHL,123.92222,10.32361,76.39
+297,Ortigas Avenue Extension,Barangay Sto. Domingo,Cainta,Rizal,R-IV,PHL,121.114303463027,14.586678648314,92.87
+298,Don Gil Garcia Street,,Barangay Capitol Site,Cebu City,R-VII,PHL,123.890508294507,10.315277510319,82.63
+299,Araneta Street,Singcang,Bacolod City,,R-VI,PHL,122.939177554047,10.65515292236,88.65
+300,J.P. Laurel Avenue,,Davao City,,R-XI,PHL,125.613141843149,7.07771597599,95.96
+301,Naga Diversion Road corner Almeda Highway,Barangay Triangulo,Naga City,,R-V,PHL,123.2073292138,13.609997248931,78.89
+302,EDSA corner Pioneer Street,,Mandaluyong City,,NCR,PHL,121.047228137519,14.572498916915,99.67
+303,J.P. Laurel Avenue,,Davao City,,R-XI,PHL,125.613141843149,7.07771597599,95.96
+304,General Maxilom Avenue,,Cebu City,,R-VII,PHL,123.911284475679,10.305412841803,95.63
+305,McArthur Highway,San Miguel,Tarlac City,Tarlac,R-III,PHL,120.599452156864,15.452784884358,96.33
+306,McArthur Highway,,San Miguel,Tarlac City,R-III,PHL,120.599452156864,15.452784884358,95.69
+307,McArthur Highway,,San Miguel,Tarlac City,R-III,PHL,120.599452156864,15.452784884358,95.69
+308,Aguinaldo Highway corner Governor’s Drive,"Sitio Pala-pala, Barangay Sampaloc",Dasmariñas,Cavite,R-IV,PHL,120.954069402513,14.302172104037,96.95
+309,Valdez Compound,"Barangay 1 San Francisco, San Nicolas",Ilocos Norte,,R-I,PHL,120.5934057,18.1761155,82.76
+310,JP Laurel National Highway,Mataas na Lupa,Lipa City,,R-IV,PHL,120.995665056422,13.812823171028,85.54
+311,1199 Quirino Highway corner Maligaya Road,Barangay Pasong Putik,Novaliches,Quezon City,NCR,PHL,121.059051231043,14.73531638027,97.75
+312,Paz Mendiola Guanzon Street,Paco,Manila,,NCR,PHL,120.997951526571,14.588508326576,96.75
+313,Brgy. Tagapo,,Sta. Rosa City,Laguna,R-IV,PHL,121.102905947175,14.318747609885,85.5
+314,6783 Ayala Avenue,"Salcedo Village, Barangay Bel-Air",Makati City,,NCR,PHL,121.020284452404,14.55730061151,83.75
+315,ADB Avenue corner Poveda Street,Ortigas Center,Pasig City,,NCR,PHL,121.059793867664,14.589023692342,98.91
+316,Barangay Malajog,Tinambacan District,Calbayog City,Western Samar,R-VIII,PHL,124.4831123,12.1081565,80
+317,Palampas and Punao,,San Carlos City,Negros Occidental,R-VI,PHL,123.4215299,10.5020446,90.83
+318,Barangay Palampas,,San Carlos City,Negros Occidental,R-VI,PHL,123.4215299,10.5020446,90.83
+319,Felix Huertas Street,Sta. Cruz,Manila,,NCR,PHL,120.98492939071,14.623992489476,97.46
+320,Mac Arthur Highway,Brgy. Nancayasan,Urdaneta City,Pangasinan,R-I,PHL,120.5780724,15.9408606,83.7
+321,Cannery,,Polomolok,South Cotabato,R-XII,PHL,125.0618748,6.2171632,86.67
+322,Macapagal Avenue cor. Pearl Drive,"Central Business Park 1, Barangay 76, San Rafael",Pasay City,,NCR,PHL,120.993034,14.541526,82
+323,Dr. A. Santos Avenue cor. Soreena Avenue,,Parañaque City,,NCR,PHL,121.035593636816,14.456591193777,100
+324,Barangay San Miguel,,Bauan,Batangas,R-IV,PHL,120.973855,13.7825041,86.67
+325,Shaw Boulevard cor. Nueve de Pebrero Street,Barangay Addition Hills,Mandaluyong City,,NCR,PHL,121.031367025605,14.591639878264,83.36
+326,Frontera Verde Drive,"Frontera Verde, Ortigas Avenue",Pasig City,,NCR,PHL,121.0806429,14.5598218,75
+327,Along Frontera Verde Drive,"Frontera Verde, E. Rodriguez Jr. Avenue, Ugong",Pasig City,,NCR,PHL,121.0929237,14.5483004,80
+328,C-5 corner Las Fiestas Road,Frontera Verde,Pasig City,,NCR,PHL,121.079263873767,14.586689617912,95.26
+329,Barangay Camachiles,,Mabalacat,Pampanga,R-III,PHL,120.6223138,15.1959995,87.69
+330,6797 Ayala Avenue,,Makati City,,NCR,PHL,121.020284452404,14.55730061151,95
+331,Harrison Road,,Baguio City,Benguet Province,CAR,PHL,120.595350861992,16.412838555234,90.38
+332,Dr. A. Santos Avenue corner President’s Avenue,Barangay BF,Parañaque City,,NCR,PHL,121.031848267201,14.458586799194,98.41
+333,M. A. Roxas Highway,Malabanias,Angeles City,,R-III,PHL,120.569926718795,15.166742133321,93.13
+334,Regalado Avenue corner Qurino Hi-way,Barangay Pasong Putik,Novaliches,Quezon City,NCR,PHL,121.060947804274,14.73536218737,95.12
+335,Quirino Highway corner Regalado Avenue,Barangay Pasong Putik,Novaliches,Quezon City,NCR,PHL,121.060947804274,14.73536218737,98.23
+336,Ayala High,,Lipa City,Batangas,R-IV,PHL,121.1613099,13.9439508,82.86
+337,EDSA corner North Avenue,,Quezon City,,NCR,PHL,121.02949982557,14.655825595677,100
+338,City of San Fernando and Municipality of Mexico,,Pampanga,,R-III,PHL,125.647403013728,7.120207979865,79.19
+339,General Luna Avenue,Barangay Ampid 1,San Mateo,Rizal,R-IV,PHL,121.1394885,14.6643283,79.44
+340,EDSA corner West Avenue and Bulacan Streets,,Quezon City,,NCR,PHL,121.030277582365,14.655076798357,96.6
+341,SM Central Business Park,Bay City,Pasay City,,NCR,PHL,120.9944465,14.5436072,75
+342,SM Central Business Park 1-A,Mall of Asia Complex,Pasay City,,NCR,PHL,120.9944465,14.5436072,75
+343,J.P. Laurel Avenue,"Barangay San Antonio, Agdao District",Davao City,,R-XI,PHL,125.637720927019,7.102681660537,85.26
+344,Gil Puyat Avenue corner Zodiac and Jupiter Streets,,Makati City,,NCR,PHL,121.0350254276,14.555855516603,96.43
+345,69 Jupiter Street,,Makati City,,NCR,PHL,121.029725292253,14.561251609314,97.5
+346,Barangay Wack-Wack,,Mandaluyong City,,NCR,PHL,121.04242711021,14.5933993881,91.76
+347,Brgy. Wack-Wack,,Mandaluyong City,,NCR,PHL,121.04242711021,14.5933993881,95.33
+348,Aurora Boulevard corner Araneta Avenue,,Barangay Doña Imelda,Quezon City,NCR,PHL,121.018706197393,14.605739910438,98.77
+349,Along Benigno Aquino Avenue,,Mandurriao,Iloilo City,R-VI,PHL,122.53556,10.71972,77.02
+350,Sitio Pala-Pala,Barangay Sampaloc 1,Dasmariñas City,Cavite,R-IV,PHL,120.95827,14.29314,81.03
+351,Barangay Mayamot,Marcos Hi-way,Antipolo City,,R-IV,PHL,0.0,0.0,0
+352,Barangay Paciano Rizal,,Calamba City,Laguna,R-IV,PHL,121.1296542,14.2154651,89
+353,Manila East Road,Barangay Dolores,Taytay,Rizal,R-IV,PHL,121.139395145524,14.551762575937,86.61
+354,Dela Rosa Street,,Makati City,,NCR,PHL,121.010332597937,14.557679491207,100
+355,2258 Pasong Tamo Extension corner EDSA,,Makati City,,NCR,PHL,121.018172773075,14.541451802729,98.44
+356,Along National Road,Barangay Alabang,Muntinlupa City,,NCR,PHL,121.04592594551,14.412857089442,90.71
+357,Barangay Halang,"Soro-Soro, San Francisco",Biñan,Laguna,R-IV,PHL,121.06255,14.32865,79.9
+358,P. Tuazon corner 10th Avenue,,Cubao,Quezon City,NCR,PHL,121.056192918241,14.618293696371,99.83
+359,Tubi-allah,,Surallah,South Cotabato,R-XII,PHL,124.78167,6.30694,89.41
+360,Calumpang,,General Santos City,,R-XII,PHL,125.1312353,6.0737299,94.67
+361,Upper Klinan,,Polomolok,South Cotabato,R-XII,PHL,125.1069119,6.2579082,95.68
+362,Maharlika Highway,,Sto. Tomas,Batangas,R-IV,PHL,121.143187407397,14.11286775152,83.29
+363,J. Vargas cor. Bank Drive,Ortigas Center,Mandaluyong City,,NCR,PHL,121.057947585852,14.584460898575,96.14
+364,Rizal Drive Corner 5th Avenue and 32nd Street,Fort Bonifacio Global City,Taguig City,,NCR,PHL,121.046251394342,14.547355889598,96.1
+365,Bulac,,Sta. Maria,Bulacan,R-III,PHL,121.0226125,14.8377047,93.33
+366,Barrio San Jose,,Sta. Rosa City,Laguna,R-IV,PHL,121.1114679,14.3152295,80.61
+367,Cabangaan Point,,Subic,Zambales,R-III,PHL,120.2274,14.87619,92.26
+368,Shaw Boulevard,,Mandaluyong City,,NCR,PHL,121.031367025605,14.591639878264,100
+369,Princeton Street corner Shaw Boulevard,,Mandaluyong City,,NCR,PHL,121.048629927006,14.585532692534,99.67
+370,1614 Quezon Avenue,,Quezon City,,NCR,PHL,121.034287317206,14.642081160397,100
+371,Lancaster Estates,,Imus,Cavite,R-IV,PHL,120.904250723844,14.404924860136,93.79
+372,Sahud-Ulan,,Tanza,Cavite,R-IV,PHL,120.8279534,14.3608635,94.78
+373,Malhacan Road,Malhacan,Mecauayan,Bulacan,R-III,PHL,120.968399648019,14.741255656042,94.6
+374,F. Cabahug Street,,Kasambangan,Cebu City,R-VII,PHL,123.920382406159,10.326746981719,78.65
+375,Lacson Street corner B.S. Aquino Drive,,Bacolod City,,R-VI,PHL,122.956346228233,10.684029511495,94.79
+376,Tabangao,,Batangas,,R-IV,PHL,121.0768,13.7027,93.68
+377,Barangays Cagdianao,"Hayanggabon, and Taganito, Municipality of Claver",Province of Surigao Del Norte,,R-XIII,PHL,125.8528333,9.5368345,79.99
+378,Raja Sikatuna Avenue,Dampas District,Tagbilaran City,Bohol,R-VII,PHL,123.8772492,9.6534018,80
+379,Brgy. Tibag,,Tarlac City,,R-III,PHL,120.56365,15.49129,86.09
+380,AFP-RSBS Compound,"Km. 12 East Service Road, C5",Taguig City,,NCR,PHL,121.0710154,14.5294065,75
+381,Sen. Gil Puyat Avenue,,Makati City,,NCR,PHL,121.027206103696,14.561780614697,96.86
+382,Bundagul and Paralayunan,,Mabalacat,Pampanga,R-III,PHL,120.6207445,15.2348957,86.05
+383,Meralco Avenue corner St. Paul Road,Barangay Ugong,Pasig City,,NCR,PHL,121.063785413776,14.579914219016,96.1
+384,Quimpo Boulevard,Matina,Davao City,,R-XI,PHL,125.58388402906,7.049761827952,93.52
+385,Villamonte,,Bacolod City,,R-VI,PHL,122.9715637,10.6833243,95
+386,25 ADB Avenue,Ortigas Center,Pasig City,,NCR,PHL,121.059904844062,14.585768391651,98.04
+387,6766 Ayala Avenue cor. Paseo de Roxas,,Makati City,,NCR,PHL,121.021073917402,14.556754014714,98.49
+388,548 Shaw Boulevard,,Mandaluyong City,,NCR,PHL,121.031367025605,14.591639878264,96.91
+389,Block 55,"26th St. corner 9th Avenue, Bonifacio South District, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,80
+390,Samar Loop cor. Panay Road,,Cebu Business Park,Cebu City,R-VII,PHL,123.906219381035,10.316142035763,80
+391,Barangay Mactan,,Lapu-Lapu City,Cebu,R-VII,PHL,124.010877316435,10.308930097409,84.54
+392,Barangay Alang-Alang,,Mandaue City,,R-VII,PHL,123.945969692498,10.33196754455,86.24
+393,Lot 6,"Industry St., Madrigal Business Park, Ayala Alabang",Muntinlupa City,,NCR,PHL,121.044048,14.4178119,80
+394,Block 4,"Meralco Center, Barangay Ugong, Ortigas Avenue",Pasig City,,NCR,PHL,121.0929237,14.5483004,80
+395,Valdez Center,San Nicolas,Ilocos Norte,,R-I,PHL,120.589563705705,18.182783134266,84.57
+396,Ayala Avenue,Barangay Bel-Air,Makati City,,NCR,PHL,121.020284452404,14.55730061151,92.63
+397,Pulong Sta. Cruz,,Sta. Rosa City,Laguna,R-IV,PHL,121.0921797,14.2872212,96.36
+398,105 H. V. de la Costa Street,Salcedo Village,Makati City,,NCR,PHL,121.026209593297,14.560532283299,94.83
+399,Araneta Street,Barangay Tangub,Bacolod City,,R-VI,PHL,122.930957749075,10.637968702362,81.27
+400,7th Avenue corner 25th St.,"Bonifacio Global City, Fort Bonifacio",Taguig City,,NCR,PHL,121.04838978548,14.547624487685,96.42
+401,7th Avenue corner 24th St.,"Fort Bonifacio, Global City",Taguig City,,NCR,PHL,121.048156098019,14.546720038423,97.67
+402,San Antonio Park Square,"Lacson Street, Mandalagan",Bacolod City,,R-VI,PHL,122.959698804893,10.693421453257,86.61
+403,Meralco Avenue cor. Onyx Street,Ortigas Center,Pasig City,,NCR,PHL,121.06377939827,14.586783394711,99.18
+404,Commonwealth  Avenue,,Quezon City,,NCR,PHL,121.077120881298,14.669878633697,100
+405,UP Town Center,Katipunan Avenue,Barangay UP Campus,Quezon City,NCR,PHL,121.0174252,14.6562961,80
+406,North Bonifacio District,Bonifacio Global City,Taguig City,,NCR,PHL,121.049221,14.5484707,83.7
+407,Barangay Palinpinon,,Municipality of Valencia,Province of Negros Oriental,R-VII,PHL,123.2276493,9.3095443,80.87
+408,Along L.P. Leviste Street (formerly Alfaro Street),Salcedo Village,Makati City,,NCR,PHL,121.0261473,14.569122,75
+409,Valdez Center,San Nicolas,Ilocos Norte,,R-I,PHL,120.589563705705,18.182783134266,84.57
+410,EDSA,,North Triangle,Quezon City,NCR,PHL,121.028273880414,14.656131288325,97.87
+411,Don Carlos Hilado Avenue corner F. Gonzaga Avenue,,Bacolod City,,R-VI,PHL,0.0,0.0,0
+412,Lot 5 & 6,21st Drive Bonifacio Global City,Taguig,,NCR,PHL,121.049221,14.5484707,86.12
+413,Roman Highway,Barangay Cupang,Balanga,Bataan,R-III,PHL,120.53611,14.67611,75
+414,Daang Hari Road,Molino IV,Bacoor City,Cavite,R-IV,PHL,120.99846230217,14.376616165367,96.89
+415,Carlos P. Garcia (C5) corner Danny Floor  Street,,Pasig City,,NCR,PHL,121.070952952062,14.56974071271,94.44
+416,7th Avenue corner 30th Street,Bonifacio Global City,Taguig City,,NCR,PHL,121.0499185608,14.552139818925,99.45
+417,Block 1,"5th Avenue, Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,92.34
+418,34th Street,Bonifacio Global City,Taguig City,,NCR,PHL,121.053177538941,14.554657972113,97.46
+419,Epifanio Delos Santos Avenue,,Barangay Veterans Village,Quezon City,NCR,PHL,121.024699444709,14.656954500022,95.41
+420,Arpili & Buanoy,,Balamban,Cebu,R-VII,PHL,123.7029908,10.4714002,85.71
+421,Shaw Boulevard,,Mandaluyong City,,NCR,PHL,121.031367025605,14.591639878264,100
+422,Along Emerald Avenue,Ortigas Center,Pasig City,,NCR,PHL,121.0806429,14.5598218,75
+423,Diversion Road,,Alangilan,Batangas City,R-IV,PHL,121.053329802142,13.775518071543,93.23
+424,Brgy. Makiling,,Calamba City,Laguna,R-IV,PHL,121.136749930348,14.154172498471,87.91
+425,Barangay Bagacay,,Dumaguete City,Negros Oriental,R-VII,PHL,123.2893831,9.2920988,89.57
+426,Paseo de Roxas corner Makati Avenue,,Makati City,,NCR,PHL,121.025811369077,14.557604694067,99.8
+427,Block 9,Rockwell Center,Makati City,,NCR,PHL,121.034728340209,14.563025111517,85.29
+428,Barangay Don Martin Marundan,,Mati City,Davao Oriental,R-XI,PHL,126.2563382,6.9755215,91.02
+429,Abanao corner Zandueta Streets,,Baguio City,,CAR,PHL,120.59445692254,16.413843201666,98.52
+430,Gadanni,,Tayum,Abra,CAR,PHL,120.6542,17.6172,85.26
+431,J. P. Laurel corner Inigo Streets,Bajada Highway,Davao City,,R-XI,PHL,125.612268338731,7.083908387965,96.15
+432,J.P. Laurel Avenue,"Barangay 20-B, Bajada",Davao City,,R-XI,PHL,125.613141843149,7.07771597599,83.23
+433,Lacson Street,Mandalagan,Bacolod City,,R-VI,PHL,122.962175694921,10.699033383214,97.08
+434,Corner Iznart and Delgado Streets,,Iloilo City,,R-VI,PHL,122.568814844158,10.697817553625,85
+435,Daja Daku & Taglawigan,San Isidro & Jubay,Calubian,Leyte,R-VIII,PHL,124.2963221,11.5280809,80
+436,E. Rodriguez Jr. Avenue,Ugong,Pasig City,,NCR,PHL,121.079658073288,14.596655981833,97.72
+437,Aurora Boulevard cor. General Aguinaldo Avenue,Araneta Center,Cubao,Quezon City,NCR,PHL,121.053178534402,14.622853619337,98.17
+438,North Capitol Road corner Aguinaldo Street,Barangay 4,Bacolod City,,R-VI,PHL,122.950446854996,10.677523459774,83.07
+439,Ayala,,Zamboanga City,,R-IX,PHL,121.9510053,6.9580126,94.29
+440,Barangay Estefania,,Bacolod City,,R-VI,PHL,122.987172941976,10.669609427434,86.35
+441,Barangay Bagtic,,Silay City,Negros Occidental,R-VI,PHL,123.0685555,10.7567668,89.52
+442,Barangay Alangilan,,Batangas City,Batangas,R-IV,PHL,121.0687,13.7822,89
+443,Barangay Villareal,,Bayawan City,Negros Oriental,R-VII,PHL,122.8228273991,9.358249741012,89.24
+444,Lot 2 and 3,"Block 5, City Center, North Bonifacio Global City",Taguig City,,NCR,PHL,121.049221,14.5484707,84.92
+445,Quezon Avenue,,Barangay Paligsahan,Quezon City,NCR,PHL,121.021206515806,14.633977665607,93.49
+446,F. Cabahug Street,,Barangay Kasambagan,Cebu City,R-VII,PHL,123.91404,10.33564,76.26
+447,Capitol Complex,"Cadlan, Pili and Maycatmon",Milaor,Camarines Sur,R-V,PHL,123.252264,13.595887,80
+448,South Superhighway Corner Emilia & Filmore Streets,,Makati City,,NCR,PHL,121.005491624123,14.557579590267,95.33
+449,Pasong Kawayan II,,Gen. Trias,Cavite,R-IV,PHL,120.8825776,14.3246327,96.25
+450,Mc Arthur Highway,Nancayasan,Urdaneta City,Pangasinan,R-I,PHL,120.5780724,15.9408606,86.12
+451,Emilio Aguinaldo Highway,Barangay Talaba VII,Bacoor City,Cavite,R-IV,PHL,120.951446439799,14.442231954942,87.33
+452,Barangay 47,Peñaranda Extension,Legaspi City,Albay,R-V,PHL,123.7533193,13.1492153,75
+453,Circuit Makati (formerly known as Sta. Ana Racetrack),Barangay Carmona,Makati City,,NCR,PHL,121.0175052,14.5768659,80
+454,Circuit Makati (formerly known as Sta. Ana Racetrack),Barangay Carmona,Makati City,,NCR,PHL,121.0175052,14.5768659,80
+455,Connecticut Street,Greenhills Shopping Center,San Juan City,,NCR,PHL,121.051713423798,14.601295537625,80.16
+456,Ayala Avenue corner Salcedo Street,,Makati City,,NCR,PHL,121.015676326421,14.555314111034,86.16
+457,Sumulong Hi-way,Barrio Sto. Niño,Marikina City,,NCR,PHL,121.099760704837,14.635385120474,94.88
+458,General Maxillom Avenue,,Cebu City,,R-VII,PHL,123.911284475679,10.305412841803,94.11
+459,Barangay San Vicente,,Dasol,Pangasinan,R-I,PHL,119.8765271,15.9805105,88.57
+460,Along Diversion Road,Barangay Cogon,Digos City,Davao del Sur,R-XI,PHL,125.3745526,6.7593637,80
+461,16 Sobrecarey Street corner Lapu-lapu Street,,Davao City,,R-XI,PHL,125.618392660105,7.078244903627,99
+462,72 N. Escario St. corner F. Ramos Extension,,Capitol Site,Cebu City,R-VII,PHL,123.892010284537,10.316602792738,86.4
+463,K44-45 Mac Arthur Highway,Barangay Longos,Malolos City,Bulacan,R-III,PHL,120.789116984601,14.878275690078,97.37
+464,169 EDSA,,Manduyong City,,NCR,PHL,121.049924009037,14.576267462492,97.74
+465,Barangay Mayamot,Marcos Highway,Antipolo City,,R-IV,PHL,0.0,0.0,0
+466,Tagpuro,"San Isidro, New Kawayan, Sto. Niño",Tacloban City,Leyte,R-VIII,PHL,124.9692,11.33564,79.9
+467,"Residence  Section ""A""",Military Cut-Off,Baguio City,,CAR,PHL,120.59808,16.40538,83.35
+468,Halang,,Biñan City,Laguna,R-IV,PHL,121.05689,14.33517,95
+469,Cabatuan,,Iloilo,,R-VI,PHL,122.482306,10.8788884,92.94
+470,EDSA corner Corregidor Street,,Quezon City,,NCR,PHL,121.024145214364,14.657060585291,100
+471,No. 222-224 Nicanor Garcia Street corner Jupiter Street,,Makati City,,NCR,PHL,121.02230773355,14.562824398541,98.64
+472,Mother Ignacia Avenue cor. Sgt. Esguerra St.,,Diliman. Quezon  City,,NCR,PHL,121.027811338426,14.635408341139,89.82
+473,Sacsac,,Bacong,Negros Oriental,R-VII,PHL,123.2934519,9.2525145,94.67
+474,Barangay Looc,,Sibulan,Negros Oriental,R-VII,PHL,123.2666572,9.3710571,87.03
+475,Quimpo Boulevard,Barangay 40-D,Davao City,,R-XI,PHL,125.594146094653,7.052741143755,91.89
+476,Trece Martirez & Tanza,,Cavite,,R-IV,PHL,120.87161,14.27861,88.15
+477,167 EDSA,,Mandaluyong City,,NCR,PHL,121.047766891741,14.572942479508,95.8
+478,Mang-hinao & Balayong,,Bauan,Batangas,R-IV,PHL,120.99484,13.79549,85.67
+479,Barangays Santor and Balite,,Malolos City,Bulacan,R-III,PHL,120.8412493,14.8223162,80.87
+480,McArthur Highway,Abangan Norte,Marilao,Bulacan,R-III,PHL,120.938773858464,14.774908274362,94.33
+481,Barangays Patay Bata and Pantay Matanda,,Tanauan City,Batangas,R-IV,PHL,121.114421,14.1322613,82.86
+482,Quezon Avenue corner Roosevelt Avenue,,Barangay Sta. Cruz,Quezon City,NCR,PHL,121.018662192402,14.632641209584,98.69
+483,Barangay Tambler,,General Santos City,,R-XII,PHL,125.142049154048,6.059019276156,82.84
+484,Garden Villas 3,Barangay Ibaba,Sta. Rosa City,Laguna,R-IV,PHL,121.1214704258,14.30409717574,84.45
+485,R.N. Pelaez Boulevard,,Kauswagan,Cagayan de Oro City,R-X,PHL,124.640948119068,8.493195682256,98.41
+486,Alternate Road,,Legaspi City,Albay,R-V,PHL,123.7533193,13.1492153,80.65
+487,168 Ouano Avenue,Mandaue Reclamation Area,Mandaue City,Cebu,R-VII,PHL,123.929332631383,10.317467497305,79.07
+488,Larap,Jose Panganiban,Camarines Norte,,R-V,PHL,122.6541389,14.2855835,97.71
+489,377 Sen. Gil Puyat Avenue,,Makati City,,NCR,PHL,121.030183956507,14.560157737956,97.74
+490,Archbishop Reyes Avenue corner Apitong Street,,Barangay Camputhaw,Cebu City,R-VII,PHL,123.902926539957,10.318823787532,95.37
+491,M. Logarta Avenue corner Kaoshiong Street,,North Reclamation Area,Cebu City,R-VII,PHL,0.0,0.0,0
+492,Quezon Street,,Barangay Sampaguita,Iloilo City,R-VI,PHL,122.566330793301,10.696190472556,87.95
+493,J. Llorente corner Don Mariano Cui Street,,Capitol Site,Cebu City,R-VII,PHL,123.891524134153,10.310942409705,96.18
+494,Clark Special Economic Zone,Barangay Aranguren,Capas,Tarlac,R-III,PHL,120.5242057,15.3600325,80
+495,Omapad Road,Opao,Mandaue City,,R-VII,PHL,123.95,10.33333,83.45
+496,Omapad Road,Opao,Mandaue City,,R-VII,PHL,123.95,10.33333,83.45
+497,Omapad Road,Opao,Mandaue City,,R-VII,PHL,123.95,10.33333,83.45
+498,Covelandia Road,Binakayan,Kawit,Cavite,R-IV,PHL,120.92176,14.4534,81.52
+499,Purok 2,Lumbocan,Butuan City,,R-XIII,PHL,125.5087556,9.0060619,84.83
+500,EDSA,,Muñoz,Quezon City,NCR,PHL,121.022677680171,14.657366714441,92.05
+501,Archbishop Reyes corner Acacia Streets,,Barangay Camputhaw,Cebu City,R-VII,PHL,123.90202942486,10.316601409724,89.82
+502,120 Juan Luna St.,Binondo,Manila,,NCR,PHL,120.97287453938,14.601424779838,96.38
+503,Commonwealth and Luzon Avenue,,Quezon City,,NCR,PHL,121.070577269919,14.665556188983,99.8
+504,Kelly,Tuding & Gumatdang,Itogon,Benguet,CAR,PHL,120.64045,16.39479,87.68
+505,Barangay Batong Malake,,Los Baños,Laguna,R-IV,PHL,121.22366,14.15256,96.76
+506,Sitio Caridad,Banquerohan,Legaspi City,Albay,R-V,PHL,123.7533193,13.1492153,75.61
+507,144 Legaspi Street,,Makati City,,NCR,PHL,121.017893940107,14.5542234611,96.38
+508,Lapasan,,Cagayan de Oro City,,R-X,PHL,124.6647411,8.4825661,96.8
+509,Lacson Street,Barangay Mandalangan,Bacolod City,,R-VI,PHL,122.962175694921,10.699033383214,89.01
+510,Corner Araneta and San Sebastian Streets,,Bacolod City,,R-VI,PHL,122.944758414731,10.666134315853,97.45
+511,Mactan Cebu International Airport,,Lapu-Lapu City,Cebu,R-VII,PHL,123.98028,10.3085,96
+512,General Romulo Street,Araneta Center,Cubao,Quezon City,NCR,PHL,121.055453677515,14.623846858859,82.3
+513,Flores Avenue,Barangay Piapi,Dumaguete City,Negros Oriental,R-X,PHL,123.3075703,9.3110296,83.7
+514,10th Avenue corner 39th Street,Bonifacio Global City,Taguig City,,NCR,PHL,121.05540267241,14.559589905925,99.45
+515,General Tinio and Melencio Streets,,Cabanatuan City,,R-III,PHL,120.964387890034,15.487372398191,85.3
+516,Metrobank Avenue,"Metropolitan Park, Central Park 1-A, San Rafael",Pasay City,,NCR,PHL,120.990726956089,14.538805686372,84.77
+517,South Super Highway,Alabang,Muntinlupa City,,NCR,PHL,121.045713239783,14.420779481903,94.57
+518,Metrobank Avenue,"Metropolitan Park, Central Business Park 1-A, San Rafael",Pasay City,,NCR,PHL,120.990726956089,14.538805686372,82.6
+519,Matinao,,Polomolok,South Cotabato,R-XII,PHL,125.09694,6.16278,95.15
+520,Barangay Carolina,,Naga City,,R-V,PHL,123.289250770552,13.664190578447,86.09
+521,Felix Plazo St.,Sabang,Naga City,Province of Camarines Sur,R-V,PHL,123.179828240309,13.620535385219,92.6
+522,Camagong and Talisay,Nasipit,Agusan del Norte,,R-XIII,PHL,125.3376206,8.9267926,86.36
+523,Cantao-an,,Naga,Cebu,R-VII,PHL,123.7604266,10.2522157,91.38
+524,A.S Fortuna Street corner V. Albano Street,Barangay Bakilid,Mandaue City,,R-VII,PHL,0.0,0.0,0
+525,Barangay Paraiso,,Sagay City,Negros Occidental,R-VI,PHL,123.4154178,10.8926817,83.26
+526,E. Rodriguez  Jr. Avenue cor Calle Industria,,Bagumbayan,Quezon City,NCR,PHL,121.079023965206,14.605485393948,99.84
+527,Barangay San Antonio,,Biñan City,Laguna,R-IV,PHL,121.08855,14.33608,90.33
+528,9th Avenue corner  31st Street,"Bonifacio Global City, Fort Bonifacio",Taguig City,,NCR,PHL,121.04451244698,14.554538740011,83.82
+529,A.S. Fortuna Street corner Sacris Road,Bakilid,Mandaue City,,R-VII,PHL,123.930006541279,10.337810390786,96.33
+530,Lapasan Highway,,Cagayan de Oro City,,R-X,PHL,124.613355,8.4396177,80
+531,Km. 48,"Mc Arthur Highway, Barrios of Iba Este, San Marcos and Palimbang",Calumpit,Bulacan,R-III,PHL,120.7669999,14.8899036,80
+532,32nd Street corner Rizal Drive,Bonifacio Global City,Taguig City,,NCR,PHL,121.046813233312,14.554759792311,99.45
+533,Macasandig,,Cagayan de Oro City,,R-X,PHL,124.6432928,8.4452148,97.14
+534,95 A. Bonifacio Street,,Baguio City,,CAR,PHL,120.599311006607,16.415375591789,86.02
+535,Villamor Airbase,,Pasay City,,NCR,PHL,121.0226,14.5181,99
+536,Nonoc Island,,Surigao del Norte,,R-XIII,PHL,125.62528,9.85056,90.32
+537,Barangays Santo Rosario and San Roque,,Magalang,Pampanga,R-III,PHL,120.618592612733,15.147682002349,94.49
+538,Benigno Aquino Avenue,,Barangay San Rafael,Iloilo City,R-VI,PHL,122.5499271,10.7064294,75.41
+539,F. Ortigas Jr. corner Garnet Road,"Ortigas Center, Brgy. San Antonio",Pasig City,,NCR,PHL,121.061960589635,14.588407685323,95.76
+540,Batangas Dos,,Mariveles,Bataan,R-III,PHL,120.6016937,14.4877322,86.83
+541,Polambato,,Bogo,Cebu,R-VII,PHL,123.9918,11.0664,92.38
+542,San Fernando City,,La Union,,R-I,PHL,120.3628619,16.6029147,96.67
+543,73 Ortigas Ave. Ext.,Barangay Sta. Lucia,Pasig City,,NCR,PHL,121.0856024,14.6156836,80
+544,Don Serging Avenue,North Reclamation Area,Cebu City,Cebu,R-VII,PHL,123.9164079,10.3117799,75
+545,Barangay Rosario and San Jose,,Mauban,Quezon,R-IV,PHL,121.7133191,14.1095932,80
+546,Malobago and Pagcolbon,,Rapu-Rapu,Albay,R-V,PHL,124.2110429,13.1729938,85.14
+547,99 E. Rodriguez Jr.,Barrio Ugong,Pasig City,,NCR,PHL,121.0929237,14.5483004,80
+548,Nuvali Development Complex,Barangay Canlubang,Calamba City,Laguna,R-IV,PHL,121.077643,14.1941922,80
+549,A. Bonifacio Ave.,Barangka,Marikina City,,NCR,PHL,121.080408550905,14.63230785863,100
+550,A. Bonifacio Ave.,Barangka,Marikina City,,NCR,PHL,121.080408550905,14.63230785863,100
+551,Simlong,,Batangas City,Batangas,R-IV,PHL,121.0558016,13.6680266,96
+552,Rosario Crescent corner Florentino Street,,Limketkai Center,Cagayan de Oro City,R-X,PHL,124.653680641995,8.483001732023,81
+553,Aurora Boulevard corner Doña Hemady Street,,Quezon City,,NCR,PHL,121.036914624757,14.615139418568,99.9
+554,Lacson Street,Mandalagan,Bacolod City,,R-VI,PHL,122.962175694921,10.699033383214,97.08
+555,Ledesma Street,,Iloilo City,,R-VI,PHL,122.5732728,10.6931315,75.38
+556,Olongapo-Gapan Road,Brgy. San Jose,San Fernando City,Pampanga,R-III,PHL,120.687565003313,15.043944052082,83.8
+557,San Isidro and Libertad,Kaputian,Samal City,Davao Del Norte,R-XI,PHL,125.7483113,6.953916,83.4
+558,Barangay Lantic,,Carmona,Cavite,R-IV,PHL,121.049348908419,14.298315628369,80.63
+559,Municipality of Alabel,,Province of Sarangani,,R-XII,PHL,125.29048,6.10179,84.65
+560,Zone 6,Panipuan,San Fernando City,Pampanga,R-III,PHL,120.6285774,15.1205916,91
+561,along Barangay Biñan,,Biñan City,,R-IV,PHL,0.0,0.0,0
+562,Nono Limbaga Drive,,Tanjay City,Negros Oriental,R-VII,PHL,123.157822244408,9.51355551114,91.41
+563,Milagros,Esperanza,Agusan del Sur,,R-XIII,PHL,125.5386987,8.6148478,94.12
+564,Silver City KPO Campus,"Frontera Drive, Frontera Verde, C-5 cor. Ortigas Ave., Brgy. Ugong",Pasig City,,NCR,PHL,121.0929237,14.5483004,80
+565,Frontera Verde,"C-5 cor. Ortigas Avenue, Barangay Ugong",Pasig City,,NCR,PHL,121.0929237,14.5483004,80
+566,Reclamation Area,,Bacolod City,,R-VI,PHL,122.9773921,10.6391813,75.17
+567,Gen. Aguinaldo cor. Tirona Hway,Brgy. Habay II,Bacoor City,,R-IV,PHL,120.952870957997,14.445341736751,93.66
+568,Barangay Tejero,,Rosario,Cavite,R-IV,PHL,120.860649166542,14.402946558428,79.34
+569,Block 9,"SM Central Business Park, Bay City",Pasay City,,NCR,PHL,120.9944465,14.5436072,75.65
+570,SM Central Business Park,Bay City,Pasay City,,NCR,PHL,120.9944465,14.5436072,75
+571,Cebu South Road Properties Complex,,Cebu City,,R-VII,PHL,123.878665499061,10.28142555916,87.5
+572,Doña Remedios,Trinidad Highway,Baliwag,Bulacan,R-III,PHL,120.9010222,14.9541961,75
+573,Benigno Aquino Ave.,,Iloilo City,,R-VI,PHL,0.0,0.0,0
+574,Pueblo de Oro,,Upper Carmen,Cagayan de Oro City,R-X,PHL,124.63611,8.47833,82
+575,EDSA corner North Avenue,,Quezon City,,NCR,PHL,121.02949982557,14.655825595677,100
+576,Quirino Highway,,Barangay San Bartolome,Quezon City,NCR,PHL,121.03817481595,14.705672976589,94.04
+577,Papaya,,Nasugbu,Batangas,R-IV,PHL,120.6190021,14.1894965,95
+578,South Forbes Golf City,Barangay Inhican,Silang,Cavite,R-IV,PHL,120.9737959,14.2259538,79.62
+579,Alabang Zapote Road,Barangay Almanza Uno,Las Piñas City,,NCR,PHL,121.019802132106,14.428298875668,94.4
+580,Indo-China Drive,"Filinvest Northgate Business District, Alabang",Muntinlupa City,,NCR,PHL,121.044048,14.4178119,80
+581,Araneta Street,Singcang,Bacolod City,,R-VI,PHL,122.939177554047,10.65515292236,88.65
+582,Shaw Boulevard cor. EDSA,,Mandaluyong City,,NCR,PHL,121.053457316502,14.581227579425,100
+583,Culis and Sumalo,,Hermosa,Bataan,R-III,PHL,120.4799042,14.8278861,84.52
+584,Cardinal Rosales Avenue,,Barangay Luz,Cebu City,R-VII,PHL,123.905330154947,10.315075253826,87.38
+585,Poblacion and Subangdaku,,Mandaue City,,R-VII,PHL,123.94433,10.32812,81.62
+586,Brgy. Tibag,,Tarlac City,,R-III,PHL,120.56365,15.49129,86.09
+587,Brgy. San Isidro,,Tarlac City,,R-III,PHL,120.5749994,15.5204928,88.15
+588,San Miguel,,Tarlac,,R-III,PHL,120.6118002,15.4616333,91.58
+589,Barangays Pallocon Silangan and Gulod Labac,,Batangas City,,R-IV,PHL,121.0817396,13.7559196,79.21
+590,961 Juan Luna Street,"Barangay 7, Tondo",Manila,,NCR,PHL,120.969708608915,14.606866438224,98.29
+591,8757 Paseo de Roxas corner Sedeño Street,Salcedo Village,Makati City,,NCR,PHL,121.022770163148,14.557399588897,95.53
+592,No. 107 Leviste Street,Salcedo Village,Makati City,,NCR,PHL,121.021713037192,14.559349533989,80.84
+593,A.S. Fortuna corner P. Remedio St.,Banilad,Mandaue City,,R-VII,PHL,123.919721024074,10.341321486207,94.24
+594,Barangay Mabacong,,Batangas City,,R-IV,PHL,121.0503601,13.6542424,85.81
+595,Doña Rosario,Tubay,Agusan del Norte,,R-XIII,PHL,125.5613701,9.1696769,94.29
+596,along National Highway,Barangay Poblacion,Tupi,South Cotabato,R-XII,PHL,124.9763877,6.354308,80
+597,C.P. Garcia,,Quezon City,,NCR,PHL,121.064335821443,14.676467644287,98.12
+598,University of the Philippines,,Los Baños,Laguna,R-IV,PHL,121.243306937821,14.167326606359,94.27
+599,University of the Philippines,,Los Baños,Laguna,R-IV,PHL,121.243306937821,14.167326606359,94.27
+600,Alabang-Zapote Road corner C.V. Starr Avenue,"Philamlife Village, Pamplona 2",Las Piñas City,,NCR,PHL,120.979035739311,14.450979383872,93.79
+601,C-5 Road and Levi Mariano Avenue,Barangay Ususan,Taguig City,,NCR,PHL,121.057576020999,14.53064706687,96.07
+602,G. Araneta Avneue cor. Ma. Clara Street,,Quezon City,,NCR,PHL,121.011228701571,14.630572304423,99.95
+603,Aeropark Office Campus,GGLC,Clark Freeport Zone,Pampanga,R-III,PHL,0.0,0.0,0
