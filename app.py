@@ -30,7 +30,8 @@ st.markdown("""
 def load_data():
     paths_to_try = [
         ("data/exports/analysis_units.csv", "data/exports/zones.csv", "data/exports/sources.csv"),
-        ("../data/exports/analysis_units.csv", "../data/exports/zones.csv", "../data/exports/sources.csv")
+        ("../data/exports/analysis_units.csv", "../data/exports/zones.csv", "../data/exports/sources.csv"),
+        ("analysis_units.csv", "zones.csv", "sources.csv")
     ]
     
     for au_path, z_path, s_path in paths_to_try:
@@ -57,7 +58,7 @@ app_mode = st.sidebar.radio("Choose a View:", [
 ])
 
 if analysis_units is None:
-    st.error("⚠️ Processed CSV files not found in `data/exports/`. Please ensure your export files are committed and pushed to your GitHub repository.")
+    st.error("⚠️ Processed CSV files not found in repository. Please ensure export files are pushed to `data/exports/`.")
     st.stop()
 
 # Prepare safe display string columns to prevent Plotly/Narwhals casting errors
@@ -131,9 +132,15 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             name_col = next((c for c in zones.columns if 'name' in c.lower()), zones.columns[0])
             
             if lat_col and lon_col:
-                fig_map = px.scatter_mapbox(
+                fig_map = px.scatter_geo(
                     zones, lat=lat_col, lon=lon_col, hover_name=name_col,
-                    zoom=5, height=450, mapbox_style="open-street-map"
+                    projection="mercator", height=450, color_discrete_sequence=["#ff7f0e"]
+                )
+                fig_map.update_geos(
+                    visible=True,
+                    center={"lat": 12.8797, "lon": 121.7740},
+                    lonaxis_range=[116, 127],
+                    lataxis_range=[4, 21]
                 )
                 fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
                 st.plotly_chart(fig_map, use_container_width=True)
