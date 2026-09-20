@@ -20,7 +20,6 @@ st.markdown("""
 <style>
     .main-header { font-size: 2.2rem; color: #1f77b4; font-weight: 700; }
     .sub-header { font-size: 1.3rem; color: #333333; font-weight: 500; }
-    .metric-card { background-color: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 5px solid #1f77b4; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -29,7 +28,6 @@ st.markdown("""
 # ==========================================
 @st.cache_data
 def load_data():
-    # Try standard repository root path (used by Streamlit Cloud)
     paths_to_try = [
         ("data/exports/analysis_units.csv", "data/exports/zones.csv", "data/exports/sources.csv"),
         ("../data/exports/analysis_units.csv", "../data/exports/zones.csv", "../data/exports/sources.csv")
@@ -62,6 +60,9 @@ if analysis_units is None:
     st.error("⚠️ Processed CSV files not found in `data/exports/`. Please ensure your export files (`analysis_units.csv`, `zones.csv`, `sources.csv`) are committed and pushed to your GitHub repository.")
     st.stop()
 
+# Prepare safe display columns
+analysis_units['zone_label'] = analysis_units['has_zone'].map({1: 'Yes', 0: 'No'})
+
 # ==========================================
 # 1. EXECUTIVE SUMMARY
 # ==========================================
@@ -85,7 +86,6 @@ if app_mode == "📊 Executive Summary":
     st.markdown("---")
     st.subheader("Descriptive Comparison: Zone vs. Non-Zone Provinces")
     
-    # Comparison table mirroring R script summary
     comparison = analysis_units.groupby('has_zone').agg(
         n_provinces=('ADM2_PCODE', 'count'),
         mean_total_pop=('T_TL', 'mean'),
@@ -125,14 +125,23 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
         
     with col2:
         st.subheader("Geographic Mapping of Zones")
-        if zones is not None and 'lat' in zones.columns and 'lon' in zones.columns:
-            fig_map = px.scatter_mapbox(
-                zones, lat="lat", lon="lon", hover_name="Zone Name" if "Zone Name" in zones.columns else zones.columns[0],
-                zoom=5, height=400, mapbox_style="carto-positron"
-            )
-            st.plotly_chart(fig_map, use_container_width=True)
+        if zones is not None and len(zones) > 0:
+            # Auto-detect latitude and longitude column names
+            lat_col = next((c for c in zones.columns if c.lower() in ['lat', 'latitude']), None)
+            lon_col = next((c for c in zones.columns if c.lower() in ['lon', 'long', 'longitude']), None)
+            name_col = next((c for c in zones.columns if 'name' in c.lower()), zones.columns[0])
+            
+            if lat_col and lon_col:
+                fig_map = px.scatter_mapbox(
+                    zones, lat=lat_col, lon=lon_col, hover_name=name_col,
+                    zoom=5, height=450, mapbox_style="open-street-map"
+                )
+                fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+                st.plotly_chart(fig_map, use_container_width=True)
+            else:
+                st.warning("Latitude/Longitude columns not found in zones dataset.")
         else:
-            st.info("Latitude and longitude coordinates available in zones dataset.")
+            st.info("Zones dataset is currently unavailable.")
 
 # ==========================================
 # 3. INFRASTRUCTURE & DEMOGRAPHICS
@@ -145,20 +154,21 @@ elif app_mode == "🏥 Infrastructure & Demographics":
         st.subheader("Hospital Counts by Zone Presence")
         fig_box = px.box(
             analysis_units, 
-            x=analysis_units['has_zone'].map({1: 'Yes', 0: 'No'}), 
+            x="zone_label", 
             y="hospitals_count",
             points="all",
-            labels={"x": "Economic Zone in Province", "hospitals_count": "Hospital Count"},
+            labels={"zone_label": "Economic Zone in Province", "hospitals_count": "Hospital Count"},
             color_discrete_sequence=["#52accb"]
         )
         st.plotly_chart(fig_box, use_container_width=True)
         
     with col2:
         st.subheader("Population vs. Zone Presence")
+        analysis_units['log_pop'] = np.log(analysis_units['T_TL'] + 1)
         fig_pop = px.scatter(
-            analysis_units, x=analysis_units['has_zone'].map({1: 'Yes', 0: 'No'}), 
-            y=np.log(analysis_units['T_TL'] + 1),
-            labels={"x": "Economic Zone in Province", "y": "Log Population + 1"},
+            analysis_units, x="zone_label", 
+            y="log_pop",
+            labels={"zone_label": "Economic Zone in Province", "log_pop": "Log Population + 1"},
             trendline="ols", color_discrete_sequence=["#ff7f0e"]
         )
         st.plotly_chart(fig_pop, use_container_width=True)
@@ -173,7 +183,7 @@ elif app_mode == "📈 Statistical Models":
     model_type = st.selectbox("Select Model:", ["Logistic Regression: Zone Placement", "OLS: Population vs Zone Presence"])
     
     if "Logistic" in model_type:
-        logit_mod = smf.logit("has_zone + 0 ~ hospitals_count + np.log(access_pop_education_10km + 1) + np.log(T_TL + 1)", data=analysis_units).fit()
+        logit_mod = smf.logit("has_zone ~ hospitals_count + np.log(access_pop_education_10km + 1) + np.log(T_TL + 1)", data=analysis_units).fit()
         st.text(str(logit_mod.summary()))
     else:
         ols_mod = smf.ols("np.log(T_TL + 1) ~ has_zone", data=analysis_units).fit()
