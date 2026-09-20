@@ -144,19 +144,30 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             if lat_col and lon_col:
                 map_df = zones.dropna(subset=[lat_col, lon_col]).copy()
                 
-                # High-resolution interactive Mapbox scatter plot with category color-coding restored
-                fig_map = px.scatter_mapbox(
+                # Robust geographic scatter projection (avoids mapbox dependency attribute errors)
+                fig_map = px.scatter_geo(
                     map_df,
                     lat=lat_col,
                     lon=lon_col,
                     color=nature_col,
                     hover_name=name_col,
                     hover_data=['CITY', 'province_name', nature_col],
-                    mapbox_style="open-street-map",
-                    zoom=5.2,
+                    scope="asia",
                     center={"lat": 12.8797, "lon": 121.7740},
+                    projection="natural earth",
                     height=550
                 )
+                
+                fig_map.update_geos(
+                    visible=True,
+                    resolution=50,
+                    showcountries=True, countrycolor="#d3d3d3",
+                    showsubunits=True, subunitcolor="#e0e0e0",
+                    lonaxis_range=[116.0, 127.0],
+                    lataxis_range=[4.5, 21.5],
+                    bgcolor="rgba(245,247,250,1)"
+                )
+                
                 fig_map.update_layout(
                     margin=dict(l=0, r=0, t=10, b=0),
                     legend=dict(
@@ -228,14 +239,14 @@ elif app_mode == "📈 Statistical Models":
             logit_mod = smf.logit("has_zone ~ hospitals_count + np.log(access_pop_education_10km + 1) + np.log(T_TL + 1)", data=analysis_units).fit()
             st.text(str(logit_mod.summary()))
         except Exception as e:
-            st.error(f"Model fitting error: {e}")
+            st.error(f"Model fitting engine error: {e}")
     else:
         st.markdown("**Model Specification:** `log(T_TL + 1) ~ has_zone`")
         try:
             ols_mod = smf.ols("np.log(T_TL + 1) ~ has_zone", data=analysis_units).fit()
             st.text(str(ols_mod.summary()))
         except Exception as e:
-            st.error(f"Model fitting error: {e}")
+            st.error(f"Model fitting engine error: {e}")
 
 # ==========================================
 # 5. DATA SOURCE AUDIT
