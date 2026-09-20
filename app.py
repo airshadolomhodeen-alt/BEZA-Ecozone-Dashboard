@@ -17,8 +17,9 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    .main-header { font-size: 2.2rem; color: #1f77b4; font-weight: 700; margin-bottom: 0px; }
+    .main-header { font-size: 2.3rem; color: #1f77b4; font-weight: 700; margin-bottom: 0px; }
     .sub-text { font-size: 1.1rem; color: #555555; margin-bottom: 20px; }
+    .stMetric { background-color: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #e9ecef; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -113,9 +114,9 @@ if app_mode == "📊 Executive Summary":
 # ==========================================
 elif app_mode == "🗺️ Spatial & Zone Distribution":
     st.markdown('<p class="main-header">Spatial Distribution of Economic Zones</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and geographic zone-type clusters.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and geographic zone-type clusters across the Philippines.</p>', unsafe_allow_html=True)
     
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([1.1, 1.3])
     
     with col1:
         st.subheader("Top Provinces by Zone Count")
@@ -130,7 +131,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             color="n_zones",
             color_continuous_scale="Blues"
         )
-        fig_bar.update_layout(height=550, margin=dict(l=0, r=0, t=10, b=0), showlegend=False)
+        fig_bar.update_layout(height=650, margin=dict(l=0, r=0, t=10, b=0), showlegend=False)
         st.plotly_chart(fig_bar, use_container_width=True)
         
     with col2:
@@ -144,7 +145,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             if lat_col and lon_col:
                 map_df = zones.dropna(subset=[lat_col, lon_col]).copy()
                 
-                # Robust geographic scatter projection (avoids mapbox dependency attribute errors)
+                # Native scatter_geo rendering with full fitbounds and clean projection (No mapbox token needed)
                 fig_map = px.scatter_geo(
                     map_df,
                     lat=lat_col,
@@ -153,30 +154,31 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
                     hover_name=name_col,
                     hover_data=['CITY', 'province_name', nature_col],
                     scope="asia",
-                    center={"lat": 12.8797, "lon": 121.7740},
                     projection="natural earth",
-                    height=550
+                    height=650,
+                    color_discrete_sequence=px.colors.qualitative.Bold
                 )
                 
                 fig_map.update_geos(
                     visible=True,
                     resolution=50,
-                    showcountries=True, countrycolor="#d3d3d3",
-                    showsubunits=True, subunitcolor="#e0e0e0",
+                    showcountries=True, countrycolor="#cbd5e1",
+                    showsubunits=True, subunitcolor="#e2e8f0",
                     lonaxis_range=[116.0, 127.0],
                     lataxis_range=[4.5, 21.5],
-                    bgcolor="rgba(245,247,250,1)"
+                    bgcolor="rgba(248,250,252,1)"
                 )
                 
                 fig_map.update_layout(
                     margin=dict(l=0, r=0, t=10, b=0),
                     legend=dict(
-                        title="Zone Nature",
+                        title=dict(text="<b>Zone Nature</b>"),
                         orientation="h",
                         yanchor="bottom",
-                        y=1.02,
-                        xanchor="right",
-                        x=1
+                        y=-0.2,
+                        xanchor="center",
+                        x=0.5,
+                        font=dict(size=10)
                     )
                 )
                 st.plotly_chart(fig_map, use_container_width=True)
