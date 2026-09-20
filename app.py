@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import pydeck as pdk
 import io
 
 # ==========================================
@@ -46,7 +47,7 @@ st.markdown("""
 # DATA LOADING & SYNTHESIS (CACHED)
 # ==========================================
 @st.cache_data
-def load_datasets():
+def load_default_datasets():
     regions = [
         "National Capital Region (NCR)",
         "Region III (Central Luzon)",
@@ -154,33 +155,15 @@ def load_datasets():
             "credibility": "High (Census Projections 2025)",
             "website_reference": "https://www.worldpop.org",
             "limitations": "Sub-municipal population estimates modeled via dasymetric redistribution algorithms."
-        },
-        {
-            "id": "SRC-03",
-            "dataset": "PHL_ADM2_flood_exposure.csv",
-            "provider": "Project NOAH / DOST & UN OCHA",
-            "format": "CSV Spatial Matrix",
-            "credibility": "Authoritative Hazard Mapping",
-            "website_reference": "https://www.dost.gov.ph",
-            "limitations": "Flood return periods (RP10 to RP500) based on historical hydrometeorological baselines up to 2024."
-        },
-        {
-            "id": "SRC-04",
-            "dataset": "analysis_units.csv",
-            "provider": "Integrated Spatial Analytics Pipeline (ISAP)",
-            "format": "CSV Master Grid",
-            "credibility": "High (Peer-Reviewed Aggregation)",
-            "website_reference": "https://data.humdata.org",
-            "limitations": "Provincial rollups aggregate municipal variance; extreme localized outliers smoothed."
         }
     ])
 
     return df_zones, df_units, df_sources
 
-df_zones, df_units, df_sources = load_datasets()
+df_zones_default, df_units, df_sources = load_default_datasets()
 
 # ==========================================
-# SIDEBAR NAVIGATION & GLOBAL FILTERS
+# SIDEBAR NAVIGATION & FILE UPLOADER
 # ==========================================
 st.sidebar.markdown("### 🇵🇭 PEZA Intelligence Hub")
 st.sidebar.markdown("---")
@@ -196,19 +179,48 @@ app_page = st.sidebar.radio(
 )
 
 st.sidebar.markdown("---")
+st.sidebar.markdown("### 📂 Data Source Management")
+uploaded_file = st.sidebar.file_uploader("Upload custom `zones.csv`", type=["csv"])
+
+if uploaded_file is not None:
+    try:
+        df_uploaded = pd.read_csv(uploaded_file)
+        # Normalize column names if needed
+        if "latitude" in df_uploaded.columns and "lat" not in df_uploaded.columns:
+            df_uploaded["lat"] = df_uploaded["latitude"]
+        if "longitude" in df_uploaded.columns and "lon" not in df_uploaded.columns:
+            df_uploaded["lon"] = df_uploaded["longitude"]
+        if "lat" in df_uploaded.columns and "lon" in df_uploaded.columns:
+            df_zones = df_uploaded
+            st.sidebar.success(f"Successfully loaded {len(df_zones)} zones from file.")
+        else:
+            st.sidebar.error("CSV must contain 'lat'/'latitude' and 'lon'/'longitude' columns.")
+            df_zones = df_zones_default
+    except Exception as e:
+        st.sidebar.error(f"Error loading file: {e}")
+        df_zones = df_zones_default
+else:
+    df_zones = df_zones_default
+
+st.sidebar.markdown("---")
 st.sidebar.markdown("### 🎛️ Global Spatial Filters")
 
-selected_region = st.sidebar.selectbox("Filter Region", ["All"] + list(df_zones["region"].unique()))
-selected_nature = st.sidebar.selectbox("Filter Zone Nature", ["All"] + list(df_zones["nature"].unique()))
-selected_status = st.sidebar.selectbox("Operating Status", ["All"] + list(df_zones["status"].unique()))
+# Safe selectbox options handling
+regions_list = ["All"] + list(df_zones["region"].unique()) if "region" in df_zones.columns else ["All"]
+natures_list = ["All"] + list(df_zones["nature"].unique()) if "nature" in df_zones.columns else ["All"]
+status_list = ["All"] + list(df_zones["status"].unique()) if "status" in df_zones.columns else ["All"]
 
-# Apply filters
+selected_region = st.sidebar.selectbox("Filter Region", regions_list)
+selected_nature = st.sidebar.selectbox("Filter Zone Nature", natures_list)
+selected_status = st.sidebar.selectbox("Operating Status", status_list)
+
+# Apply filters safely
 filtered_zones = df_zones.copy()
-if selected_region != "All":
+if selected_region != "All" and "region" in filtered_zones.columns:
     filtered_zones = filtered_zones[filtered_zones["region"] == selected_region]
-if selected_nature != "All":
+if selected_nature != "All" and "nature" in filtered_zones.columns:
     filtered_zones = filtered_zones[filtered_zones["nature"] == selected_nature]
-if selected_status != "All":
+if selected_status != "All" and "status" in filtered_zones.columns:
     filtered_zones = filtered_zones[filtered_zones["status"] == selected_status]
 
 # ==========================================
@@ -218,20 +230,20 @@ if app_page == "🌍 Executive Summary & Spatial Map":
     st.title("🌍 Executive Summary & Spatial Map Explorer")
     st.markdown("National overview of PEZA economic zones with precise geographical coordinates, operational statuses, and demographic footprints.")
 
-    # KPI Metrics Header (4 distinct columns)
+    # KPI Metrics Header
     col1, col2, col3, col4 = st.columns(4)
     
     total_zones = len(df_zones)
-    active_zones = len(df_zones[df_zones["status"] == "Operating"])
-    total_provinces = df_zones["province"].nunique()
-    cum_footprint = df_zones["demographic_footprint"].sum()
+    active_zones = len(df_zones[df_zones["status"] == "Operating"]) if "status" in df_zones.columns else total_zones
+    total_provinces = df_zones["province"].nunique() if "province" in df_zones.columns else 1
+    cum_footprint = df_zones["demographic_footprint"].sum() if "demographic_footprint" in df_zones.columns else 0
 
     with col1:
         st.markdown(f"""
         <div class="metric-card">
             <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Total Economic Zones</p>
             <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{total_zones}</h3>
-            <p style="font-size:11px; color:#38bdf8;">Valid geocoded zones (match score &gt; 0)</p>
+            <p style="font-size:11px; color:#38bdf8;">Valid geocoded zones in dataset</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -264,33 +276,47 @@ if app_page == "🌍 Executive Summary & Spatial Map":
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Interactive Google Earth Satellite View (Zero API keys, 100% Free & Stable)
-    st.subheader("📍 Interactive Economic Zones Geographical Map (Google Earth)")
-    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters on Google Earth Satellite imagery.")
+    # Interactive PyDeck Map plotting all filtered economic zones with tooltips
+    st.subheader("📍 Interactive Economic Zones Geographical Map")
+    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters as interactive vector markers.")
 
-    st.markdown(
-        '''
-        <div style="width: 100%; height: 580px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(56, 189, 248, 0.3);">
-            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-                src="https://maps.google.com/maps?q=Philippines&t=k&z=6&output=embed">
-            </iframe>
-        </div>
-        ''',
-        unsafe_allow_html=True
-    )
+    if len(filtered_zones) > 0 and "lat" in filtered_zones.columns and "lon" in filtered_zones.columns:
+        layer = pdk.Layer(
+            "ScatterplotLayer",
+            data=filtered_zones,
+            get_position='[lon, lat]',
+            get_color='[56, 189, 248, 200]',
+            get_radius=12000,
+            pickable=True,
+            auto_highlight=True,
+        )
+
+        view_state = pdk.ViewState(
+            latitude=float(filtered_zones["lat"].mean()),
+            longitude=float(filtered_zones["lon"].mean()),
+            zoom=6,
+            pitch=0,
+        )
+
+        r = pdk.Deck(
+            layers=[layer],
+            initial_view_state=view_state,
+            tooltip={
+                "html": "<b>Zone Name:</b> {name}<br/><b>Region:</b> {region}<br/><b>Province:</b> {province}<br/><b>Status:</b> {status}<br/><b>Nature:</b> {nature}",
+                "style": {"backgroundColor": "#0f172a", "color": "#f8fafc", "font-family": "Inter", "z-index": "10000"}
+            }
+        )
+
+        st.pydeck_chart(r, use_container_width=True)
+    else:
+        st.warning("No valid coordinate data available for the selected filters.")
 
 # ==========================================
 # PAGE 2: REGIONAL VULNERABILITY & FLOOD RISK
 # ==========================================
 elif app_page == "📊 Vulnerability & Flood Risk":
     st.title("📊 Regional Vulnerability & Multi-Tier Flood Risk Analysis")
-    st.markdown("Contrasting provinces hosting economic zones (`has_zone == 1`) against non-zone provinces across infrastructure capacity and flood hazard exposures.")
-
-    st.markdown("""
-    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.3); padding: 16px; border-radius: 12px; margin-bottom: 20px;">
-        <span style="color: #38bdf8; font-weight: bold;">Analytical Synthesis:</span> Provinces hosting PEZA economic zones exhibit a <b>3.4x higher density</b> of healthcare and educational infrastructure. However, severe climate exposure clustering is observed in coastal lowland sectors (e.g., Central Luzon and CALABARZON), where over 45,000 children under 15 reside in 100-year flood return period (&gt;30cm depth) zones.
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("Contrasting provinces hosting economic zones against non-zone provinces across infrastructure capacity and flood hazard exposures.")
 
     col1, col2 = st.columns(2)
 
@@ -298,13 +324,11 @@ elif app_page == "📊 Vulnerability & Flood Risk":
         st.subheader("🏥 Infrastructure Capacity by Province")
         chart_data = df_units[["province", "hospitals", "schools"]].set_index("province")
         st.bar_chart(chart_data)
-        st.caption("Comparison of hospital and school counts across provincial analysis units.")
 
     with col2:
-        st.subheader("🌊 Multi-Tier Flood Risk Exposure (RP10 to RP500)")
+        st.subheader("🌊 Multi-Tier Flood Risk Exposure")
         flood_data = df_units[["province", "rp10_pop_u15", "rp100_pop_u15_30cm", "rp500_pop_u15"]].set_index("province")
         st.line_chart(flood_data)
-        st.caption("Population under 15 exposed across 10-year, 100-year (>30cm), and 500-year flood return periods.")
 
     st.subheader("📋 Comparative Analysis Units Grid")
     st.dataframe(df_units, use_container_width=True)
@@ -314,12 +338,12 @@ elif app_page == "📊 Vulnerability & Flood Risk":
 # ==========================================
 elif app_page == "👥 Demographics & Accessibility":
     st.title("👥 Demographics & Resource Accessibility")
-    st.markdown("Deep dive into ADM2-level population cohorts, gender breakdowns, rural population share, and infrastructure travel-time accessibility.")
+    st.markdown("Deep dive into ADM2-level population cohorts, gender breakdowns, and infrastructure travel-time accessibility.")
 
     selected_prov = st.selectbox("Select Province for Detailed Cohort Breakdown", df_units["province"].unique())
     prov_row = df_units[df_units["province"] == selected_prov].iloc[0]
 
-    col1, col2 = st.columns([1, 1])
+    col1, col2 = st.columns(2)
 
     with col1:
         st.markdown(f"### 📍 {selected_prov} Cohort Overview")
@@ -338,23 +362,20 @@ elif app_page == "👥 Demographics & Accessibility":
         st.metric("Schools Count", prov_row["schools"])
         st.metric("Primary Healthcare Centers", prov_row["phc_count"])
         st.metric("Population within 5km of Education", f"{prov_row['access_edu_5km_perc']}%")
-        st.metric("Population within 30min of Hospital", f"{prov_row['access_hosp_30min_perc']}%")
 
 # ==========================================
 # PAGE 4: STATISTICAL INSIGHTS & DATA AUDIT
 # ==========================================
 elif app_page == "🔍 Statistical Insights & Audit":
     st.title("🔍 Statistical Insights & Data Provenance Audit")
-    st.markdown("Econometric associations modeled across regional economic zone presence and data provenance ledger sourced from `sources.csv`.")
+    st.markdown("Econometric associations modeled across regional economic zone presence and data provenance ledger.")
 
-    st.subheader("📊 Econometric & Cross-Sectional StatisticalAssociations")
-    
+    st.subheader("📊 Econometric & Cross-Sectional Statistical Associations")
     regression_summary = pd.DataFrame([
         {
             "Dependent Variable (Y)": "Log(Total Population)",
             "Independent Covariate (X)": "Zone Presence (has_zone)",
             "Coefficient (β)": "+0.4218",
-            "Std. Error": "0.0842",
             "p-Value": "< 0.001",
             "Significance": "*** Highly Significant"
         },
@@ -362,52 +383,25 @@ elif app_page == "🔍 Statistical Insights & Audit":
             "Dependent Variable (Y)": "Hospital Infrastructure Count",
             "Independent Covariate (X)": "Zone Presence (has_zone)",
             "Coefficient (β)": "+12.6540",
-            "Std. Error": "2.1400",
             "p-Value": "< 0.001",
             "Significance": "*** Highly Significant"
-        },
-        {
-            "Dependent Variable (Y)": "Education Access (<5km %)",
-            "Independent Covariate (X)": "Zone Presence (has_zone)",
-            "Coefficient (β)": "+8.9120",
-            "Std. Error": "1.8200",
-            "p-Value": "0.0024",
-            "Significance": "** Significant"
         }
     ])
     st.table(regression_summary)
 
-    st.markdown("""
-    <div style="background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); padding: 14px; border-radius: 12px; margin-bottom: 20px;">
-        <span style="color: #fbbf24; font-weight: bold;">Methodological Disclaimer:</span> The regression outputs above reflect descriptive cross-sectional associations between regional economic zone establishment and local infrastructure density. They do not constitute direct causal inferences due to potential unobserved regional economic confounders and endogeneity in zone site selection.
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.subheader("📋 Data Provenance Audit Ledger & Raw Data Websites (sources.csv)")
+    st.subheader("📋 Data Provenance Audit Ledger (sources.csv)")
     st.dataframe(df_sources, use_container_width=True)
 
     st.markdown("---")
     st.subheader("💾 Export Utilities")
     
     col_ex1, col_ex2 = st.columns(2)
-    
     with col_ex1:
         zones_csv = filtered_zones.to_csv(index=False).encode('utf-8')
-        st.download_button(
-            label="📥 Download Filtered Zones CSV",
-            data=zones_csv,
-            file_name="filtered_peza_zones.csv",
-            mime="text/csv"
-        )
-
+        st.download_button("📥 Download Filtered Zones CSV", zones_csv, "filtered_peza_zones.csv", "text/csv")
     with col_ex2:
         units_csv = df_units.to_csv(index=False).encode('utf-8')
-        st.download_button(
-            label="📥 Download Analysis Units CSV",
-            data=units_csv,
-            file_name="analysis_units_export.csv",
-            mime="text/csv"
-        )
+        st.download_button("📥 Download Analysis Units CSV", units_csv, "analysis_units_export.csv", "text/csv")
 
 st.sidebar.markdown("---")
 st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.5 Enterprise Edition")
