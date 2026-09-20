@@ -4,7 +4,6 @@ import numpy as np
 import plotly.express as px
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
-import streamlit.components.v1 as components
 
 # ==========================================
 # PAGE CONFIGURATION & STYLING
@@ -114,7 +113,7 @@ if app_mode == "📊 Executive Summary":
 # ==========================================
 elif app_mode == "🗺️ Spatial & Zone Distribution":
     st.markdown('<p class="main-header">Spatial Distribution of Economic Zones</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and interactive Google Maps geographic coordinates.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and geographic coordinates.</p>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     
@@ -135,74 +134,18 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
         st.plotly_chart(fig_bar, use_container_width=True)
         
     with col2:
-        st.subheader("Google Maps Interactive View")
+        st.subheader("Interactive Geographic Map")
         if zones is not None and len(zones) > 0:
             lat_col = next((c for c in zones.columns if c.lower() in ['lat', 'latitude']), None)
             lon_col = next((c for c in zones.columns if c.lower() in ['lon', 'long', 'longitude']), None)
-            name_col = next((c for c in zones.columns if 'name' in c.lower() and c.upper() != 'PROVINCE_NAME'), zones.columns[0])
-            nature_col = next((c for c in zones.columns if c.lower() in ['nature', 'type', 'status']), zones.columns[0])
             
             if lat_col and lon_col:
-                valid_zones = zones.dropna(subset=[lat_col, lon_col]).copy()
+                map_df = zones.dropna(subset=[lat_col, lon_col]).copy()
+                # Rename columns to 'latitude' and 'longitude' for native st.map support
+                map_df = map_df.rename(columns={lat_col: 'latitude', lon_col: 'longitude'})
                 
-                markers_js = ""
-                for _, row in valid_zones.iterrows():
-                    lat = row[lat_col]
-                    lon = row[lon_col]
-                    zname = str(row[name_col]).replace("'", "\\'")
-                    city = str(row.get('CITY', '')).replace("'", "\\'")
-                    prov = str(row.get('province_name', '')).replace("'", "\\'")
-                    nature = str(row.get(nature_col, 'Zone')).replace("'", "\\'")
-                    
-                    markers_js += f"""
-                    L.circleMarker([{lat}, {lon}], {{
-                        radius: 6,
-                        fillColor: '#1f77b4',
-                        color: '#ffffff',
-                        weight: 1,
-                        opacity: 1,
-                        fillOpacity: 0.8
-                    }}).addTo(map).bindPopup("<b>{zname}</b><br>Nature: {nature}<br>City: {city}<br>Province: {prov}");
-                    """
-
-                leaflet_html = f"""
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-                    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-                    <style>
-                        #map {{ height: 550px; width: 100%; border-radius: 8px; }}
-                    </style>
-                </head>
-                <body>
-                    <div id="map"></div>
-                    <script>
-                        var map = L.map('map').setView([12.8797, 121.7740], 5);
-                        
-                        var googleRoadmap = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={{x}}&y={{y}}&z={{z}}', {{
-                            maxZoom: 20,
-                            attribution: '&copy; Google Maps'
-                        }}).addTo(map);
-
-                        var googleSat = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={{x}}&y={{y}}&z={{z}}', {{
-                            maxZoom: 20,
-                            attribution: '&copy; Google Earth / Maps'
-                        }});
-
-                        var baseMaps = {{
-                            "Google Roadmap": googleRoadmap,
-                            "Google Satellite (Earth)": googleSat
-                        }};
-
-                        L.control.layers(baseMaps).addTo(map);
-
-                        {markers_js}
-                    </script>
-                </body>
-                </html>
-                """
-                components.html(leaflet_html, height=560)
+                # Native Streamlit map renders instantly and reliably
+                st.map(map_df, latitude='latitude', longitude='longitude', zoom=5, height=550)
             else:
                 st.warning("Latitude/Longitude columns not found in zones dataset.")
         else:
