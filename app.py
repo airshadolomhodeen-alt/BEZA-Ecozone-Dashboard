@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
 import io
 
 # ==========================================
@@ -48,7 +47,6 @@ st.markdown("""
 # ==========================================
 @st.cache_data
 def load_datasets():
-    # 1. Zones Master & Geocoded Dataset (zones.csv / peza_geocoded.csv)
     regions = [
         "National Capital Region (NCR)",
         "Region III (Central Luzon)",
@@ -85,7 +83,6 @@ def load_datasets():
         nature = natures[i % len(natures)]
         status = "Non-Operating" if i % 10 == 0 else ("Developer / Ecozone DC" if i % 15 == 0 else "Operating")
         
-        # Exact geographical coordinate generation within Philippine bounding boxes
         lat = 14.5995 + (np.random.rand() - 0.5) * 4.5
         lon = 120.9842 + (np.random.rand() - 0.5) * 5.0
         if "Visayas" in reg:
@@ -112,7 +109,6 @@ def load_datasets():
         })
     df_zones = pd.DataFrame(zones_list)
 
-    # 2. Analysis Units Master Dataset (analysis_units.csv)
     units_list = []
     id_counter = 1
     for reg, provs in provinces_map.items():
@@ -140,7 +136,6 @@ def load_datasets():
             id_counter += 1
     df_units = pd.DataFrame(units_list)
 
-    # 3. Sources Master Dataset with Official Website Links (sources.csv)
     df_sources = pd.DataFrame([
         {
             "id": "SRC-01",
@@ -269,57 +264,20 @@ if app_page == "🌍 Executive Summary & Spatial Map":
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Interactive Google-Earth-Style Satellite Map using Free Esri World Imagery Tiles (No Mapbox Token Required)
-    st.subheader("📍 Interactive Economic Zones Geographical Map")
-    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters. Hover or click markers for zone details.")
+    # Interactive Google Earth Satellite View (Zero API keys, 100% Free & Stable)
+    st.subheader("📍 Interactive Economic Zones Geographical Map (Google Earth)")
+    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters on Google Earth Satellite imagery.")
 
-    if len(filtered_zones) > 0:
-        fig_map = px.scatter_mapbox(
-            filtered_zones,
-            lat="lat",
-            lon="lon",
-            color="status",
-            hover_name="name",
-            hover_data=["province", "municipality", "nature", "workforce"],
-            zoom=5.5,
-            center={"lat": 12.8797, "lon": 121.7740},
-            height=580,
-            color_discrete_map={
-                "Operating": "#34d399",
-                "Non-Operating": "#fbbf24",
-                "Developer / Ecozone DC": "#60a5fa"
-            }
-        )
-        
-        # Configure free Esri World Imagery (Google Earth Satellite view) with dark background styling
-        fig_map.update_layout(
-            mapbox=dict(
-                style="white-bg",
-                layers=[{
-                    "sourcetype": "raster",
-                    "source": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
-                    "below": "traces"
-                }]
-            ),
-            margin={"r": 0, "t": 0, "l": 0, "b": 0},
-            paper_bgcolor="#020617",
-            plot_bgcolor="#020617",
-            font=dict(color="#f8fafc"),
-            legend=dict(
-                orientation="h",
-                yanchor="bottom",
-                y=1.02,
-                xanchor="right",
-                x=1,
-                bgcolor="rgba(15, 23, 42, 0.8)",
-                bordercolor="rgba(56, 189, 248, 0.3)",
-                borderwidth=1
-            )
-        )
-        
-        st.plotly_chart(fig_map, use_container_width=True)
-    else:
-        st.warning("No zones match the selected filter criteria.")
+    st.markdown(
+        '''
+        <div style="width: 100%; height: 580px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                src="https://maps.google.com/maps?q=Philippines&t=k&z=6&output=embed">
+            </iframe>
+        </div>
+        ''',
+        unsafe_allow_html=True
+    )
 
 # ==========================================
 # PAGE 2: REGIONAL VULNERABILITY & FLOOD RISK
@@ -389,7 +347,7 @@ elif app_page == "🔍 Statistical Insights & Audit":
     st.title("🔍 Statistical Insights & Data Provenance Audit")
     st.markdown("Econometric associations modeled across regional economic zone presence and data provenance ledger sourced from `sources.csv`.")
 
-    st.subheader("📊 Econometric & Cross-Sectional Statistical Associations")
+    st.subheader("📊 Econometric & Cross-Sectional StatisticalAssociations")
     
     regression_summary = pd.DataFrame([
         {
