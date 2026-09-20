@@ -20,7 +20,6 @@ st.markdown("""
 <style>
     .main-header { font-size: 2.2rem; color: #1f77b4; font-weight: 700; margin-bottom: 0px; }
     .sub-text { font-size: 1.1rem; color: #555555; margin-bottom: 20px; }
-    .metric-card { background-color: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 5px solid #1f77b4; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -59,7 +58,7 @@ app_mode = st.sidebar.radio("Choose a View:", [
 ])
 
 if analysis_units is None:
-    st.error("⚠️ Processed CSV files not found. Please ensure `analysis_units.csv`, `zones.csv`, and `sources.csv` are in the root directory or `data/exports/`.")
+    st.error("⚠️ Processed CSV files not found. Please ensure `analysis_units.csv`, `zones.csv`, and `sources.csv` are in the root directory.")
     st.stop()
 
 # Safe string formatting for categorical charts
@@ -98,7 +97,7 @@ if app_mode == "📊 Executive Summary":
         mean_hosp_access_1h=('access_pop_hospitals_1h', 'mean')
     ).reset_index()
     
-    comparison['has_zone'] = comparison['has_zone'].map({1: 'Zone Province (n=...)', 0: 'Non-Zone Province'})
+    comparison['has_zone'] = comparison['has_zone'].map({1: 'Zone Province', 0: 'Non-Zone Province'})
     
     st.dataframe(comparison.style.format({
         'n_provinces': '{:,}',
@@ -144,18 +143,25 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             nature_col = next((c for c in zones.columns if c.lower() in ['nature', 'type', 'status']), zones.columns[0])
             
             if lat_col and lon_col:
-                # carto-positron requires NO API token and renders a crisp, high-end map
-                fig_map = px.scatter_mapbox(
+                # Using robust scatter_geo centered on the Philippines to prevent Mapbox API crashes
+                fig_map = px.scatter_geo(
                     zones, 
                     lat=lat_col, 
                     lon=lon_col, 
                     hover_name=name_col,
                     hover_data=['CITY', 'province_name', nature_col],
                     color=nature_col,
-                    mapbox_style="carto-positron",
-                    zoom=5.2, 
-                    center={"lat": 12.8797, "lon": 121.7740},
+                    projection="mercator",
                     height=520
+                )
+                fig_map.update_geos(
+                    visible=True,
+                    resolution=50,
+                    showcountries=True, countrycolor="#d8d8d8",
+                    showcoastlines=True, coastlinecolor="#c8c8c8",
+                    center={"lat": 12.8797, "lon": 121.7740},
+                    lonaxis_range=[116.5, 126.5],
+                    lataxis_range=[4.5, 21.5]
                 )
                 fig_map.update_layout(
                     margin={"r":0,"t":10,"l":0,"b":0},
