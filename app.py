@@ -16,15 +16,15 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    .main { background-color: #020617; color: #f8fafc; }
-    .stSidebar { background-color: #0f172a; border-right: 1px solid #1e293b; }
-    h1, h2, h3 { color: #f8fafc; font-family: 'Inter', sans-serif; }
+    .main { background-color: #f8fafc; color: #0f172a; }
+    .stSidebar { background-color: #ffffff; border-right: 1px solid #e2e8f0; }
+    h1, h2, h3 { color: #0f172a; font-family: 'Inter', sans-serif; }
     .metric-card {
-        background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
-        border: 1px solid rgba(56, 189, 248, 0.2);
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
         padding: 20px;
         border-radius: 16px;
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
     .stButton>button {
         background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
@@ -37,50 +37,32 @@ st.markdown("""
     }
     .stButton>button:hover {
         opacity: 0.9;
-        box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
+        box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
     }
 </style>
 """, unsafe_allow_html=True)
 
 # ==========================================
-# ROBUST DATA LOADING WITH EMBEDDED FALLBACK
+# STRICT DATA LOADING FROM zones.csv
 # ==========================================
 @st.cache_data
 def load_datasets():
     if os.path.exists("zones.csv"):
-        try:
-            df_zones = pd.read_csv("zones.csv")
-        except Exception:
-            df_zones = pd.DataFrame()
+        df_zones = pd.read_csv("zones.csv")
     else:
-        df_zones = pd.DataFrame()
-
-    # If zones.csv is missing or empty, generate complete backup dataset of 589 zones
-    if df_zones.empty:
-        np.random.seed(42)
-        mock_sz = 589
-        df_zones = pd.DataFrame({
-            "ID": range(1, mock_sz + 1),
-            "ZONE_NAME": [f"PEZA Economic Zone Hub {i}" for i in range(1, mock_sz + 1)],
-            "NATURE": np.random.choice(["IT Center", "IT Park", "Manufacturing", "Tourism", "Agro-Industrial"], mock_sz),
-            "STATUS": np.random.choice(["Operating", "Not Yet Operating"], mock_sz, p=[0.88, 0.12]),
-            "CITY": np.random.choice(["Makati City", "Taguig City", "Cebu City", "Davao City", "Pasig City", "Quezon City"], mock_sz),
-            "province_name": np.random.choice(["Metro Manila", "Cebu", "Laguna", "Cavite", "Batangas", "Davao del Sur"], mock_sz),
-            "region_name": np.random.choice(["National Capital Region", "Region VII", "Region IV-A", "Region XI"], mock_sz),
-            "lat": 6.0 + np.random.rand(mock_sz) * 12.0,
-            "lon": 121.0 + np.random.rand(mock_sz) * 5.0
-        })
+        st.error("🚨 CRITICAL ERROR: `zones.csv` not found in root directory!")
+        df_zones = pd.DataFrame(columns=["ZONE_NAME", "lat", "lon", "NATURE", "STATUS", "CITY", "province_name", "region_name"])
 
     # Clean column names
     df_zones.columns = [c.strip() for c in df_zones.columns]
 
-    # Ensure valid numeric coordinates
+    # Ensure exact numeric parsing for lat and lon
     if "lat" in df_zones.columns and "lon" in df_zones.columns:
         df_zones["lat"] = pd.to_numeric(df_zones["lat"], errors="coerce")
         df_zones["lon"] = pd.to_numeric(df_zones["lon"], errors="coerce")
         df_zones = df_zones.dropna(subset=["lat", "lon"])
 
-    # Standardize attributes
+    # Standardize display attribute mappings
     df_zones["name"] = df_zones["ZONE_NAME"] if "ZONE_NAME" in df_zones.columns else df_zones.get("name", "Unknown Zone")
     df_zones["region"] = df_zones["region_name"] if "region_name" in df_zones.columns else df_zones.get("region", "National Capital Region")
     df_zones["province"] = df_zones["province_name"] if "province_name" in df_zones.columns else df_zones.get("province", "Metro Manila")
@@ -188,9 +170,9 @@ if app_page == "🌍 Executive Summary & Spatial Map":
     with col1:
         st.markdown(f"""
         <div class="metric-card">
-            <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Total Economic Zones</p>
-            <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{total_zones}</h3>
-            <p style="font-size:11px; color:#38bdf8;">Master Registry Records</p>
+            <p style="font-size:12px; color:#64748b; font-weight:600; text-transform:uppercase;">Total Economic Zones</p>
+            <h3 style="font-size:28px; font-weight:900; color:#0f172a; margin:5px 0;">{total_zones}</h3>
+            <p style="font-size:11px; color:#0284c7;">Master Registry Records</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -198,45 +180,45 @@ if app_page == "🌍 Executive Summary & Spatial Map":
         eff_pct = (active_zones / total_zones * 100) if total_zones > 0 else 0.0
         st.markdown(f"""
         <div class="metric-card">
-            <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Active Operating Zones</p>
-            <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{active_zones}</h3>
-            <p style="font-size:11px; color:#34d399;">{eff_pct:.1f}% Operational Efficiency</p>
+            <p style="font-size:12px; color:#64748b; font-weight:600; text-transform:uppercase;">Active Operating Zones</p>
+            <h3 style="font-size:28px; font-weight:900; color:#0f172a; margin:5px 0;">{active_zones}</h3>
+            <p style="font-size:11px; color:#10b981;">{eff_pct:.1f}% Operational Efficiency</p>
         </div>
         """, unsafe_allow_html=True)
 
     with col3:
         st.markdown(f"""
         <div class="metric-card">
-            <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Provinces Covered</p>
-            <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{total_provinces}</h3>
-            <p style="font-size:11px; color:#60a5fa;">Across major administrative regions</p>
+            <p style="font-size:12px; color:#64748b; font-weight:600; text-transform:uppercase;">Provinces Covered</p>
+            <h3 style="font-size:28px; font-weight:900; color:#0f172a; margin:5px 0;">{total_provinces}</h3>
+            <p style="font-size:11px; color:#2563eb;">Across major administrative regions</p>
         </div>
         """, unsafe_allow_html=True)
 
     with col4:
         st.markdown(f"""
         <div class="metric-card">
-            <p style="font-size:12px; color:#94a3b8; font-weight:600; text-transform:uppercase;">Demographic Footprint</p>
-            <h3 style="font-size:28px; font-weight:900; color:#f8fafc; margin:5px 0;">{cum_footprint/1e6:.2f}M</h3>
-            <p style="font-size:11px; color:#a78bfa;">Cumulative catchment population</p>
+            <p style="font-size:12px; color:#64748b; font-weight:600; text-transform:uppercase;">Demographic Footprint</p>
+            <h3 style="font-size:28px; font-weight:900; color:#0f172a; margin:5px 0;">{cum_footprint/1e6:.2f}M</h3>
+            <p style="font-size:11px; color:#7c3aed;">Cumulative catchment population</p>
         </div>
         """, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.subheader("📍 Interactive Economic Zones Geographical Map")
-    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters. Hover or click markers for exact zone details.")
+    st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current filters on professional map view.")
 
     if len(filtered_zones) > 0:
         def get_color(status):
             st_str = str(status).lower()
             if "not" in st_str:
-                return [251, 191, 36, 200]
-            return [52, 211, 153, 200]
+                return [217, 119, 6, 220]  # Amber for not operating
+            return [16, 185, 129, 220]    # Emerald Green for operating
 
         map_df = filtered_zones.copy()
         map_df["color"] = map_df["status"].apply(get_color)
-        map_df["radius"] = 5000
+        map_df["radius"] = 6000
 
         layer = pdk.Layer(
             "ScatterplotLayer",
@@ -246,15 +228,15 @@ if app_page == "🌍 Executive Summary & Spatial Map":
             get_radius="radius",
             pickable=True,
             auto_highlight=True,
-            radius_min_pixels=4,
-            radius_max_pixels=12,
+            radius_min_pixels=5,
+            radius_max_pixels=14,
         )
 
         view_state = pdk.ViewState(
             latitude=float(map_df["lat"].mean()),
             longitude=float(map_df["lon"].mean()),
             zoom=6,
-            pitch=30,
+            pitch=0,  # Flat professional 2D top-down map view (Google Maps/Earth style)
         )
 
         r = pdk.Deck(
@@ -262,9 +244,9 @@ if app_page == "🌍 Executive Summary & Spatial Map":
             initial_view_state=view_state,
             tooltip={
                 "html": "<b>Zone Name:</b> {name}<br/><b>Province:</b> {province}<br/><b>Municipality:</b> {municipality}<br/><b>Nature:</b> {nature}<br/><b>Status:</b> {status}",
-                "style": {"backgroundColor": "#0f172a", "color": "#f8fafc", "border": "1px solid #38bdf8"}
+                "style": {"backgroundColor": "#ffffff", "color": "#0f172a", "border": "1px solid #cbd5e1", "box-shadow": "0 4px 6px rgba(0,0,0,0.1)"}
             },
-            map_style="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
+            map_style="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"  # Clean professional light map style
         )
 
         st.pydeck_chart(r)
@@ -272,92 +254,39 @@ if app_page == "🌍 Executive Summary & Spatial Map":
         st.warning("No zones match the selected filter criteria.")
 
 # ==========================================
-# PAGE 2: REGIONAL VULNERABILITY & FLOOD RISK
+# OTHER PAGES (Vulnerability, Demographics, Audit)
 # ==========================================
 elif app_page == "📊 Vulnerability & Flood Risk":
     st.title("📊 Regional Vulnerability & Multi-Tier Flood Risk Analysis")
     st.markdown("Contrasting provinces hosting economic zones across infrastructure capacity and flood hazard exposures.")
-
     col1, col2 = st.columns(2)
-
     with col1:
         st.subheader("🏥 Infrastructure Capacity by Province")
         chart_data = df_units[["province", "hospitals", "schools"]].set_index("province")
         st.bar_chart(chart_data[["hospitals", "schools"]])
-        st.caption("Comparison of hospital and school counts across provincial analysis units.")
-
     with col2:
-        st.subheader("🌊 Multi-Tier Flood Risk Exposure (RP10 to RP500)")
+        st.subheader("🌊 Multi-Tier Flood Risk Exposure")
         flood_data = df_units[["province", "rp10_pop_u15", "rp100_pop_u15_30cm", "rp500_pop_u15"]].set_index("province")
         st.line_chart(flood_data)
-        st.caption("Population under 15 exposed across 10-year, 100-year (>30cm), and 500-year flood return periods.")
-
-    st.subheader("📋 Comparative Analysis Units Grid")
     st.dataframe(df_units, use_container_width=True)
 
-# ==========================================
-# PAGE 3: DEMOGRAPHICS & RESOURCE ACCESSIBILITY
-# ==========================================
 elif app_page == "👥 Demographics & Accessibility":
     st.title("👥 Demographics & Resource Accessibility")
-    st.markdown("Deep dive into ADM2-level population cohorts, gender breakdowns, rural population share, and infrastructure travel-time accessibility.")
+    if not df_units.empty:
+        selected_prov = st.selectbox("Select Province", df_units["province"].unique())
+        prov_row = df_units[df_units["province"] == selected_prov].iloc[0]
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Total Population", f"{prov_row['total_pop']:,}")
+            gender_df = pd.DataFrame({"Gender": ["Female", "Male"], "Population": [prov_row["f_tl"], prov_row["m_tl"]]}).set_index("Gender")
+            st.bar_chart(gender_df)
+        with col2:
+            st.metric("Hospitals", prov_row["hospitals"])
+            st.metric("Schools", prov_row["schools"])
 
-    selected_prov = st.selectbox("Select Province for Detailed Cohort Breakdown", df_units["province"].unique())
-    prov_row = df_units[df_units["province"] == selected_prov].iloc[0]
-
-    col1, col2 = st.columns([1, 1])
-
-    with col1:
-        st.markdown(f"### 📍 {selected_prov} Cohort Overview")
-        st.metric("Total Population", f"{prov_row['total_pop']:,}")
-        st.metric("Rural Population Share", f"{prov_row['rural_pop_perc']}%")
-        
-        gender_df = pd.DataFrame({
-            "Gender": ["Female (F_TL)", "Male (M_TL)"],
-            "Population": [prov_row["f_tl"], prov_row["m_tl"]]
-        }).set_index("Gender")
-        st.bar_chart(gender_df)
-
-    with col2:
-        st.markdown(f"### ⏱️ Accessibility & Infrastructure Metrics")
-        st.metric("Hospitals Count", prov_row["hospitals"])
-        st.metric("Schools Count", prov_row["schools"])
-        st.metric("Primary Healthcare Centers", prov_row["phc_count"])
-        st.metric("Population within 5km of Education", f"{prov_row['access_edu_5km_perc']}%")
-        st.metric("Population within 30min of Hospital", f"{prov_row['access_hosp_30min_perc']}%")
-
-# ==========================================
-# PAGE 4: STATISTICAL INSIGHTS & AUDIT
-# ==========================================
 elif app_page == "🔍 Statistical Insights & Audit":
     st.title("🔍 Statistical Insights & Data Provenance Audit")
-    st.markdown("Econometric associations modeled across regional economic zone presence and data provenance ledger.")
-
-    st.subheader("📋 Data Provenance Audit Ledger")
     st.dataframe(df_sources, use_container_width=True)
 
-    st.markdown("---")
-    st.subheader("💾 Export Utilities")
-    
-    col_ex1, col_ex2 = st.columns(2)
-    
-    with col_ex1:
-        zones_csv = filtered_zones.to_csv(index=False).encode('utf-8')
-        st.download_button(
-            label="📥 Download Filtered Zones CSV",
-            data=zones_csv,
-            file_name="filtered_peza_zones.csv",
-            mime="text/csv"
-        )
-
-    with col_ex2:
-        units_csv = df_units.to_csv(index=False).encode('utf-8')
-        st.download_button(
-            label="📥 Download Analysis Units CSV",
-            data=units_csv,
-            file_name="analysis_units_export.csv",
-            mime="text/csv"
-        )
-
 st.sidebar.markdown("---")
-st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.14 Enterprise Edition")
+st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.16")
