@@ -114,7 +114,7 @@ if app_mode == "📊 Executive Summary":
 # ==========================================
 elif app_mode == "🗺️ Spatial & Zone Distribution":
     st.markdown('<p class="main-header">Spatial Distribution of Economic Zones</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and geographic coordinates.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-text">Inspecting provincial concentration hierarchies and interactive street-level geographic coordinates.</p>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     
@@ -131,11 +131,11 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             color="n_zones",
             color_continuous_scale="Blues"
         )
-        fig_bar.update_layout(height=520, margin=dict(l=0, r=0, t=10, b=0), showlegend=False)
+        fig_bar.update_layout(height=550, margin=dict(l=0, r=0, t=10, b=0), showlegend=False)
         st.plotly_chart(fig_bar, use_container_width=True)
         
     with col2:
-        st.subheader("Geographic Mapping of Zones")
+        st.subheader("Interactive OpenStreetMap View")
         if zones is not None and len(zones) > 0:
             lat_col = next((c for c in zones.columns if c.lower() in ['lat', 'latitude']), None)
             lon_col = next((c for c in zones.columns if c.lower() in ['lon', 'long', 'longitude']), None)
@@ -143,25 +143,18 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             nature_col = next((c for c in zones.columns if c.lower() in ['nature', 'type', 'status']), zones.columns[0])
             
             if lat_col and lon_col:
-                # Using robust scatter_geo centered on the Philippines to prevent Mapbox API crashes
-                fig_map = px.scatter_geo(
+                # Using open-street-map tiles for a fully detailed, professional, token-free interactive map
+                fig_map = px.scatter_mapbox(
                     zones, 
                     lat=lat_col, 
                     lon=lon_col, 
                     hover_name=name_col,
                     hover_data=['CITY', 'province_name', nature_col],
                     color=nature_col,
-                    projection="mercator",
-                    height=520
-                )
-                fig_map.update_geos(
-                    visible=True,
-                    resolution=50,
-                    showcountries=True, countrycolor="#d8d8d8",
-                    showcoastlines=True, coastlinecolor="#c8c8c8",
+                    mapbox_style="open-street-map",
+                    zoom=5.2, 
                     center={"lat": 12.8797, "lon": 121.7740},
-                    lonaxis_range=[116.5, 126.5],
-                    lataxis_range=[4.5, 21.5]
+                    height=550
                 )
                 fig_map.update_layout(
                     margin={"r":0,"t":10,"l":0,"b":0},
