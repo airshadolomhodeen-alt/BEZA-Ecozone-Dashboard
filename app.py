@@ -52,44 +52,33 @@ def load_datasets():
     if os.path.exists("zones.csv"):
         df_zones = pd.read_csv("zones.csv")
     else:
-        df_zones = pd.DataFrame()
+        df_zones = pd.DataFrame(columns=[
+            'ID', 'ZONE_NAME', 'NATURE', 'STATUS', 'ORIGINAL_LOCATION', 'CITY',
+            'matched_muni', 'admin3_pcode', 'province_name', 'ADM2_PCODE',
+            'region_name', 'admin1_pcode', 'geometry', 'lon', 'lat'
+        ])
 
-    # Normalize columns to guarantee compatibility with your UI
-    col_mapping = {}
-    for col in df_zones.columns:
-        col_lower = col.lower()
-        if "zone_name" in col_lower or col_lower == "zone_name":
-            col_mapping[col] = "name"
-        elif col_lower == "region_name":
-            col_mapping[col] = "region"
-        elif col_lower == "province_name":
-            col_mapping[col] = "province"
-        elif col_lower == "nature":
-            col_mapping[col] = "nature"
-        elif col_lower == "status":
-            col_mapping[col] = "status"
-        elif col_lower == "city":
-            col_mapping[col] = "municipality"
-        elif col_lower == "id":
-            col_mapping[col] = "zone_id"
-    
-    df_zones = df_zones.rename(columns=col_mapping)
-    
-    # Fallback mappings if specific columns use different casing
-    if "name" not in df_zones.columns and "ZONE_NAME" in df_zones.columns:
+    # Standardize column names safely without dropping any original columns
+    if "ZONE_NAME" in df_zones.columns and "name" not in df_zones.columns:
         df_zones["name"] = df_zones["ZONE_NAME"]
-    if "region" not in df_zones.columns and "region_name" in df_zones.columns:
+    if "region_name" in df_zones.columns and "region" not in df_zones.columns:
         df_zones["region"] = df_zones["region_name"]
-    if "province" not in df_zones.columns and "province_name" in df_zones.columns:
+    if "province_name" in df_zones.columns and "province" not in df_zones.columns:
         df_zones["province"] = df_zones["province_name"]
-    if "nature" not in df_zones.columns and "NATURE" in df_zones.columns:
+    if "NATURE" in df_zones.columns and "nature" not in df_zones.columns:
         df_zones["nature"] = df_zones["NATURE"]
-    if "status" not in df_zones.columns and "STATUS" in df_zones.columns:
+    if "STATUS" in df_zones.columns and "status" not in df_zones.columns:
         df_zones["status"] = df_zones["STATUS"]
-    if "zone_id" not in df_zones.columns and "ID" in df_zones.columns:
-        df_zones["zone_id"] = df_zones["ID"]
-    if "municipality" not in df_zones.columns and "CITY" in df_zones.columns:
+    if "CITY" in df_zones.columns and "municipality" not in df_zones.columns:
         df_zones["municipality"] = df_zones["CITY"]
+    if "ID" in df_zones.columns and "zone_id" not in df_zones.columns:
+        df_zones["zone_id"] = df_zones["ID"]
+
+    # Ensure lat and lon exist
+    if "lat" not in df_zones.columns:
+        df_zones["lat"] = 14.5995
+    if "lon" not in df_zones.columns:
+        df_zones["lon"] = 120.9842
 
     # Ensure valid numeric coordinates
     df_zones["lat"] = pd.to_numeric(df_zones["lat"], errors="coerce")
@@ -379,4 +368,4 @@ elif app_page == "🔍 Statistical Insights & Audit":
         )
 
 st.sidebar.markdown("---")
-st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.7 Enterprise Edition")
+st.sidebar.info("PEZA Economic Zones Intelligence Hub v2.8 Enterprise Edition")
