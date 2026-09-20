@@ -115,14 +115,21 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
     
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader("Distribution of Zones per Province")
-        fig_hist = px.histogram(
-            analysis_units, x="n_zones", nbins=15,
-            labels={"n_zones": "Number of Zones", "count": "Number of Provinces"},
-            color_discrete_sequence=["#1f77b4"]
+        st.subheader("Top Provinces by Economic Zone Count")
+        # Filter provinces with at least 1 zone and sort by count descending
+        top_provinces = analysis_units[analysis_units['n_zones'] > 0].sort_values(by='n_zones', ascending=True)
+        
+        fig_bar = px.bar(
+            top_provinces, 
+            x="n_zones", 
+            y="ADM2_NAME", 
+            orientation="h",
+            labels={"n_zones": "Number of Economic Zones", "ADM2_NAME": "Province / District"},
+            color="n_zones",
+            color_continuous_scale="Blues"
         )
-        fig_hist.update_layout(bargap=0.1)
-        st.plotly_chart(fig_hist, use_container_width=True)
+        fig_bar.update_layout(height=500, margin=dict(l=0, r=0, t=10, b=0), showlegend=False)
+        st.plotly_chart(fig_bar, use_container_width=True)
         
     with col2:
         st.subheader("Geographic Mapping of Zones")
@@ -134,7 +141,7 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
             if lat_col and lon_col:
                 fig_map = px.scatter_geo(
                     zones, lat=lat_col, lon=lon_col, hover_name=name_col,
-                    projection="mercator", height=450, color_discrete_sequence=["#ff7f0e"]
+                    projection="mercator", height=500, color_discrete_sequence=["#ff7f0e"]
                 )
                 fig_map.update_geos(
                     visible=True,
@@ -142,12 +149,18 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
                     lonaxis_range=[116, 127],
                     lataxis_range=[4, 21]
                 )
-                fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+                fig_map.update_layout(margin={"r":0,"t":10,"l":0,"b":0})
                 st.plotly_chart(fig_map, use_container_width=True)
             else:
                 st.warning("Latitude/Longitude columns not found in zones dataset.")
         else:
             st.info("Zones dataset is currently unavailable.")
+            
+    st.markdown("---")
+    st.subheader("📋 Province Economic Zone Directory")
+    province_table = analysis_units[['ADM2_NAME', 'ADM1_NAME', 'n_zones', 'T_TL', 'hospitals_count']].sort_values(by='n_zones', ascending=False)
+    province_table.columns = ['Province / Area', 'Region', 'Total Economic Zones', 'Total Population', 'Hospital Count']
+    st.dataframe(province_table, use_container_width=True, height=350)
 
 # ==========================================
 # 3. INFRASTRUCTURE & DEMOGRAPHICS
