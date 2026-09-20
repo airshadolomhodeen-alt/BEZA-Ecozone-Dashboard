@@ -57,11 +57,11 @@ app_mode = st.sidebar.radio("Choose a View:", [
 ])
 
 if analysis_units is None:
-    st.error("⚠️ Processed CSV files not found in `data/exports/`. Please ensure your export files (`analysis_units.csv`, `zones.csv`, `sources.csv`) are committed and pushed to your GitHub repository.")
+    st.error("⚠️ Processed CSV files not found in `data/exports/`. Please ensure your export files are committed and pushed to your GitHub repository.")
     st.stop()
 
-# Prepare safe display columns
-analysis_units['zone_label'] = analysis_units['has_zone'].map({1: 'Yes', 0: 'No'})
+# Prepare safe display string columns to prevent Plotly/Narwhals casting errors
+analysis_units['zone_label'] = analysis_units['has_zone'].map({1: 'Zone Present', 0: 'No Zone'}).astype(str)
 
 # ==========================================
 # 1. EXECUTIVE SUMMARY
@@ -126,7 +126,6 @@ elif app_mode == "🗺️ Spatial & Zone Distribution":
     with col2:
         st.subheader("Geographic Mapping of Zones")
         if zones is not None and len(zones) > 0:
-            # Auto-detect latitude and longitude column names
             lat_col = next((c for c in zones.columns if c.lower() in ['lat', 'latitude']), None)
             lon_col = next((c for c in zones.columns if c.lower() in ['lon', 'long', 'longitude']), None)
             name_col = next((c for c in zones.columns if 'name' in c.lower()), zones.columns[0])
@@ -157,21 +156,20 @@ elif app_mode == "🏥 Infrastructure & Demographics":
             x="zone_label", 
             y="hospitals_count",
             points="all",
-            labels={"zone_label": "Economic Zone in Province", "hospitals_count": "Hospital Count"},
+            labels={"zone_label": "Economic Zone Presence", "hospitals_count": "Hospital Count"},
             color_discrete_sequence=["#52accb"]
         )
         st.plotly_chart(fig_box, use_container_width=True)
         
     with col2:
-        st.subheader("Population vs. Zone Presence")
-        analysis_units['log_pop'] = np.log(analysis_units['T_TL'] + 1)
-        fig_pop = px.scatter(
-            analysis_units, x="zone_label", 
-            y="log_pop",
-            labels={"zone_label": "Economic Zone in Province", "log_pop": "Log Population + 1"},
-            trendline="ols", color_discrete_sequence=["#ff7f0e"]
+        st.subheader("Provincial Population Distribution")
+        fig_hist_pop = px.histogram(
+            analysis_units, x="T_TL", color="zone_label",
+            nbins=20, barmode="group",
+            labels={"T_TL": "Total Population", "zone_label": "Zone Status"},
+            color_discrete_map={"Zone Present": "#1f77b4", "No Zone": "#ff7f0e"}
         )
-        st.plotly_chart(fig_pop, use_container_width=True)
+        st.plotly_chart(fig_hist_pop, use_container_width=True)
 
 # ==========================================
 # 4. STATISTICAL MODELS
