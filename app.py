@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pydeck as pdk
+import plotly.express as px
 import io
 
 # ==========================================
@@ -269,54 +269,55 @@ if app_page == "🌍 Executive Summary & Spatial Map":
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Interactive PyDeck Map with exact geographical coordinates & screen-fit viewport
+    # Interactive Google-Earth-Style Satellite Map using Free Esri World Imagery Tiles (No Mapbox Token Required)
     st.subheader("📍 Interactive Economic Zones Geographical Map")
     st.markdown(f"Displaying **{len(filtered_zones)}** zones matching current sidebar filters. Hover or click markers for zone details.")
 
     if len(filtered_zones) > 0:
-        def get_color(status):
-            if status == "Operating":
-                return [52, 211, 153, 220]  # Emerald green
-            elif status == "Non-Operating":
-                return [251, 191, 36, 220]  # Amber
-            else:
-                return [96, 165, 250, 220]  # Blue
-
-        map_df = filtered_zones.copy()
-        map_df["color"] = map_df["status"].apply(get_color)
-        map_df["radius"] = 12000
-
-        layer = pdk.Layer(
-            "ScatterplotLayer",
-            data=map_df,
-            get_position=["lon", "lat"],
-            get_color="color",
-            get_radius="radius",
-            pickable=True,
-            auto_highlight=True,
-            radius_min_pixels=5,
-            radius_max_pixels=16,
+        fig_map = px.scatter_mapbox(
+            filtered_zones,
+            lat="lat",
+            lon="lon",
+            color="status",
+            hover_name="name",
+            hover_data=["province", "municipality", "nature", "workforce"],
+            zoom=5.5,
+            center={"lat": 12.8797, "lon": 121.7740},
+            height=580,
+            color_discrete_map={
+                "Operating": "#34d399",
+                "Non-Operating": "#fbbf24",
+                "Developer / Ecozone DC": "#60a5fa"
+            }
         )
-
-        # Dynamic view center based on filtered records
-        view_state = pdk.ViewState(
-            latitude=float(map_df["lat"].mean()),
-            longitude=float(map_df["lon"].mean()),
-            zoom=5.6,
-            pitch=25,
+        
+        # Configure free Esri World Imagery (Google Earth Satellite view) with dark background styling
+        fig_map.update_layout(
+            mapbox=dict(
+                style="white-bg",
+                layers=[{
+                    "sourcetype": "raster",
+                    "source": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
+                    "below": "traces"
+                }]
+            ),
+            margin={"r": 0, "t": 0, "l": 0, "b": 0},
+            paper_bgcolor="#020617",
+            plot_bgcolor="#020617",
+            font=dict(color="#f8fafc"),
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1,
+                bgcolor="rgba(15, 23, 42, 0.8)",
+                bordercolor="rgba(56, 189, 248, 0.3)",
+                borderwidth=1
+            )
         )
-
-        r = pdk.Deck(
-            layers=[layer],
-            initial_view_state=view_state,
-            tooltip={
-                "html": "<b>Zone Name:</b> {name}<br/><b>Province:</b> {province}<br/><b>Municipality:</b> {municipality}<br/><b>Nature:</b> {nature}<br/><b>Status:</b> {status}",
-                "style": {"backgroundColor": "#0f172a", "color": "#f8fafc", "border": "1px solid #38bdf8", "borderRadius": "8px", "padding": "10px"}
-            },
-            map_style="mapbox://styles/mapbox/dark-v10"
-        )
-
-        st.pydeck_chart(r, use_container_width=True)
+        
+        st.plotly_chart(fig_map, use_container_width=True)
     else:
         st.warning("No zones match the selected filter criteria.")
 
